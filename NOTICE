@@ -1,0 +1,9 @@
+API-TAIL
+Copyright 2026 TokenRhythm Technologies.
+
+The release implementation is derived from the authors' API-TAIL research code.
+File-level provenance for archived research implementations is recorded under legacy/.
+Third-party libraries are dependencies rather than vendored components and retain
+their own licenses. Model weights, original prompts and commercial API responses
+are not included. Apache-2.0 licensing of this repository does not grant rights to
+those external assets; see docs/ASSETS.md.

@@ -1,0 +1,58 @@
+{
+  "software_version": "0.1.1",
+  "platform": "linux",
+  "status": "passed",
+  "scope": "Real Git checkout with core.autocrlf=true on Linux; not a native Windows run.",
+  "git_version": "git version 2.34.1",
+  "cases": {
+    "control": {
+      "core_autocrlf": "true",
+      "attributes_present": false,
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "paper_files_checked": 9,
+      "changed_paper_files": [
+        "g4_p30.json",
+        "g4_user.json",
+        "manifest.json",
+        "q38_p30.json",
+        "q38_user.json"
+      ],
+      "expected_failure": "Missing or modified frozen asset",
+      "expected_failure_observed": true,
+      "passed": true,
+      "changes_are_only_lf_to_crlf": true
+    },
+    "fixed": {
+      "core_autocrlf": "true",
+      "attributes_present": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "paper_files_checked": 9,
+      "changed_paper_files": [],
+      "replay_status": "passed_with_float32_differences",
+      "total_checks": 2020,
+      "failures": 0,
+      "float32_differences": 83,
+      "script_bytes_unchanged": true,
+      "passed": true
+    }
+  },
+  "source_sha256": {
+    ".gitattributes": "6f2856e1c70e6f435f4a2841b9d2e26ed7e4c036c8172e42cb767df0a7e3dca2",
+    "scripts/reproduce_paper.py": "cb72d282773d6149dee8b39154985865f74f329e285f2432889c38fd5f8cc200",
+    "tests/test_text.py": "ef655e7611e11c9120429f1d4efa7e97bae9e7669b70703df82b014f473ee90c"
+  },
+  "paper_asset_sha256": {
+    "g4_p30.json": "40056235b63c4a85b9e3b6ed111e87b1a155baeb5374968d94d89f54019af30e",
+    "g4_p30.npz": "cfb9c2b0bca5f5d0965525e89be835b1a38004075c94e7f101a64e8d36e288c6",
+    "g4_user.json": "129e79d021957244cae49e3a79f6dab514fb5054a5739253ec76069f562e2101",
+    "g4_user.npz": "ccc1d3395fc1ec8b2199d1db11041a7f6366f29513cc954352c6371a79d10477",
+    "manifest.json": "a749385889596479d46781232a76907a39ee23de3e53483ed1fb270f06c62b7d",
+    "q38_p30.json": "857727d6146be6c48a17e85565edcfb4f75043daad3ac8cde776a8e3922e55a8",
+    "q38_p30.npz": "213ae2f869180964663858dc5c1b534828153a7db5703b0658297aeb1ee820ae",
+    "q38_user.json": "ffed5fb6767a9629ef27874c8805e756e1922aabbd9372f30d93451678660c8c",
+    "q38_user.npz": "df0c93423c22b53732c2d84ad4f1033fb3cd531dfb7623688e22055590aa7306"
+  },
+  "gbk_regression": "The unit suite separately simulates GBK defaults for UTF-8 Chinese configuration and prompt-ID files."
+}

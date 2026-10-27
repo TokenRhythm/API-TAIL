@@ -1,0 +1,2863 @@
+{
+  "schema_version": 1,
+  "purpose": "Parameter inventory of the frozen paper pools, extracted from the actual generation metadata headers; not an executable pipeline config. No prompt/response text, credentials, provider map or private absolute path is included.",
+  "provenance_note": "Source paths are labels relative to the separately retained experiment archive. SHA-256 hashes identify original design/config bytes and the original metadata-header line; the raw files are not distributed here. Model asset labels identify local checkpoint names, not verified download URLs.",
+  "main_pool": "S_pen",
+  "common": {
+    "temperature_grid": {
+      "start": 0.3,
+      "stop": 1.8,
+      "step": 0.01
+    },
+    "z_cutoff": 3.0,
+    "alpha": 0.05,
+    "integer_quantile_method": "higher",
+    "rejection": "K > tau",
+    "audit_request_counts": [
+      100,
+      200,
+      400
+    ],
+    "mixture_rates": [
+      0.05,
+      0.1,
+      0.25
+    ],
+    "null_trials_total": 4000,
+    "calibration_trials_even": 2000,
+    "heldout_null_trials_odd": 2000,
+    "alternative_trials": 1000,
+    "calibration_redraws": 20,
+    "minimum_valid_redraws": 16,
+    "plain_endpoint_far_limit": 0.1,
+    "minimum_endpoint_coverage": 0.99,
+    "bootstrap_replicates": 2000,
+    "bootstrap_resample_calibration": false,
+    "bootstrap_resample_test_prompts": true,
+    "reference_generation_and_scoring_cost_is_additional_to_api_request_budget": true
+  },
+  "panels": {
+    "q38_p30": {
+      "claimed_model_asset_label": "Qwen3.8-27B",
+      "calibration_selectors": [
+        "v3"
+      ],
+      "test_selectors": [
+        "v5:T1",
+        "v5:T2"
+      ],
+      "test_halves": {
+        "T1": [
+          "v5:T1"
+        ],
+        "T2": [
+          "v5:T2"
+        ]
+      },
+      "pools": {
+        "S_main": [
+          "self",
+          "self2",
+          "h_topk20",
+          "h_T07",
+          "h_T10",
+          "h_gcdef",
+          "h_T07p08",
+          "h_sysdefault",
+          "q_fp8",
+          "q_awq_int4",
+          "q_int4_redhat",
+          "h_T10b",
+          "q_fp8_T10"
+        ],
+        "S_pen": [
+          "self",
+          "self2",
+          "h_topk20",
+          "h_T07",
+          "h_T10",
+          "h_gcdef",
+          "h_T07p08",
+          "h_sysdefault",
+          "q_fp8",
+          "q_awq_int4",
+          "q_int4_redhat",
+          "h_T10b",
+          "q_fp8_T10",
+          "h_pp15",
+          "h_pp20",
+          "h_rp105",
+          "h_rp110",
+          "h_pp15rp105"
+        ],
+        "S_main+ID": [
+          "self",
+          "self2",
+          "h_topk20",
+          "h_T07",
+          "h_T10",
+          "h_gcdef",
+          "h_T07p08",
+          "h_sysdefault",
+          "q_fp8",
+          "q_awq_int4",
+          "q_int4_redhat",
+          "h_T10b",
+          "q_fp8_T10",
+          "h_sysqwen"
+        ],
+        "S_pen+ID": [
+          "self",
+          "self2",
+          "h_topk20",
+          "h_T07",
+          "h_T10",
+          "h_gcdef",
+          "h_T07p08",
+          "h_sysdefault",
+          "q_fp8",
+          "q_awq_int4",
+          "q_int4_redhat",
+          "h_T10b",
+          "q_fp8_T10",
+          "h_pp15",
+          "h_pp20",
+          "h_rp105",
+          "h_rp110",
+          "h_pp15rp105",
+          "h_sysqwen"
+        ]
+      },
+      "main_pool_member_count": 18,
+      "members": {
+        "self": {
+          "id": "self",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 3101
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_p30_v3/gen/self.jsonl",
+          "metadata_line_sha256": "5632713b0f09de73dff2a6821699dde6805c1bb11414bc1295541f49f86cfa5b",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "self2": {
+          "id": "self2",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 3102
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_p30_v3/gen/self2.jsonl",
+          "metadata_line_sha256": "2c30d7b3b2e374f98ba8a892bc54b00b6d443b6864a0cfbb55e72a7dc264d9ce",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "h_topk20": {
+          "id": "h_topk20",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": 20,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 3103
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_p30_v3/gen/h_topk20.jsonl",
+          "metadata_line_sha256": "5bbd3c2ba2eeae5686436972278e8c3fae158aa41ec29959848b292eec27e663",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "h_T07": {
+          "id": "h_T07",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.7,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 3104
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_p30_v3/gen/h_T07.jsonl",
+          "metadata_line_sha256": "6629b10b93e8e931c84563338872df86ce72b98c7c08ec0457910d2677d2db01",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "h_T10": {
+          "id": "h_T10",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 3105
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_p30_v3/gen/h_T10.jsonl",
+          "metadata_line_sha256": "632562760396a12500aa1e6b17a4cf3f07656458ee3d9279bf22895e75a6a9be",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "h_gcdef": {
+          "id": "h_gcdef",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 3106
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_p30_v3/gen/h_gcdef.jsonl",
+          "metadata_line_sha256": "945e22c41b637ce07394853d876517d2db0c87909cfcfbf655d337d6f7cc180c",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "h_T07p08": {
+          "id": "h_T07p08",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 3107
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_p30_v3/gen/h_T07p08.jsonl",
+          "metadata_line_sha256": "b57da93de39738e55eb624b27498c36b1d747b5033a789d849a46c65638ba72e",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "h_sysdefault": {
+          "id": "h_sysdefault",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "You are a helpful assistant.",
+            "seed": 3108
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_p30_v3/gen/h_sysdefault.jsonl",
+          "metadata_line_sha256": "30ccde5692d3d6c9af18f33286a052372a30551f3c5ac7bcf26435e3714c00e7",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "q_fp8": {
+          "id": "q_fp8",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 3131
+          },
+          "model_asset_label": "Qwen3.8-27B-FP8",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_p30_v3/gen/q_fp8.jsonl",
+          "metadata_line_sha256": "761dce78ad328c42f612fe9df200a400c9d95300c6bced17f625d54ae0695e3d",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "q_awq_int4": {
+          "id": "q_awq_int4",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 3135
+          },
+          "model_asset_label": "Qwen3.8-27B-AWQ-INT4-cyankiwi",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_p30_v3/gen/q_awq_int4.jsonl",
+          "metadata_line_sha256": "bd79e8ad05b201ecce6a9ca3710732724ffc88d796997cf36210be298ff11048",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "q_int4_redhat": {
+          "id": "q_int4_redhat",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 3137
+          },
+          "model_asset_label": "Qwen3.8-27B-INT4-RedHatAI",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_p30_v3/gen/q_int4_redhat.jsonl",
+          "metadata_line_sha256": "b9775a135a820552c574f101e52d89773ccf4b4a4a2b0194959938ac022b34b1",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "h_T10b": {
+          "id": "h_T10b",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 3114
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_p30_v3/gen/h_T10b.jsonl",
+          "metadata_line_sha256": "e7c80882c698e46ae4a7a9ce30d6533252d8b310d3627850e72e8be534f34b8c",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "q_fp8_T10": {
+          "id": "q_fp8_T10",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 3132
+          },
+          "model_asset_label": "Qwen3.8-27B-FP8",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_p30_v3/gen/q_fp8_T10.jsonl",
+          "metadata_line_sha256": "fe70a1ccf5b1a4ec445c7e697ad17233ec407608b1b54705f1e2c714f9052ddf",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "h_pp15": {
+          "id": "h_pp15",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 1.5,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 3109
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_p30_v3/gen/h_pp15.jsonl",
+          "metadata_line_sha256": "0824dd8406f19ddcbf86ed1e1237fd036442d8ba0fb284371174264f7a0a08c1",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "h_pp20": {
+          "id": "h_pp20",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 2.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 3110
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_p30_v3/gen/h_pp20.jsonl",
+          "metadata_line_sha256": "cd4b99c6534941fe10a9c5ffc53ca7e76eb77aa188fc248c448830b4aa75d2ed",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "h_rp105": {
+          "id": "h_rp105",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.05,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 3111
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_p30_v3/gen/h_rp105.jsonl",
+          "metadata_line_sha256": "796ad0417269b10cfaef8473d4dcbed5f3c5f8d765f7662e036db7cfab6410e5",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "h_rp110": {
+          "id": "h_rp110",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.1,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 3112
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_p30_v3/gen/h_rp110.jsonl",
+          "metadata_line_sha256": "01e2a1519ddd4fda9a3827626e017ae394388d4664c378e12fd723734a06b5f5",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "h_pp15rp105": {
+          "id": "h_pp15rp105",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 1.5,
+            "repetition_penalty": 1.05,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 3113
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_p30_v3/gen/h_pp15rp105.jsonl",
+          "metadata_line_sha256": "639cc4fa3a74392b07bb6399ebaa98a37fd7e1d6fb29ecf398bb15737d700eae",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "h_sysqwen": {
+          "id": "h_sysqwen",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant.",
+            "seed": 5102
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/q38_p30_v3sys/gen/h_sysqwen.jsonl",
+          "metadata_line_sha256": "cc60640b405eb64507b8724c5a8fb9fcfc97d67ae1fe93dfdfc46c04d083986d",
+          "engine": "vllm-gen_multi (source implementation)"
+        }
+      },
+      "test_bases": {
+        "self_v5": {
+          "id": "self_v5",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 5101
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/q38_p30_v5/gen/self_v5.jsonl",
+          "metadata_line_sha256": "912f1365b54e9678e471fdcc498ec6e9de857fbf9bdeb004f09f3c4181e410dd",
+          "engine": "vllm-gen_multi (source implementation)"
+        }
+      },
+      "test_reference_shards": [
+        {
+          "id": "ref_s0",
+          "parameters": {
+            "n": 25,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 5160
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/q38_p30_v5/gen/ref_s0.jsonl",
+          "metadata_line_sha256": "f9ea67e7ed702bed4db93c52fbbeeca29ec42c5fd8f50e8a28689ddadf30af05",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        {
+          "id": "ref_s1",
+          "parameters": {
+            "n": 25,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 5161
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/q38_p30_v5/gen/ref_s1.jsonl",
+          "metadata_line_sha256": "253bf0610121fd34af75c8f72ccba1353b103e08cdbfe14953b8a7f9880cfafd",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        {
+          "id": "ref_s2",
+          "parameters": {
+            "n": 25,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 5162
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/q38_p30_v5/gen/ref_s2.jsonl",
+          "metadata_line_sha256": "f26744ee432e86d4b23a36e2ccf5a9773cd3a3bfb93f9b086102708c02692103",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        {
+          "id": "ref_s3",
+          "parameters": {
+            "n": 25,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 5163
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/q38_p30_v5/gen/ref_s3.jsonl",
+          "metadata_line_sha256": "11ddc239b1a07af910784c90ca4d99cee41ac14c2c0ce23be37df536584aa900",
+          "engine": "vllm-gen_multi (source implementation)"
+        }
+      ],
+      "rut": {
+        "evaluated": true,
+        "references_per_prompt": 100
+      },
+      "same_budget_met": {
+        "evaluated": true,
+        "api_responses_per_prompt": 2,
+        "reference_responses_per_prompt": 2,
+        "token_length": 30
+      },
+      "source_design": "results_paper2/designs/design_q38_p30.json",
+      "source_design_sha256": "d6be983432ad116264159db4666a5a418edb2fd1b15ff49ba22a3806cfa33470",
+      "source_cfg": "project/runs/paper2/cfgs/cfg_q38_p30.json",
+      "source_cfg_sha256": "9d94368f4c30d920f0b193e6164c800a90b9194206df4c277ce92595c1c1c7be"
+    },
+    "q38_user": {
+      "claimed_model_asset_label": "Qwen3.8-27B",
+      "calibration_selectors": [
+        "v3"
+      ],
+      "test_selectors": [
+        "v5:T1",
+        "v5:T2"
+      ],
+      "test_halves": {
+        "T1": [
+          "v5:T1"
+        ],
+        "T2": [
+          "v5:T2"
+        ]
+      },
+      "pools": {
+        "S_main": [
+          "self_u",
+          "self_u2",
+          "hu_T07p08k20",
+          "hu_k20p1",
+          "hu_nok",
+          "hu_T07p095",
+          "hu_T1p1",
+          "hu_T1p1b",
+          "hu_T07p1",
+          "hu_sysdefault",
+          "qu_fp8",
+          "qu_awq",
+          "hu_T1p1c",
+          "qu_fp8_T1p1"
+        ],
+        "S_pen": [
+          "self_u",
+          "self_u2",
+          "hu_T07p08k20",
+          "hu_k20p1",
+          "hu_nok",
+          "hu_T07p095",
+          "hu_T1p1",
+          "hu_T1p1b",
+          "hu_T07p1",
+          "hu_sysdefault",
+          "qu_fp8",
+          "qu_awq",
+          "hu_T1p1c",
+          "qu_fp8_T1p1",
+          "hu_pp15",
+          "hu_pp20",
+          "hu_rp105",
+          "hu_rp110",
+          "hu_pp15rp105"
+        ],
+        "S_main+ID": [
+          "self_u",
+          "self_u2",
+          "hu_T07p08k20",
+          "hu_k20p1",
+          "hu_nok",
+          "hu_T07p095",
+          "hu_T1p1",
+          "hu_T1p1b",
+          "hu_T07p1",
+          "hu_sysdefault",
+          "qu_fp8",
+          "qu_awq",
+          "hu_T1p1c",
+          "qu_fp8_T1p1",
+          "hu_sysqwen"
+        ],
+        "S_pen+ID": [
+          "self_u",
+          "self_u2",
+          "hu_T07p08k20",
+          "hu_k20p1",
+          "hu_nok",
+          "hu_T07p095",
+          "hu_T1p1",
+          "hu_T1p1b",
+          "hu_T07p1",
+          "hu_sysdefault",
+          "qu_fp8",
+          "qu_awq",
+          "hu_T1p1c",
+          "qu_fp8_T1p1",
+          "hu_pp15",
+          "hu_pp20",
+          "hu_rp105",
+          "hu_rp110",
+          "hu_pp15rp105",
+          "hu_sysqwen"
+        ]
+      },
+      "main_pool_member_count": 19,
+      "members": {
+        "self_u": {
+          "id": "self_u",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 3115
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_user_v3/gen/self_u.jsonl",
+          "metadata_line_sha256": "3687f0a71e5820fd8a5c8969a6abfd74c3405f4add281d852fb430236c00c898",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "self_u2": {
+          "id": "self_u2",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 3116
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_user_v3/gen/self_u2.jsonl",
+          "metadata_line_sha256": "42616770a13621f729642f3f2d561afb5ab0e2d8280ad0fa273f7b099762a5c4",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "hu_T07p08k20": {
+          "id": "hu_T07p08k20",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 3117
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_user_v3/gen/hu_T07p08k20.jsonl",
+          "metadata_line_sha256": "03af28ab6175539a9a9b53a1269964d2cf8eee1422e4e9e4dfb2a163331ce2ae",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "hu_k20p1": {
+          "id": "hu_k20p1",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 1.0,
+            "top_k": 20,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 3118
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_user_v3/gen/hu_k20p1.jsonl",
+          "metadata_line_sha256": "782d55fed4574282ac1a2414f124f089d16aa2f18c0c552380c31e2b8c27fad1",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "hu_nok": {
+          "id": "hu_nok",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 3119
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_user_v3/gen/hu_nok.jsonl",
+          "metadata_line_sha256": "10bdc65664a28bdf35e0d50285de02d8d6a460c8a5d5315097e1f07d9778cd90",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "hu_T07p095": {
+          "id": "hu_T07p095",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.7,
+            "top_p": 0.95,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 3120
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_user_v3/gen/hu_T07p095.jsonl",
+          "metadata_line_sha256": "dfed5eb61a9d919f8d69194a979bf83c561a5c16e7a4cfdc596271be9e550dfc",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "hu_T1p1": {
+          "id": "hu_T1p1",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 3121
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_user_v3/gen/hu_T1p1.jsonl",
+          "metadata_line_sha256": "a95f1ac8fc772f923c1138eb4e175dc2d21aa2d316ec7625d2cd52196f6c9f51",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "hu_T1p1b": {
+          "id": "hu_T1p1b",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 3122
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_user_v3/gen/hu_T1p1b.jsonl",
+          "metadata_line_sha256": "ca73e9acd0ac8c624eb37a267607fb5f22707d35d3fda2c564bcc050d5dc95b2",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "hu_T07p1": {
+          "id": "hu_T07p1",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.7,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 3123
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_user_v3/gen/hu_T07p1.jsonl",
+          "metadata_line_sha256": "7de29490d4747ca7b34a0a38b15b87f20b944428deb6c0ec1a91297d0f069a65",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "hu_sysdefault": {
+          "id": "hu_sysdefault",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "You are a helpful assistant.",
+            "seed": 3124
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_user_v3/gen/hu_sysdefault.jsonl",
+          "metadata_line_sha256": "2d0dde14dbd7b7da0481cc3180d488ad06252275c2ff1a56aa5a91362e911d4c",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "qu_fp8": {
+          "id": "qu_fp8",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 3133
+          },
+          "model_asset_label": "Qwen3.8-27B-FP8",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_user_v3/gen/qu_fp8.jsonl",
+          "metadata_line_sha256": "b30f29dba72705bfda2410ed7cc6036f8693fab25c09f7e7dab715fc7664e43e",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "qu_awq": {
+          "id": "qu_awq",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 3136
+          },
+          "model_asset_label": "Qwen3.8-27B-AWQ-INT4-cyankiwi",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_user_v3/gen/qu_awq.jsonl",
+          "metadata_line_sha256": "0f856d94bef04d104a1fecad72791035a13172c62d07de5855e8d1f7222b053f",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "hu_T1p1c": {
+          "id": "hu_T1p1c",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 3130
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_user_v3/gen/hu_T1p1c.jsonl",
+          "metadata_line_sha256": "a1416e4f26b62aa70d6fee5e6329a17a1d18f7e67f0356bb051132a8fae6d725",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "qu_fp8_T1p1": {
+          "id": "qu_fp8_T1p1",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 3134
+          },
+          "model_asset_label": "Qwen3.8-27B-FP8",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_user_v3/gen/qu_fp8_T1p1.jsonl",
+          "metadata_line_sha256": "4cb90dc58fdc95c2c83bd2ca501fd5dce3cf9e6168045ebd53af2e5015f4c508",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "hu_pp15": {
+          "id": "hu_pp15",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0.0,
+            "presence_penalty": 1.5,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 3125
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_user_v3/gen/hu_pp15.jsonl",
+          "metadata_line_sha256": "0e876d0682d13d413531d40dbbc3a50c21ca62d1fcc6248574d056a27e22f7b5",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "hu_pp20": {
+          "id": "hu_pp20",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0.0,
+            "presence_penalty": 2.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 3126
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_user_v3/gen/hu_pp20.jsonl",
+          "metadata_line_sha256": "e3bb8307c3e5e6df6ada91f2b0d9dedbd7c1703720906b7f617915134e1b2a8b",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "hu_rp105": {
+          "id": "hu_rp105",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.05,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 3127
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_user_v3/gen/hu_rp105.jsonl",
+          "metadata_line_sha256": "f348329d55c28fd67bf60260263205f2bc64273e86563406d37dc994529712b0",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "hu_rp110": {
+          "id": "hu_rp110",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.1,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 3128
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_user_v3/gen/hu_rp110.jsonl",
+          "metadata_line_sha256": "ca0fbdd9a43bc8918309fbcb134db632e41efba9d6119ee71ffac40d31e9fcd2",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "hu_pp15rp105": {
+          "id": "hu_pp15rp105",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0.0,
+            "presence_penalty": 1.5,
+            "repetition_penalty": 1.05,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 3129
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/cmp3/q38_user_v3/gen/hu_pp15rp105.jsonl",
+          "metadata_line_sha256": "f6d2d0936a2ea15a29ed341d79c9900b9ab9b66ec5d48960d8f9ec87c51b08ef",
+          "engine": "vllm-gen_multi (source implementation)"
+        },
+        "hu_sysqwen": {
+          "id": "hu_sysqwen",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant.",
+            "seed": 5202
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/q38_user_v3sys/gen/hu_sysqwen.jsonl",
+          "metadata_line_sha256": "49cd22e3439dbabdec483926725080de6993801eaecac63784c7f72ebfdf0dd8",
+          "engine": "vllm-gen_multi (source implementation)"
+        }
+      },
+      "test_bases": {
+        "self_u_v5": {
+          "id": "self_u_v5",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 5201
+          },
+          "model_asset_label": "Qwen3.8-27B",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/q38_user_v5/gen/self_u_v5.jsonl",
+          "metadata_line_sha256": "5ff994e8a6604b009e6703347efa843282b57493a7d0274ca55aaf167075526a",
+          "engine": "vllm-gen_multi (source implementation)"
+        }
+      },
+      "test_reference_shards": [],
+      "rut": {
+        "evaluated": false,
+        "references_per_prompt": null
+      },
+      "same_budget_met": {
+        "evaluated": false,
+        "api_responses_per_prompt": null,
+        "reference_responses_per_prompt": null,
+        "token_length": null
+      },
+      "source_design": "results_paper2/designs/design_q38_user.json",
+      "source_design_sha256": "bd989ee31d8d80ccf033f7f0f09231c637f21a8fd6711b5cd1869e0ec04fa8d3",
+      "source_cfg": "project/runs/paper2/cfgs/cfg_q38_user.json",
+      "source_cfg_sha256": "f1625bef914c4062d21e66d5a974b51bbfc09aba65d79255d9d80fb091cafb2f"
+    },
+    "g4_p30": {
+      "claimed_model_asset_label": "gemma-4-31B-it",
+      "calibration_selectors": [
+        "v5:CAL"
+      ],
+      "test_selectors": [
+        "v5:T1",
+        "v5:T2"
+      ],
+      "test_halves": {
+        "T1": [
+          "v5:T1"
+        ],
+        "T2": [
+          "v5:T2"
+        ]
+      },
+      "pools": {
+        "S_main": [
+          "g4p_self",
+          "g4p_self2",
+          "g4p_topk64",
+          "g4p_T07",
+          "g4p_T10",
+          "g4p_T10b",
+          "g4p_gcdef",
+          "g4p_T07p08",
+          "g4p_sysdefault",
+          "g4p_fp8w",
+          "g4p_fp8w_T10"
+        ],
+        "S_pen": [
+          "g4p_self",
+          "g4p_self2",
+          "g4p_topk64",
+          "g4p_T07",
+          "g4p_T10",
+          "g4p_T10b",
+          "g4p_gcdef",
+          "g4p_T07p08",
+          "g4p_sysdefault",
+          "g4p_fp8w",
+          "g4p_fp8w_T10",
+          "g4p_pp15",
+          "g4p_pp20",
+          "g4p_rp105",
+          "g4p_rp110",
+          "g4p_pp15rp105"
+        ],
+        "S_main+ID": [
+          "g4p_self",
+          "g4p_self2",
+          "g4p_topk64",
+          "g4p_T07",
+          "g4p_T10",
+          "g4p_T10b",
+          "g4p_gcdef",
+          "g4p_T07p08",
+          "g4p_sysdefault",
+          "g4p_fp8w",
+          "g4p_fp8w_T10",
+          "g4p_sysid"
+        ],
+        "S_pen+ID": [
+          "g4p_self",
+          "g4p_self2",
+          "g4p_topk64",
+          "g4p_T07",
+          "g4p_T10",
+          "g4p_T10b",
+          "g4p_gcdef",
+          "g4p_T07p08",
+          "g4p_sysdefault",
+          "g4p_fp8w",
+          "g4p_fp8w_T10",
+          "g4p_pp15",
+          "g4p_pp20",
+          "g4p_rp105",
+          "g4p_rp110",
+          "g4p_pp15rp105",
+          "g4p_sysid"
+        ]
+      },
+      "main_pool_member_count": 16,
+      "members": {
+        "g4p_self": {
+          "id": "g4p_self",
+          "parameters": {
+            "n": 2,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6219
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_self.jsonl",
+          "metadata_line_sha256": "8087d09e7900950e12503c564bf8f918a09d84ee3de7f8c2f531441e85a2ee8e",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4p_self2": {
+          "id": "g4p_self2",
+          "parameters": {
+            "n": 2,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6220
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_self2.jsonl",
+          "metadata_line_sha256": "35548aacc6dd09473736a25335bf839af9d920d9ba56b475f3103d6ca22e25d6",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4p_topk64": {
+          "id": "g4p_topk64",
+          "parameters": {
+            "n": 2,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": 64,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6221
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_topk64.jsonl",
+          "metadata_line_sha256": "ecdd5a90639ffcf9e7b01ebded7e5c75b5f4d2835976f6a797d7f1d4d18aefe2",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4p_T07": {
+          "id": "g4p_T07",
+          "parameters": {
+            "n": 2,
+            "temperature": 0.7,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6222
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_T07.jsonl",
+          "metadata_line_sha256": "63ea0e3b1ea4ff87fcc885a599e584f577ab86224cf0292b223d162ee29a9beb",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4p_T10": {
+          "id": "g4p_T10",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6223
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_T10.jsonl",
+          "metadata_line_sha256": "aecefd08a0ee51f50506c9d7d1dda5e3960e71feff3b403fe6da225cb8d19e3b",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4p_T10b": {
+          "id": "g4p_T10b",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6224
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_T10b.jsonl",
+          "metadata_line_sha256": "7c2b6d95a4b122130a682bcbad5ba86d7b2b5a3b728f718dcf9de24eb1bbad52",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4p_gcdef": {
+          "id": "g4p_gcdef",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 64,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6225
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_gcdef.jsonl",
+          "metadata_line_sha256": "ff18abd394fbcf4a4e6d9b3e15a4475dbbc8388672168470ac78c8825521964d",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4p_T07p08": {
+          "id": "g4p_T07p08",
+          "parameters": {
+            "n": 2,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6226
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_T07p08.jsonl",
+          "metadata_line_sha256": "d424832db937fb0de70ef58b8d7fd3f2bf4b5b98f4c3ce11f748b1bb176ee366",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4p_sysdefault": {
+          "id": "g4p_sysdefault",
+          "parameters": {
+            "n": 2,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "You are a helpful assistant.",
+            "seed": 6227
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_sysdefault.jsonl",
+          "metadata_line_sha256": "23040388e73a5add212617343cbd4f27f94e362cbd29d4956579c0fe97c5f040",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4p_fp8w": {
+          "id": "g4p_fp8w",
+          "parameters": {
+            "n": 2,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6237
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_fp8w.jsonl",
+          "metadata_line_sha256": "fdae7a13969975c0fe1475cee07741ceebd3ea0127a27beb6e0677e9c80f47ec",
+          "weight_rounding": {
+            "fp8w": 1,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4p_fp8w_T10": {
+          "id": "g4p_fp8w_T10",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6238
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_fp8w_T10.jsonl",
+          "metadata_line_sha256": "8f8683c860a0d2d78ad1e2b0f49e97ea25bb4e197fc598a8bce7f5dfd7f9f034",
+          "weight_rounding": {
+            "fp8w": 1,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4p_pp15": {
+          "id": "g4p_pp15",
+          "parameters": {
+            "n": 2,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 1.5,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6228
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_pp15.jsonl",
+          "metadata_line_sha256": "5efbd199e67d6f78f620c4f102986bb69ecb8ddd97170b19eedfaba2f95ac2a5",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4p_pp20": {
+          "id": "g4p_pp20",
+          "parameters": {
+            "n": 2,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 2.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6229
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_pp20.jsonl",
+          "metadata_line_sha256": "520a6e8dfd1ea617adcbd4285108561e33fb38bb5672f7c449a807aa5c6c2f62",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4p_rp105": {
+          "id": "g4p_rp105",
+          "parameters": {
+            "n": 2,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.05,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6230
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_rp105.jsonl",
+          "metadata_line_sha256": "6eb6eff5fd200c30912644a8e52f180c782142c14b8fab698aa4b13323f10c4a",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4p_rp110": {
+          "id": "g4p_rp110",
+          "parameters": {
+            "n": 2,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.1,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6231
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_rp110.jsonl",
+          "metadata_line_sha256": "d332e4dda274c6de91d66b29908157c09acad33bab0a0154368441263aea8ad1",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4p_pp15rp105": {
+          "id": "g4p_pp15rp105",
+          "parameters": {
+            "n": 2,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 1.5,
+            "repetition_penalty": 1.05,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6232
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_pp15rp105.jsonl",
+          "metadata_line_sha256": "434e8e10224e2abd07e0070ed45c0d79381e6cc0a88cba91a15eb3bd32462203",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4p_sysid": {
+          "id": "g4p_sysid",
+          "parameters": {
+            "n": 2,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "You are Gemma, an AI assistant developed by Google.",
+            "seed": 6233
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_sysid.jsonl",
+          "metadata_line_sha256": "55b9bb98b5dd93728f6f29500062d070268084aefdb36dfadb848349ebe9570c",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        }
+      },
+      "test_bases": {
+        "g4_self_v5": {
+          "id": "g4_self_v5",
+          "parameters": {
+            "n": 4,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6234
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4_self_v5.jsonl",
+          "metadata_line_sha256": "473d3576fa38e80afbca6e710896ca5c7df36d4ee9b1ee4c24867726daaebad0",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        }
+      },
+      "test_reference_shards": [
+        {
+          "id": "g4p_ref_s0",
+          "parameters": {
+            "n": 25,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6900
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_ref_s0.jsonl",
+          "metadata_line_sha256": "97ddec7a3dbf27dd619ca7a77cfdf46183dc348670734dd16a39be1f933a3d11",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        {
+          "id": "g4p_ref_s1",
+          "parameters": {
+            "n": 25,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6901
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_ref_s1.jsonl",
+          "metadata_line_sha256": "8f553e645290a689a61935dab84d07f2436d9b400830fc576ecc30df2c98b14f",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        {
+          "id": "g4p_ref_s2",
+          "parameters": {
+            "n": 25,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6902
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_ref_s2.jsonl",
+          "metadata_line_sha256": "82d59bbe98ca9c297a806656f18dda5f369d96600b47c498160ca35291190ec8",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        {
+          "id": "g4p_ref_s3",
+          "parameters": {
+            "n": 25,
+            "temperature": 0.5,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 30,
+            "system": "",
+            "seed": 6903
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_p30_v5/gen/g4p_ref_s3.jsonl",
+          "metadata_line_sha256": "0465fbc70fdf3b2f507fecdd61e827b6fb390ed2dcbb6f2fa831c5a5c2cb12d5",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        }
+      ],
+      "rut": {
+        "evaluated": true,
+        "references_per_prompt": 100
+      },
+      "same_budget_met": {
+        "evaluated": true,
+        "api_responses_per_prompt": 2,
+        "reference_responses_per_prompt": 2,
+        "token_length": 30
+      },
+      "source_design": "results_paper2/designs/design_g4_p30.json",
+      "source_design_sha256": "bc91ff9573a9ed048287d57cfb3e539f91161ac4130656bca6c99ae33934599d",
+      "source_cfg": "project/runs/paper2/cfgs/cfg_g4_p30.json",
+      "source_cfg_sha256": "be4a6bfd9558277340070862e48755e852f0cc207f98a1e9b52749e105aba83a"
+    },
+    "g4_user": {
+      "claimed_model_asset_label": "gemma-4-31B-it",
+      "calibration_selectors": [
+        "v5:CAL"
+      ],
+      "test_selectors": [
+        "v5:T1",
+        "v5:T2"
+      ],
+      "test_halves": {
+        "T1": [
+          "v5:T1"
+        ],
+        "T2": [
+          "v5:T2"
+        ]
+      },
+      "pools": {
+        "S_main": [
+          "g4_self",
+          "g4_self2",
+          "g4_T07p08k20",
+          "g4_k64p1",
+          "g4_nok",
+          "g4_T07p095",
+          "g4_T1p1",
+          "g4_T1p1b",
+          "g4_T1p1c",
+          "g4_T07p1",
+          "g4_sysdefault",
+          "g4_fp8w",
+          "g4_fp8w_T1p1"
+        ],
+        "S_pen": [
+          "g4_self",
+          "g4_self2",
+          "g4_T07p08k20",
+          "g4_k64p1",
+          "g4_nok",
+          "g4_T07p095",
+          "g4_T1p1",
+          "g4_T1p1b",
+          "g4_T1p1c",
+          "g4_T07p1",
+          "g4_sysdefault",
+          "g4_fp8w",
+          "g4_fp8w_T1p1",
+          "g4_pp15",
+          "g4_pp20",
+          "g4_rp105",
+          "g4_rp110",
+          "g4_pp15rp105"
+        ],
+        "S_main+ID": [
+          "g4_self",
+          "g4_self2",
+          "g4_T07p08k20",
+          "g4_k64p1",
+          "g4_nok",
+          "g4_T07p095",
+          "g4_T1p1",
+          "g4_T1p1b",
+          "g4_T1p1c",
+          "g4_T07p1",
+          "g4_sysdefault",
+          "g4_fp8w",
+          "g4_fp8w_T1p1",
+          "g4_sysid"
+        ],
+        "S_pen+ID": [
+          "g4_self",
+          "g4_self2",
+          "g4_T07p08k20",
+          "g4_k64p1",
+          "g4_nok",
+          "g4_T07p095",
+          "g4_T1p1",
+          "g4_T1p1b",
+          "g4_T1p1c",
+          "g4_T07p1",
+          "g4_sysdefault",
+          "g4_fp8w",
+          "g4_fp8w_T1p1",
+          "g4_pp15",
+          "g4_pp20",
+          "g4_rp105",
+          "g4_rp110",
+          "g4_pp15rp105",
+          "g4_sysid"
+        ]
+      },
+      "main_pool_member_count": 18,
+      "members": {
+        "g4_self": {
+          "id": "g4_self",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 64,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 6201
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_self.jsonl",
+          "metadata_line_sha256": "774a7f8b7911d6e9723aa404ec5b4e7fc0115646cae3e0e379f1854fefad186a",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4_self2": {
+          "id": "g4_self2",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 64,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 6202
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_self2.jsonl",
+          "metadata_line_sha256": "b2aab1787b5cc07b01a75e18dc2f5f08c96ca6b7a59bca2f572d2a3ed3bf9092",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4_T07p08k20": {
+          "id": "g4_T07p08k20",
+          "parameters": {
+            "n": 2,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 6203
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_T07p08k20.jsonl",
+          "metadata_line_sha256": "3ad753ba7a825e63f599491659ca37e1b8d47a62a05cd254671d107b82f6539a",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4_k64p1": {
+          "id": "g4_k64p1",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 1.0,
+            "top_k": 64,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 6204
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_k64p1.jsonl",
+          "metadata_line_sha256": "ab5d7b767afcf33707dbd34601dfed5b9535fe06f565a2644251c81e49ceff65",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4_nok": {
+          "id": "g4_nok",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 6205
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_nok.jsonl",
+          "metadata_line_sha256": "b2597063f8d176680314fc804f1e1e55787e7ce4b980af58c43962967df70bd3",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4_T07p095": {
+          "id": "g4_T07p095",
+          "parameters": {
+            "n": 2,
+            "temperature": 0.7,
+            "top_p": 0.95,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 6206
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_T07p095.jsonl",
+          "metadata_line_sha256": "4a4e722f6d00be478e03d575fd022567b5c46c937f6c27d9e313885f04b24bd4",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4_T1p1": {
+          "id": "g4_T1p1",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 6207
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_T1p1.jsonl",
+          "metadata_line_sha256": "7d4f2f3bc1d76694d69b25c5c525f6db2a498f81e19713381eb28e5b7a4e751c",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4_T1p1b": {
+          "id": "g4_T1p1b",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 6208
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_T1p1b.jsonl",
+          "metadata_line_sha256": "521e66cb239168adeaa2e637170eeb11c7cddef7c3d8a116b5111926a33a518d",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4_T1p1c": {
+          "id": "g4_T1p1c",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 6209
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_T1p1c.jsonl",
+          "metadata_line_sha256": "c0b8b378202486aa40029f425f7e2c0a50ed743ff53b93b11006da05ea6f2942",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4_T07p1": {
+          "id": "g4_T07p1",
+          "parameters": {
+            "n": 2,
+            "temperature": 0.7,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 6210
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_T07p1.jsonl",
+          "metadata_line_sha256": "9d65660163fec257c3f3c2be9d9c8cc7bceb98899b789accb2ba25a91a5d350c",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4_sysdefault": {
+          "id": "g4_sysdefault",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 64,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "You are a helpful assistant.",
+            "seed": 6211
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_sysdefault.jsonl",
+          "metadata_line_sha256": "eeca05583a5b778ac5d6cf718247ed69fab37e044656b0279ad905794a8f1a64",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4_fp8w": {
+          "id": "g4_fp8w",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 64,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 6235
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_fp8w.jsonl",
+          "metadata_line_sha256": "f8c70ae0236413ed0d4a1b6de3b1e996c3fffbbf66a8c08e394d26b46bc84799",
+          "weight_rounding": {
+            "fp8w": 1,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4_fp8w_T1p1": {
+          "id": "g4_fp8w_T1p1",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 1.0,
+            "top_k": -1,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 6236
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_fp8w_T1p1.jsonl",
+          "metadata_line_sha256": "3b76d0c8c549b7beb580f5e385a1119b3db3f806dc1e9490c55ac821edde39e1",
+          "weight_rounding": {
+            "fp8w": 1,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4_pp15": {
+          "id": "g4_pp15",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 64,
+            "min_p": 0.0,
+            "presence_penalty": 1.5,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 6212
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_pp15.jsonl",
+          "metadata_line_sha256": "40fce1e315eeaa11f23ef4a316ceb95b5497af4390268701bbdd9fa77018a689",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4_pp20": {
+          "id": "g4_pp20",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 64,
+            "min_p": 0.0,
+            "presence_penalty": 2.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 6213
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_pp20.jsonl",
+          "metadata_line_sha256": "de8a3470e62a665f84a9a74030721ef32597ec66ed035b314a22c289f13e0e75",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4_rp105": {
+          "id": "g4_rp105",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 64,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.05,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 6214
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_rp105.jsonl",
+          "metadata_line_sha256": "10312f49470bbb05d59e69fc5b2bf9f2755c11a3c5315c7225a911b3a67492ec",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4_rp110": {
+          "id": "g4_rp110",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 64,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.1,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 6215
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_rp110.jsonl",
+          "metadata_line_sha256": "37fab1e00b9bebf2158bcc5521793c2e1fccb80abacaf46b569f75dfa538b2b5",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4_pp15rp105": {
+          "id": "g4_pp15rp105",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 64,
+            "min_p": 0.0,
+            "presence_penalty": 1.5,
+            "repetition_penalty": 1.05,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 6216
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_pp15rp105.jsonl",
+          "metadata_line_sha256": "87b662c9ae37febf7d2779a9f92d403f8f27c575a4c66edb523280c87ec9cd77",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        },
+        "g4_sysid": {
+          "id": "g4_sysid",
+          "parameters": {
+            "n": 2,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 64,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "You are Gemma, an AI assistant developed by Google.",
+            "seed": 6217
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_sysid.jsonl",
+          "metadata_line_sha256": "cb1acab3c6163c811b02d8bc8cf421abe802f75cf9a3a50cbe1b13be2fee592f",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        }
+      },
+      "test_bases": {
+        "g4_self_u_v5": {
+          "id": "g4_self_u_v5",
+          "parameters": {
+            "n": 4,
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 64,
+            "min_p": 0.0,
+            "presence_penalty": 0.0,
+            "repetition_penalty": 1.0,
+            "max_tokens": 400,
+            "system": "",
+            "seed": 6218
+          },
+          "model_asset_label": "gemma-4-31B-it",
+          "chat_kwargs": {
+            "enable_thinking": false
+          },
+          "metadata_source": "runs/paper2/g4_user_v5/gen/g4_self_u_v5.jsonl",
+          "metadata_line_sha256": "81880779b8c768ce04d6020e240841986af41e20be1a9a684f2843cd7ffb39c3",
+          "weight_rounding": {
+            "fp8w": 0,
+            "format": "e4m3fn",
+            "scale": "per-output-channel",
+            "compute_dtype": "bfloat16",
+            "exclude": [
+              "vision modules",
+              "audio modules",
+              "output embeddings"
+            ]
+          },
+          "engine": "hf-generate"
+        }
+      },
+      "test_reference_shards": [],
+      "rut": {
+        "evaluated": false,
+        "references_per_prompt": null
+      },
+      "same_budget_met": {
+        "evaluated": false,
+        "api_responses_per_prompt": null,
+        "reference_responses_per_prompt": null,
+        "token_length": null
+      },
+      "source_design": "results_paper2/designs/design_g4_user.json",
+      "source_design_sha256": "fdf3878f89aeee5af24d68c4167694440526d5f8335f6434743c495c3ddca0b5",
+      "source_cfg": "project/runs/paper2/cfgs/cfg_g4_user.json",
+      "source_cfg_sha256": "7b231afedb42376b313ef61327d97226daf99920514dc75223658f589ee8bd0d"
+    }
+  }
+}

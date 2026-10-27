@@ -1,0 +1,7052 @@
+{
+  "scope": "Frozen audit-statistic replay; not raw-response or model-inference reproduction. Bootstrap confidence intervals are recalculated from saved paired replicate rates, not newly resampled prompts.",
+  "checks": 2016,
+  "additional_checks": 4,
+  "precision_differences": [
+    {
+      "field": "g4_p30/200/rut/q95/C01",
+      "difference": -9.16563331898601e-08,
+      "tolerance": 4.76837158203125e-07
+    },
+    {
+      "field": "g4_p30/200/rut/q95/C02",
+      "difference": -1.64631570598317e-08,
+      "tolerance": 4.76837158203125e-07
+    },
+    {
+      "field": "g4_p30/200/rut/q95/C03",
+      "difference": 5.8262195068436995e-08,
+      "tolerance": 4.76837158203125e-07
+    },
+    {
+      "field": "g4_p30/200/rut/q95/C04",
+      "difference": 9.249989929571711e-08,
+      "tolerance": 3.814697265625e-06
+    },
+    {
+      "field": "g4_p30/200/rut/q95/C05",
+      "difference": -8.088878864498383e-07,
+      "tolerance": 3.814697265625e-06
+    },
+    {
+      "field": "g4_p30/200/rut/q95/C06",
+      "difference": 2.9235558685059004e-07,
+      "tolerance": 3.814697265625e-06
+    },
+    {
+      "field": "g4_p30/200/rut/q95/C07",
+      "difference": -2.4133576914664445e-07,
+      "tolerance": 3.814697265625e-06
+    },
+    {
+      "field": "g4_p30/200/rut/q95/C08",
+      "difference": -1.255745738504288e-07,
+      "tolerance": 9.5367431640625e-07
+    },
+    {
+      "field": "g4_p30/200/rut/q95/C09",
+      "difference": -4.0512872345743745e-07,
+      "tolerance": 3.814697265625e-06
+    },
+    {
+      "field": "g4_p30/200/rut/q95/C10",
+      "difference": 1.5687126087016168e-07,
+      "tolerance": 9.5367431640625e-07
+    },
+    {
+      "field": "g4_p30/200/rut/q95/C11",
+      "difference": 1.976613539511618e-07,
+      "tolerance": 3.814697265625e-06
+    },
+    {
+      "field": "g4_p30/200/rut/q95/C12",
+      "difference": -1.0037772746329665e-07,
+      "tolerance": 9.5367431640625e-07
+    },
+    {
+      "field": "g4_p30/200/rut/q95/C13",
+      "difference": -3.6202422037945325e-07,
+      "tolerance": 1.9073486328125e-06
+    },
+    {
+      "field": "g4_p30/200/rut/q95/C14",
+      "difference": -2.2633898666413188e-07,
+      "tolerance": 1.9073486328125e-06
+    },
+    {
+      "field": "g4_p30/200/rut/q95/C15",
+      "difference": 2.3333421594884385e-07,
+      "tolerance": 3.814697265625e-06
+    },
+    {
+      "field": "g4_p30/200/rut/q95/C16",
+      "difference": 8.613210873420485e-07,
+      "tolerance": 3.814697265625e-06
+    },
+    {
+      "field": "g4_p30/200/rut/threshold",
+      "difference": 2.3333421594884385e-07,
+      "tolerance": 3.814697265625e-06
+    },
+    {
+      "field": "g4_p30/200/met/q95/C02",
+      "difference": -2.8808921914702523e-10,
+      "tolerance": 7.450580596923828e-09
+    },
+    {
+      "field": "g4_p30/200/met/q95/C03",
+      "difference": -1.98685512486918e-11,
+      "tolerance": 7.450580596923828e-09
+    },
+    {
+      "field": "g4_p30/200/met/q95/C04",
+      "difference": 1.0927518889758403e-09,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "g4_p30/200/met/q95/C05",
+      "difference": 2.8610229740877458e-09,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "g4_p30/200/met/q95/C06",
+      "difference": 9.934105760223133e-10,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "g4_p30/200/met/q95/C07",
+      "difference": 1.907348501362094e-09,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "g4_p30/200/met/q95/C08",
+      "difference": -3.576274831829096e-10,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "g4_p30/200/met/q95/C09",
+      "difference": -1.867612064998525e-09,
+      "tolerance": 2.9802322387695312e-08
+    },
+    {
+      "field": "g4_p30/200/met/q95/C10",
+      "difference": -3.3179919922687873e-09,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "g4_p30/200/met/q95/C11",
+      "difference": -2.841154644883659e-09,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "g4_p30/200/met/q95/C12",
+      "difference": -6.357828707947988e-10,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "g4_p30/200/met/q95/C13",
+      "difference": 3.9736447465799074e-10,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "g4_p30/200/met/q95/C14",
+      "difference": 2.980231950111545e-09,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "g4_p30/200/met/q95/C15",
+      "difference": -1.1920930909070648e-10,
+      "tolerance": 2.9802322387695312e-08
+    },
+    {
+      "field": "g4_p30/200/met/q95/C16",
+      "difference": -3.973643636356883e-10,
+      "tolerance": 2.9802322387695312e-08
+    },
+    {
+      "field": "g4_p30/200/met/threshold",
+      "difference": -1.1920930909070648e-10,
+      "tolerance": 2.9802322387695312e-08
+    },
+    {
+      "field": "g4_p30/bootstrap/temperature_mle/0",
+      "difference": -1.4901161138336505e-09,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "g4_p30/bootstrap/fixed_temperature/1",
+      "difference": 1.4901159819946663e-09,
+      "tolerance": 7.450580596923828e-09
+    },
+    {
+      "field": "g4_p30/bootstrap/nucleus_095/0",
+      "difference": -2.5331974073949937e-08,
+      "tolerance": 1.1920928955078125e-07
+    },
+    {
+      "field": "q38_p30/200/rut/q95/C01",
+      "difference": 3.338641363370698e-08,
+      "tolerance": 4.76837158203125e-07
+    },
+    {
+      "field": "q38_p30/200/rut/q95/C02",
+      "difference": -7.848747785033083e-08,
+      "tolerance": 4.76837158203125e-07
+    },
+    {
+      "field": "q38_p30/200/rut/q95/C03",
+      "difference": 7.810889979253943e-08,
+      "tolerance": 4.76837158203125e-07
+    },
+    {
+      "field": "q38_p30/200/rut/q95/C04",
+      "difference": -8.842242209539108e-07,
+      "tolerance": 3.814697265625e-06
+    },
+    {
+      "field": "q38_p30/200/rut/q95/C05",
+      "difference": -4.0309586779585516e-07,
+      "tolerance": 3.814697265625e-06
+    },
+    {
+      "field": "q38_p30/200/rut/q95/C06",
+      "difference": -7.468815290678776e-07,
+      "tolerance": 3.814697265625e-06
+    },
+    {
+      "field": "q38_p30/200/rut/q95/C07",
+      "difference": -5.152182591672272e-08,
+      "tolerance": 9.5367431640625e-07
+    },
+    {
+      "field": "q38_p30/200/rut/q95/C08",
+      "difference": -1.067688044642523e-07,
+      "tolerance": 9.5367431640625e-07
+    },
+    {
+      "field": "q38_p30/200/rut/q95/C09",
+      "difference": -2.1980870990034873e-07,
+      "tolerance": 9.5367431640625e-07
+    },
+    {
+      "field": "q38_p30/200/rut/q95/C10",
+      "difference": -2.9509736343413806e-07,
+      "tolerance": 1.9073486328125e-06
+    },
+    {
+      "field": "q38_p30/200/rut/q95/C11",
+      "difference": -9.330190167133878e-07,
+      "tolerance": 3.814697265625e-06
+    },
+    {
+      "field": "q38_p30/200/rut/q95/C12",
+      "difference": -8.38549567561131e-08,
+      "tolerance": 3.814697265625e-06
+    },
+    {
+      "field": "q38_p30/200/rut/q95/C13",
+      "difference": -7.916740223379293e-07,
+      "tolerance": 3.814697265625e-06
+    },
+    {
+      "field": "q38_p30/200/rut/q95/C14",
+      "difference": 1.1122230159088531e-07,
+      "tolerance": 9.5367431640625e-07
+    },
+    {
+      "field": "q38_p30/200/rut/q95/C15",
+      "difference": 4.1739646405858366e-07,
+      "tolerance": 1.9073486328125e-06
+    },
+    {
+      "field": "q38_p30/200/rut/q95/C16",
+      "difference": 8.614678037588419e-08,
+      "tolerance": 1.9073486328125e-06
+    },
+    {
+      "field": "q38_p30/200/rut/q95/C17",
+      "difference": 2.6338541658788017e-07,
+      "tolerance": 3.814697265625e-06
+    },
+    {
+      "field": "q38_p30/200/rut/q95/C18",
+      "difference": -5.590106653130533e-07,
+      "tolerance": 3.814697265625e-06
+    },
+    {
+      "field": "q38_p30/200/rut/threshold",
+      "difference": 2.6338541658788017e-07,
+      "tolerance": 3.814697265625e-06
+    },
+    {
+      "field": "q38_p30/200/met/q95/C01",
+      "difference": -1.5000500841466646e-09,
+      "tolerance": 7.450580596923828e-09
+    },
+    {
+      "field": "q38_p30/200/met/q95/C02",
+      "difference": 6.357826487501939e-10,
+      "tolerance": 7.450580596923828e-09
+    },
+    {
+      "field": "q38_p30/200/met/q95/C03",
+      "difference": 4.1723247079517023e-10,
+      "tolerance": 7.450580596923828e-09
+    },
+    {
+      "field": "q38_p30/200/met/q95/C04",
+      "difference": 3.576277052275145e-10,
+      "tolerance": 7.450580596923828e-09
+    },
+    {
+      "field": "q38_p30/200/met/q95/C05",
+      "difference": 9.139379253397806e-10,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "q38_p30/200/met/q95/C06",
+      "difference": 2.7020772286334704e-09,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "q38_p30/200/met/q95/C07",
+      "difference": -1.2020270334645033e-09,
+      "tolerance": 7.450580596923828e-09
+    },
+    {
+      "field": "q38_p30/200/met/q95/C08",
+      "difference": -2.2848447578383002e-09,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "q38_p30/200/met/q95/C09",
+      "difference": 1.6192593932373711e-09,
+      "tolerance": 7.450580596923828e-09
+    },
+    {
+      "field": "q38_p30/200/met/q95/C10",
+      "difference": -8.344651636349454e-10,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "q38_p30/200/met/q95/C11",
+      "difference": 1.7086664305665522e-09,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "q38_p30/200/met/q95/C12",
+      "difference": -1.410643379884391e-09,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "q38_p30/200/met/q95/C13",
+      "difference": -1.1126198851130198e-09,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "q38_p30/200/met/q95/C14",
+      "difference": 3.47693762670076e-09,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "q38_p30/200/met/q95/C15",
+      "difference": 2.185503666929378e-09,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "q38_p30/200/met/q95/C16",
+      "difference": -1.7881363056915234e-10,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "q38_p30/200/met/q95/C17",
+      "difference": 3.2981234965312467e-09,
+      "tolerance": 2.9802322387695312e-08
+    },
+    {
+      "field": "q38_p30/200/met/q95/C18",
+      "difference": -3.635883538688489e-09,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "q38_p30/200/met/threshold",
+      "difference": 3.2981234965312467e-09,
+      "tolerance": 2.9802322387695312e-08
+    },
+    {
+      "field": "q38_p30/200/met/Q18/far",
+      "difference": -0.0002500000000000002,
+      "tolerance": 0.000250000001
+    },
+    {
+      "field": "q38_p30/bootstrap/temperature_mle/0",
+      "difference": -2.980232241545089e-09,
+      "tolerance": 1.4901161193847656e-08
+    },
+    {
+      "field": "q38_p30/bootstrap/fixed_temperature/0",
+      "difference": -6.705522526129215e-09,
+      "tolerance": 2.9802322387695312e-08
+    },
+    {
+      "field": "q38_p30/bootstrap/fixed_temperature/1",
+      "difference": -4.4703484802788296e-09,
+      "tolerance": 5.960464477539063e-08
+    },
+    {
+      "field": "q38_user/bootstrap/fixed_temperature/0",
+      "difference": 3.725290298461914e-09,
+      "tolerance": 5.960464477539063e-08
+    },
+    {
+      "field": "q38_user/bootstrap/fixed_temperature/1",
+      "difference": 2.5331973851905332e-08,
+      "tolerance": 1.1920928955078125e-07
+    },
+    {
+      "field": "q38_user/bootstrap/top20/1",
+      "difference": 2.5331973851905332e-08,
+      "tolerance": 1.1920928955078125e-07
+    },
+    {
+      "field": "q38_user/bootstrap/nucleus_095/0",
+      "difference": 3.725290298461914e-09,
+      "tolerance": 5.960464477539063e-08
+    },
+    {
+      "field": "q38_user/bootstrap/nucleus_095/1",
+      "difference": 2.5331973851905332e-08,
+      "tolerance": 1.1920928955078125e-07
+    }
+  ],
+  "panels": {
+    "g4_p30": {
+      "methods": {
+        "100/api_tail": {
+          "threshold": 5.0,
+          "configuration_quantiles": {
+            "C01": 3.0,
+            "C02": 4.0,
+            "C03": 3.0,
+            "C04": 3.0,
+            "C05": 3.0,
+            "C06": 3.0,
+            "C07": 2.0,
+            "C08": 1.0,
+            "C09": 5.0,
+            "C10": 3.0,
+            "C11": 3.0,
+            "C12": 3.0,
+            "C13": 4.0,
+            "C14": 3.0,
+            "C15": 3.0,
+            "C16": 3.0
+          },
+          "calibration_trial_arrays_replayed": 16,
+          "calibration_configurations": 16,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.00125,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.0075,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.00225,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.00525,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.0045,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.004,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.00125,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.00575,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.125,
+            "S06_0.10": 0.555,
+            "S06_0.25": 0.993,
+            "S05_0.05": 0.329,
+            "S05_0.10": 0.912,
+            "S05_0.25": 1.0,
+            "S07_0.05": 0.282,
+            "S07_0.10": 0.874,
+            "S07_0.25": 0.999
+          }
+        },
+        "200/api_tail": {
+          "threshold": 8.0,
+          "configuration_quantiles": {
+            "C01": 5.0,
+            "C02": 7.0,
+            "C03": 6.0,
+            "C04": 5.0,
+            "C05": 5.0,
+            "C06": 5.0,
+            "C07": 3.0,
+            "C08": 2.0,
+            "C09": 8.0,
+            "C10": 5.0,
+            "C11": 4.0,
+            "C12": 5.0,
+            "C13": 7.0,
+            "C14": 5.0,
+            "C15": 5.0,
+            "C16": 5.0
+          },
+          "calibration_trial_arrays_replayed": 16,
+          "calibration_configurations": 16,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.003,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.01175,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.0035,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.0095,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.0085,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.0045,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.003,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.0015,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.0125,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.293,
+            "S06_0.10": 0.893,
+            "S06_0.25": 1.0,
+            "S05_0.05": 0.564,
+            "S05_0.10": 1.0,
+            "S05_0.25": 1.0,
+            "S07_0.05": 0.542,
+            "S07_0.10": 0.989,
+            "S07_0.25": 1.0
+          }
+        },
+        "200/temperature_mle": {
+          "threshold": 9.0,
+          "configuration_quantiles": {
+            "C01": 5.0,
+            "C02": 7.0,
+            "C03": 5.0,
+            "C04": 6.0,
+            "C05": 5.0,
+            "C06": 5.0,
+            "C07": 3.0,
+            "C08": 2.0,
+            "C09": 9.0,
+            "C10": 5.0,
+            "C11": 4.0,
+            "C12": 6.0,
+            "C13": 7.0,
+            "C14": 6.0,
+            "C15": 6.0,
+            "C16": 6.0
+          },
+          "calibration_trial_arrays_replayed": 16,
+          "calibration_configurations": 16,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.00125,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.007,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.003,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.00525,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.00575,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.0035,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.00075,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.00125,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.006,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.151,
+            "S06_0.10": 0.8,
+            "S06_0.25": 1.0,
+            "S05_0.05": 0.445,
+            "S05_0.10": 0.997,
+            "S05_0.25": 1.0,
+            "S07_0.05": 0.4,
+            "S07_0.10": 0.984,
+            "S07_0.25": 1.0
+          }
+        },
+        "200/fixed_temperature": {
+          "threshold": 5.0,
+          "configuration_quantiles": {
+            "C01": 1.0,
+            "C02": 0.0,
+            "C03": 0.0,
+            "C04": 1.0,
+            "C05": 5.0,
+            "C06": 5.0,
+            "C07": 1.0,
+            "C08": 0.0,
+            "C09": 0.0,
+            "C10": 0.0,
+            "C11": 5.0,
+            "C12": 1.0,
+            "C13": 1.0,
+            "C14": 1.0,
+            "C15": 3.0,
+            "C16": 2.0
+          },
+          "calibration_trial_arrays_replayed": 16,
+          "calibration_configurations": 16,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.0,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.1795,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.0185,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.10075,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.10525,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.05225,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.136,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.398,
+            "S06_0.10": 0.935,
+            "S06_0.25": 1.0,
+            "S05_0.05": 0.905,
+            "S05_0.10": 1.0,
+            "S05_0.25": 1.0,
+            "S07_0.05": 0.879,
+            "S07_0.10": 1.0,
+            "S07_0.25": 1.0
+          }
+        },
+        "200/nucleus_095": {
+          "threshold": 6.0,
+          "configuration_quantiles": {
+            "C01": 4.0,
+            "C02": 5.0,
+            "C03": 3.0,
+            "C04": 3.0,
+            "C05": 3.0,
+            "C06": 4.0,
+            "C07": 4.0,
+            "C08": 2.0,
+            "C09": 4.0,
+            "C10": 4.0,
+            "C11": 3.0,
+            "C12": 4.0,
+            "C13": 4.0,
+            "C14": 6.0,
+            "C15": 6.0,
+            "C16": 5.0
+          },
+          "calibration_trial_arrays_replayed": 16,
+          "calibration_configurations": 16,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.002,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.00025,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.00075,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.0005,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.001,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.00025,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.00075,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.00125,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.002,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.011,
+            "S06_0.10": 0.063,
+            "S06_0.25": 0.425,
+            "S05_0.05": 0.018,
+            "S05_0.10": 0.119,
+            "S05_0.25": 0.741,
+            "S07_0.05": 0.012,
+            "S07_0.10": 0.096,
+            "S07_0.25": 0.753
+          }
+        },
+        "200/top20": {
+          "threshold": 8.0,
+          "configuration_quantiles": {
+            "C01": 5.0,
+            "C02": 7.0,
+            "C03": 6.0,
+            "C04": 5.0,
+            "C05": 5.0,
+            "C06": 5.0,
+            "C07": 3.0,
+            "C08": 2.0,
+            "C09": 8.0,
+            "C10": 5.0,
+            "C11": 4.0,
+            "C12": 5.0,
+            "C13": 7.0,
+            "C14": 5.0,
+            "C15": 5.0,
+            "C16": 5.0
+          },
+          "calibration_trial_arrays_replayed": 16,
+          "calibration_configurations": 16,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.00325,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.0125,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.00425,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.011,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.00975,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.00475,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.00325,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.0015,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.0175,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.294,
+            "S06_0.10": 0.893,
+            "S06_0.25": 1.0,
+            "S05_0.05": 0.564,
+            "S05_0.10": 1.0,
+            "S05_0.25": 1.0,
+            "S07_0.05": 0.537,
+            "S07_0.10": 0.988,
+            "S07_0.25": 1.0
+          }
+        },
+        "200/nll_count": {
+          "threshold": 14.0,
+          "configuration_quantiles": {
+            "C01": 1.0,
+            "C02": 0.0,
+            "C03": 0.0,
+            "C04": 2.0,
+            "C05": 12.0,
+            "C06": 12.0,
+            "C07": 6.0,
+            "C08": 0.0,
+            "C09": 1.0,
+            "C10": 1.0,
+            "C11": 14.0,
+            "C12": 1.0,
+            "C13": 0.0,
+            "C14": 1.0,
+            "C15": 3.0,
+            "C16": 1.0
+          },
+          "calibration_trial_arrays_replayed": 0,
+          "calibration_configurations": 16,
+          "calibration_input": "saved_configuration_quantiles",
+          "plain_max_far": 0.0,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.00025,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.0,
+            "S06_0.10": 0.077,
+            "S06_0.25": 0.984,
+            "S05_0.05": 0.051,
+            "S05_0.10": 0.842,
+            "S05_0.25": 1.0,
+            "S07_0.05": 0.013,
+            "S07_0.10": 0.582,
+            "S07_0.25": 1.0
+          }
+        },
+        "200/logrank_count": {
+          "threshold": 13.0,
+          "configuration_quantiles": {
+            "C01": 1.0,
+            "C02": 0.0,
+            "C03": 1.0,
+            "C04": 2.0,
+            "C05": 9.0,
+            "C06": 12.0,
+            "C07": 8.0,
+            "C08": 0.0,
+            "C09": 1.0,
+            "C10": 1.0,
+            "C11": 13.0,
+            "C12": 1.0,
+            "C13": 0.0,
+            "C14": 2.0,
+            "C15": 3.0,
+            "C16": 1.0
+          },
+          "calibration_trial_arrays_replayed": 0,
+          "calibration_configurations": 16,
+          "calibration_input": "saved_configuration_quantiles",
+          "plain_max_far": 0.0,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.00025,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.0,
+            "S06_0.10": 0.025,
+            "S06_0.25": 0.915,
+            "S05_0.05": 0.033,
+            "S05_0.10": 0.784,
+            "S05_0.25": 1.0,
+            "S07_0.05": 0.006,
+            "S07_0.10": 0.417,
+            "S07_0.25": 0.999
+          }
+        },
+        "200/entropy_count": {
+          "threshold": 6.0,
+          "configuration_quantiles": {
+            "C01": 4.0,
+            "C02": 4.0,
+            "C03": 4.0,
+            "C04": 2.0,
+            "C05": 3.0,
+            "C06": 5.0,
+            "C07": 6.0,
+            "C08": 5.0,
+            "C09": 4.0,
+            "C10": 4.0,
+            "C11": 3.0,
+            "C12": 4.0,
+            "C13": 4.0,
+            "C14": 4.0,
+            "C15": 5.0,
+            "C16": 4.0
+          },
+          "calibration_trial_arrays_replayed": 0,
+          "calibration_configurations": 16,
+          "calibration_input": "saved_configuration_quantiles",
+          "plain_max_far": 0.029,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.036,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.00875,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.004,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.01075,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.0075,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0045,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.029,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.0075,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.0105,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.01175,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.01025,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0245,
+              "plain": true,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.01225,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.004,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.00075,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.019,
+            "S06_0.10": 0.019,
+            "S06_0.25": 0.02,
+            "S05_0.05": 0.017,
+            "S05_0.10": 0.028,
+            "S05_0.25": 0.069,
+            "S07_0.05": 0.014,
+            "S07_0.10": 0.018,
+            "S07_0.25": 0.028
+          }
+        },
+        "200/rut": {
+          "threshold": 25.275379180908203,
+          "configuration_quantiles": {
+            "C01": 3.03367280960083,
+            "C02": 2.984600305557251,
+            "C03": 2.8215081691741943,
+            "C04": 21.177112579345703,
+            "C05": 23.641965866088867,
+            "C06": 23.1933536529541,
+            "C07": 25.001083374023438,
+            "C08": 5.423925876617432,
+            "C09": 16.512237548828125,
+            "C10": 4.577083587646484,
+            "C11": 23.267276763916016,
+            "C12": 7.012933731079102,
+            "C13": 10.38588809967041,
+            "C14": 8.238762855529785,
+            "C15": 25.275379180908203,
+            "C16": 22.289894104003906
+          },
+          "calibration_trial_arrays_replayed": 16,
+          "calibration_configurations": 16,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.0,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.02475,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.052,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.03075,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.05,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.04475,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.02425,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.0,
+            "S06_0.10": 0.0,
+            "S06_0.25": 0.001,
+            "S05_0.05": 0.0,
+            "S05_0.10": 0.0,
+            "S05_0.25": 0.021,
+            "S07_0.05": 0.0,
+            "S07_0.10": 0.0,
+            "S07_0.25": 0.012
+          }
+        },
+        "200/met": {
+          "threshold": 0.2094999998807907,
+          "configuration_quantiles": {
+            "C01": 0.0625,
+            "C02": 0.03233333304524422,
+            "C03": 0.04533333331346512,
+            "C04": 0.06916666775941849,
+            "C05": 0.09700000286102295,
+            "C06": 0.10833333432674408,
+            "C07": 0.08550000190734863,
+            "C08": 0.06599999964237213,
+            "C09": 0.13633333146572113,
+            "C10": 0.07066666334867477,
+            "C11": 0.10766666382551193,
+            "C12": 0.07566666603088379,
+            "C13": 0.09333333373069763,
+            "C14": 0.07500000298023224,
+            "C15": 0.2094999998807907,
+            "C16": 0.15666666626930237
+          },
+          "calibration_trial_arrays_replayed": 16,
+          "calibration_configurations": 16,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.0,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.00225,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.00475,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.00025,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.004,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.002,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 1.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.0,
+            "S06_0.10": 0.0,
+            "S06_0.25": 0.0,
+            "S07_0.05": 0.0,
+            "S07_0.10": 0.0,
+            "S07_0.25": 0.0
+          }
+        },
+        "400/api_tail": {
+          "threshold": 14.0,
+          "configuration_quantiles": {
+            "C01": 9.0,
+            "C02": 12.0,
+            "C03": 9.0,
+            "C04": 9.0,
+            "C05": 8.0,
+            "C06": 8.0,
+            "C07": 4.0,
+            "C08": 3.0,
+            "C09": 14.0,
+            "C10": 8.0,
+            "C11": 7.0,
+            "C12": 8.0,
+            "C13": 11.0,
+            "C14": 8.0,
+            "C15": 8.0,
+            "C16": 9.0
+          },
+          "calibration_trial_arrays_replayed": 16,
+          "calibration_configurations": 16,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.00125,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.0075,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.0005,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.0095,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.006,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.002,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.00125,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.01125,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.505,
+            "S06_0.10": 0.996,
+            "S06_0.25": 1.0,
+            "S05_0.05": 0.862,
+            "S05_0.10": 1.0,
+            "S05_0.25": 1.0,
+            "S07_0.05": 0.781,
+            "S07_0.10": 1.0,
+            "S07_0.25": 1.0
+          }
+        }
+      },
+      "bootstrap_comparisons": {
+        "temperature_mle": {
+          "delta_power": 0.09299999999999997,
+          "paired_ci95": [
+            0.06297496557235718,
+            0.12999999523162842
+          ],
+          "paired_replicates": 2000
+        },
+        "fixed_temperature": {
+          "delta_power": -0.04200000000000004,
+          "paired_ci95": [
+            -0.07199996709823608,
+            0.04702504873275743
+          ],
+          "paired_replicates": 2000
+        },
+        "top20": {
+          "delta_power": 0.0,
+          "paired_ci95": [
+            -0.001000046730041504,
+            0.0040000081062316895
+          ],
+          "paired_replicates": 2000
+        },
+        "nucleus_095": {
+          "delta_power": 0.8300000000000001,
+          "paired_ci95": [
+            0.784974966943264,
+            0.8809999823570251
+          ],
+          "paired_replicates": 2000
+        }
+      },
+      "pool_ablation_without_penalties": {
+        "N": 200,
+        "method": "api_tail",
+        "removed_configurations": [
+          {
+            "id": "C12",
+            "source_configuration_label": "g4p_pp15"
+          },
+          {
+            "id": "C13",
+            "source_configuration_label": "g4p_pp20"
+          },
+          {
+            "id": "C14",
+            "source_configuration_label": "g4p_rp105"
+          },
+          {
+            "id": "C15",
+            "source_configuration_label": "g4p_rp110"
+          },
+          {
+            "id": "C16",
+            "source_configuration_label": "g4p_pp15rp105"
+          }
+        ],
+        "remaining_configurations": 11,
+        "configuration_quantiles": {
+          "C01": 5.0,
+          "C02": 7.0,
+          "C03": 6.0,
+          "C04": 5.0,
+          "C05": 5.0,
+          "C06": 5.0,
+          "C07": 3.0,
+          "C08": 2.0,
+          "C09": 8.0,
+          "C10": 5.0,
+          "C11": 4.0
+        },
+        "decisive_configurations": [
+          "C09"
+        ],
+        "threshold": 8.0,
+        "endpoint_rates": {
+          "G11": {
+            "far": 0.01175,
+            "plain": false,
+            "trials": 4000
+          },
+          "G16": {
+            "far": 0.0035,
+            "plain": false,
+            "trials": 4000
+          },
+          "G10": {
+            "far": 0.0095,
+            "plain": false,
+            "trials": 4000
+          },
+          "G12": {
+            "far": 0.0085,
+            "plain": false,
+            "trials": 4000
+          },
+          "G13": {
+            "far": 0.0045,
+            "plain": false,
+            "trials": 4000
+          },
+          "G01": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "G05": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "G06": {
+            "far": 0.0005,
+            "plain": true,
+            "trials": 4000
+          },
+          "G07": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "G03": {
+            "far": 0.003,
+            "plain": true,
+            "trials": 4000
+          },
+          "G02": {
+            "far": 0.0015,
+            "plain": true,
+            "trials": 4000
+          },
+          "G04": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "G08": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "G15": {
+            "far": 0.0125,
+            "plain": false,
+            "trials": 4000
+          },
+          "G09": {
+            "far": 0.00025,
+            "plain": true,
+            "trials": 4000
+          }
+        },
+        "plain_max_far": 0.003,
+        "maximizing_plain_endpoints": [
+          "G03"
+        ],
+        "plain_max_far_3dp": 0.003,
+        "published_plain_max_far_3dp": 0.003,
+        "verification": "Table 3 rounded FAR; computed from retained calibration and endpoint trial statistics"
+      }
+    },
+    "g4_user": {
+      "methods": {
+        "100/api_tail": {
+          "threshold": 3.0,
+          "configuration_quantiles": {
+            "C01": 2.0,
+            "C02": 1.0,
+            "C03": 3.0,
+            "C04": 2.0,
+            "C05": 1.0,
+            "C06": 2.0,
+            "C07": 2.0,
+            "C08": 2.0,
+            "C09": 2.0,
+            "C10": 3.0,
+            "C11": 1.0,
+            "C12": 2.0,
+            "C13": 3.0,
+            "C14": 2.0,
+            "C15": 2.0,
+            "C16": 2.0,
+            "C17": 2.0,
+            "C18": 1.0
+          },
+          "calibration_trial_arrays_replayed": 18,
+          "calibration_configurations": 18,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.05575,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.18875,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.27175,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.19925,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.0905,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.086,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.00125,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.0065,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.00325,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.0025,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G14": {
+              "far": 0.005,
+              "plain": false,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.01375,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.0225,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.05575,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.757,
+            "S06_0.10": 0.985,
+            "S06_0.25": 1.0,
+            "S05_0.05": 0.775,
+            "S05_0.10": 0.99,
+            "S05_0.25": 1.0,
+            "S07_0.05": 0.77,
+            "S07_0.10": 0.994,
+            "S07_0.25": 1.0
+          }
+        },
+        "200/api_tail": {
+          "threshold": 5.0,
+          "configuration_quantiles": {
+            "C01": 2.0,
+            "C02": 2.0,
+            "C03": 5.0,
+            "C04": 4.0,
+            "C05": 2.0,
+            "C06": 3.0,
+            "C07": 3.0,
+            "C08": 4.0,
+            "C09": 4.0,
+            "C10": 5.0,
+            "C11": 2.0,
+            "C12": 2.0,
+            "C13": 4.0,
+            "C14": 2.0,
+            "C15": 3.0,
+            "C16": 2.0,
+            "C17": 3.0,
+            "C18": 2.0
+          },
+          "calibration_trial_arrays_replayed": 18,
+          "calibration_configurations": 18,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.069,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.3435,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.5255,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.36025,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.13475,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.13425,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.0025,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.00125,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.00075,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G14": {
+              "far": 0.003,
+              "plain": false,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.007,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.02325,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.069,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.955,
+            "S06_0.10": 1.0,
+            "S06_0.25": 1.0,
+            "S05_0.05": 0.965,
+            "S05_0.10": 1.0,
+            "S05_0.25": 1.0,
+            "S07_0.05": 0.956,
+            "S07_0.10": 1.0,
+            "S07_0.25": 1.0
+          }
+        },
+        "200/temperature_mle": {
+          "threshold": 5.0,
+          "configuration_quantiles": {
+            "C01": 2.0,
+            "C02": 2.0,
+            "C03": 5.0,
+            "C04": 4.0,
+            "C05": 2.0,
+            "C06": 3.0,
+            "C07": 3.0,
+            "C08": 4.0,
+            "C09": 4.0,
+            "C10": 5.0,
+            "C11": 2.0,
+            "C12": 2.0,
+            "C13": 4.0,
+            "C14": 2.0,
+            "C15": 3.0,
+            "C16": 2.0,
+            "C17": 3.0,
+            "C18": 2.0
+          },
+          "calibration_trial_arrays_replayed": 18,
+          "calibration_configurations": 18,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.08375,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.365,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.5035,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.34575,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.1105,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.1305,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.0025,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.001,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.00075,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G14": {
+              "far": 0.00275,
+              "plain": false,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.00625,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.02225,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.08375,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.955,
+            "S06_0.10": 1.0,
+            "S06_0.25": 1.0,
+            "S05_0.05": 0.966,
+            "S05_0.10": 1.0,
+            "S05_0.25": 1.0,
+            "S07_0.05": 0.954,
+            "S07_0.10": 1.0,
+            "S07_0.25": 1.0
+          }
+        },
+        "200/fixed_temperature": {
+          "threshold": 56.0,
+          "configuration_quantiles": {
+            "C01": 1.0,
+            "C02": 1.0,
+            "C03": 1.0,
+            "C04": 4.0,
+            "C05": 1.0,
+            "C06": 1.0,
+            "C07": 4.0,
+            "C08": 4.0,
+            "C09": 4.0,
+            "C10": 1.0,
+            "C11": 1.0,
+            "C12": 1.0,
+            "C13": 5.0,
+            "C14": 2.0,
+            "C15": 7.0,
+            "C16": 2.0,
+            "C17": 34.0,
+            "C18": 56.0
+          },
+          "calibration_trial_arrays_replayed": 18,
+          "calibration_configurations": 18,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.0,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G14": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.0,
+            "S06_0.10": 0.0,
+            "S06_0.25": 0.024,
+            "S05_0.05": 0.0,
+            "S05_0.10": 0.0,
+            "S05_0.25": 0.161,
+            "S07_0.05": 0.0,
+            "S07_0.10": 0.0,
+            "S07_0.25": 0.169
+          }
+        },
+        "200/nucleus_095": {
+          "threshold": 3.0,
+          "configuration_quantiles": {
+            "C01": 2.0,
+            "C02": 1.0,
+            "C03": 1.0,
+            "C04": 2.0,
+            "C05": 2.0,
+            "C06": 3.0,
+            "C07": 2.0,
+            "C08": 2.0,
+            "C09": 3.0,
+            "C10": 3.0,
+            "C11": 2.0,
+            "C12": 1.0,
+            "C13": 2.0,
+            "C14": 2.0,
+            "C15": 2.0,
+            "C16": 3.0,
+            "C17": 2.0,
+            "C18": 3.0
+          },
+          "calibration_trial_arrays_replayed": 18,
+          "calibration_configurations": 18,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.022,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.01075,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.00375,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.0015,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.00225,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.0045,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.00175,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.00075,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.00125,
+              "plain": true,
+              "trials": 4000
+            },
+            "G14": {
+              "far": 0.00025,
+              "plain": false,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.022,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.00125,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.867,
+            "S06_0.10": 0.998,
+            "S06_0.25": 1.0,
+            "S05_0.05": 0.973,
+            "S05_0.10": 1.0,
+            "S05_0.25": 1.0,
+            "S07_0.05": 0.967,
+            "S07_0.10": 1.0,
+            "S07_0.25": 1.0
+          }
+        },
+        "200/top20": {
+          "threshold": 5.0,
+          "configuration_quantiles": {
+            "C01": 2.0,
+            "C02": 2.0,
+            "C03": 5.0,
+            "C04": 4.0,
+            "C05": 2.0,
+            "C06": 4.0,
+            "C07": 3.0,
+            "C08": 4.0,
+            "C09": 3.0,
+            "C10": 5.0,
+            "C11": 2.0,
+            "C12": 2.0,
+            "C13": 4.0,
+            "C14": 2.0,
+            "C15": 2.0,
+            "C16": 2.0,
+            "C17": 3.0,
+            "C18": 2.0
+          },
+          "calibration_trial_arrays_replayed": 18,
+          "calibration_configurations": 18,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.0725,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.4175,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.5385,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.44825,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.16975,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.2215,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.002,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.00125,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.00075,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G14": {
+              "far": 0.00175,
+              "plain": false,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.0115,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.04175,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.0725,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.956,
+            "S06_0.10": 1.0,
+            "S06_0.25": 1.0,
+            "S05_0.05": 0.965,
+            "S05_0.10": 1.0,
+            "S05_0.25": 1.0,
+            "S07_0.05": 0.957,
+            "S07_0.10": 1.0,
+            "S07_0.25": 1.0
+          }
+        },
+        "200/nll_count": {
+          "threshold": 14.0,
+          "configuration_quantiles": {
+            "C01": 2.0,
+            "C02": 2.0,
+            "C03": 0.0,
+            "C04": 5.0,
+            "C05": 1.0,
+            "C06": 0.0,
+            "C07": 5.0,
+            "C08": 4.0,
+            "C09": 5.0,
+            "C10": 1.0,
+            "C11": 2.0,
+            "C12": 2.0,
+            "C13": 5.0,
+            "C14": 3.0,
+            "C15": 4.0,
+            "C16": 3.0,
+            "C17": 7.0,
+            "C18": 14.0
+          },
+          "calibration_trial_arrays_replayed": 0,
+          "calibration_configurations": 18,
+          "calibration_input": "saved_configuration_quantiles",
+          "plain_max_far": 0.0,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.00025,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.00125,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G14": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.0005,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.0,
+            "S06_0.10": 0.126,
+            "S06_0.25": 0.998,
+            "S05_0.05": 0.085,
+            "S05_0.10": 0.877,
+            "S05_0.25": 1.0,
+            "S07_0.05": 0.017,
+            "S07_0.10": 0.651,
+            "S07_0.25": 1.0
+          }
+        },
+        "200/logrank_count": {
+          "threshold": 13.0,
+          "configuration_quantiles": {
+            "C01": 2.0,
+            "C02": 2.0,
+            "C03": 0.0,
+            "C04": 4.0,
+            "C05": 1.0,
+            "C06": 0.0,
+            "C07": 5.0,
+            "C08": 5.0,
+            "C09": 4.0,
+            "C10": 1.0,
+            "C11": 2.0,
+            "C12": 2.0,
+            "C13": 5.0,
+            "C14": 3.0,
+            "C15": 6.0,
+            "C16": 4.0,
+            "C17": 6.0,
+            "C18": 13.0
+          },
+          "calibration_trial_arrays_replayed": 0,
+          "calibration_configurations": 18,
+          "calibration_input": "saved_configuration_quantiles",
+          "plain_max_far": 0.0,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.01225,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.002,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.001,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.0045,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.0025,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G14": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.001,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.001,
+            "S06_0.10": 0.102,
+            "S06_0.25": 0.988,
+            "S05_0.05": 0.08,
+            "S05_0.10": 0.829,
+            "S05_0.25": 1.0,
+            "S07_0.05": 0.016,
+            "S07_0.10": 0.473,
+            "S07_0.25": 1.0
+          }
+        },
+        "200/entropy_count": {
+          "threshold": 6.0,
+          "configuration_quantiles": {
+            "C01": 4.0,
+            "C02": 4.0,
+            "C03": 3.0,
+            "C04": 3.0,
+            "C05": 4.0,
+            "C06": 4.0,
+            "C07": 3.0,
+            "C08": 4.0,
+            "C09": 4.0,
+            "C10": 4.0,
+            "C11": 4.0,
+            "C12": 6.0,
+            "C13": 4.0,
+            "C14": 3.0,
+            "C15": 4.0,
+            "C16": 4.0,
+            "C17": 3.0,
+            "C18": 3.0
+          },
+          "calibration_trial_arrays_replayed": 0,
+          "calibration_configurations": 18,
+          "calibration_input": "saved_configuration_quantiles",
+          "plain_max_far": 0.0005,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.00025,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.01075,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.00075,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.001,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G14": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.0005,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.001,
+            "S06_0.10": 0.002,
+            "S06_0.25": 0.012,
+            "S05_0.05": 0.042,
+            "S05_0.10": 0.189,
+            "S05_0.25": 0.879,
+            "S07_0.05": 0.015,
+            "S07_0.10": 0.06,
+            "S07_0.25": 0.561
+          }
+        },
+        "400/api_tail": {
+          "threshold": 9.0,
+          "configuration_quantiles": {
+            "C01": 3.0,
+            "C02": 3.0,
+            "C03": 9.0,
+            "C04": 6.0,
+            "C05": 3.0,
+            "C06": 5.0,
+            "C07": 5.0,
+            "C08": 6.0,
+            "C09": 5.0,
+            "C10": 8.0,
+            "C11": 3.0,
+            "C12": 4.0,
+            "C13": 6.0,
+            "C14": 4.0,
+            "C15": 4.0,
+            "C16": 3.0,
+            "C17": 4.0,
+            "C18": 3.0
+          },
+          "calibration_trial_arrays_replayed": 18,
+          "calibration_configurations": 18,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.06775,
+          "endpoint_rates": {
+            "G11": {
+              "far": 0.538,
+              "plain": false,
+              "trials": 4000
+            },
+            "G16": {
+              "far": 0.7665,
+              "plain": false,
+              "trials": 4000
+            },
+            "G10": {
+              "far": 0.532,
+              "plain": false,
+              "trials": 4000
+            },
+            "G12": {
+              "far": 0.1475,
+              "plain": false,
+              "trials": 4000
+            },
+            "G13": {
+              "far": 0.13025,
+              "plain": false,
+              "trials": 4000
+            },
+            "G01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "G14": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "G08": {
+              "far": 0.00075,
+              "plain": true,
+              "trials": 4000
+            },
+            "G15": {
+              "far": 0.00625,
+              "plain": false,
+              "trials": 4000
+            },
+            "G09": {
+              "far": 0.06775,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S06_0.05": 0.998,
+            "S06_0.10": 1.0,
+            "S06_0.25": 1.0,
+            "S05_0.05": 0.998,
+            "S05_0.10": 1.0,
+            "S05_0.25": 1.0,
+            "S07_0.05": 0.998,
+            "S07_0.10": 1.0,
+            "S07_0.25": 1.0
+          }
+        }
+      },
+      "bootstrap_comparisons": {
+        "temperature_mle": {
+          "delta_power": 0.0,
+          "paired_ci95": [
+            0.0,
+            0.0
+          ],
+          "paired_replicates": 2000
+        },
+        "fixed_temperature": {
+          "delta_power": 1.0,
+          "paired_ci95": [
+            0.9990000128746033,
+            1.0
+          ],
+          "paired_replicates": 2000
+        },
+        "top20": {
+          "delta_power": 0.0,
+          "paired_ci95": [
+            0.0,
+            0.0
+          ],
+          "paired_replicates": 2000
+        },
+        "nucleus_095": {
+          "delta_power": 0.0020000000000000018,
+          "paired_ci95": [
+            0.0,
+            0.0059999823570251465
+          ],
+          "paired_replicates": 2000
+        }
+      },
+      "pool_ablation_without_penalties": {
+        "N": 200,
+        "method": "api_tail",
+        "removed_configurations": [
+          {
+            "id": "C14",
+            "source_configuration_label": "g4_pp15"
+          },
+          {
+            "id": "C15",
+            "source_configuration_label": "g4_pp20"
+          },
+          {
+            "id": "C16",
+            "source_configuration_label": "g4_rp105"
+          },
+          {
+            "id": "C17",
+            "source_configuration_label": "g4_rp110"
+          },
+          {
+            "id": "C18",
+            "source_configuration_label": "g4_pp15rp105"
+          }
+        ],
+        "remaining_configurations": 13,
+        "configuration_quantiles": {
+          "C01": 2.0,
+          "C02": 2.0,
+          "C03": 5.0,
+          "C04": 4.0,
+          "C05": 2.0,
+          "C06": 3.0,
+          "C07": 3.0,
+          "C08": 4.0,
+          "C09": 4.0,
+          "C10": 5.0,
+          "C11": 2.0,
+          "C12": 2.0,
+          "C13": 4.0
+        },
+        "decisive_configurations": [
+          "C03",
+          "C10"
+        ],
+        "threshold": 5.0,
+        "endpoint_rates": {
+          "G11": {
+            "far": 0.3435,
+            "plain": false,
+            "trials": 4000
+          },
+          "G16": {
+            "far": 0.5255,
+            "plain": false,
+            "trials": 4000
+          },
+          "G10": {
+            "far": 0.36025,
+            "plain": false,
+            "trials": 4000
+          },
+          "G12": {
+            "far": 0.13475,
+            "plain": false,
+            "trials": 4000
+          },
+          "G13": {
+            "far": 0.13425,
+            "plain": false,
+            "trials": 4000
+          },
+          "G01": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "G05": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "G06": {
+            "far": 0.0025,
+            "plain": true,
+            "trials": 4000
+          },
+          "G07": {
+            "far": 0.00125,
+            "plain": true,
+            "trials": 4000
+          },
+          "G03": {
+            "far": 0.00075,
+            "plain": true,
+            "trials": 4000
+          },
+          "G02": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "G04": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "G14": {
+            "far": 0.003,
+            "plain": false,
+            "trials": 4000
+          },
+          "G08": {
+            "far": 0.007,
+            "plain": true,
+            "trials": 4000
+          },
+          "G15": {
+            "far": 0.02325,
+            "plain": false,
+            "trials": 4000
+          },
+          "G09": {
+            "far": 0.069,
+            "plain": true,
+            "trials": 4000
+          }
+        },
+        "plain_max_far": 0.069,
+        "maximizing_plain_endpoints": [
+          "G09"
+        ],
+        "plain_max_far_3dp": 0.069,
+        "published_plain_max_far_3dp": 0.069,
+        "verification": "Table 3 rounded FAR; computed from retained calibration and endpoint trial statistics"
+      }
+    },
+    "q38_p30": {
+      "methods": {
+        "100/api_tail": {
+          "threshold": 4.0,
+          "configuration_quantiles": {
+            "C01": 3.0,
+            "C02": 3.0,
+            "C03": 3.0,
+            "C04": 3.0,
+            "C05": 3.0,
+            "C06": 2.0,
+            "C07": 1.0,
+            "C08": 3.0,
+            "C09": 3.0,
+            "C10": 3.0,
+            "C11": 3.0,
+            "C12": 3.0,
+            "C13": 3.0,
+            "C14": 4.0,
+            "C15": 4.0,
+            "C16": 3.0,
+            "C17": 4.0,
+            "C18": 4.0
+          },
+          "calibration_trial_arrays_replayed": 18,
+          "calibration_configurations": 18,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.03175,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.00175,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.0025,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.00075,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.00525,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.00075,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.002,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.004,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.00625,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.00225,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.006,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.00275,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.004,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.00325,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.0185,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.03175,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.00275,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 0.48225,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.0045,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.059,
+            "S01_0.10": 0.189,
+            "S01_0.25": 0.398,
+            "S02_0.05": 0.071,
+            "S02_0.10": 0.264,
+            "S02_0.25": 0.539,
+            "S03_0.05": 0.137,
+            "S03_0.10": 0.472,
+            "S03_0.25": 0.852,
+            "S04_0.05": 0.197,
+            "S04_0.10": 0.534,
+            "S04_0.25": 0.925,
+            "S05_0.05": 0.521,
+            "S05_0.10": 0.969,
+            "S05_0.25": 1.0
+          }
+        },
+        "200/api_tail": {
+          "threshold": 7.0,
+          "configuration_quantiles": {
+            "C01": 5.0,
+            "C02": 5.0,
+            "C03": 5.0,
+            "C04": 5.0,
+            "C05": 5.0,
+            "C06": 3.0,
+            "C07": 1.0,
+            "C08": 5.0,
+            "C09": 4.0,
+            "C10": 5.0,
+            "C11": 5.0,
+            "C12": 5.0,
+            "C13": 4.0,
+            "C14": 6.0,
+            "C15": 6.0,
+            "C16": 4.0,
+            "C17": 7.0,
+            "C18": 6.0
+          },
+          "calibration_trial_arrays_replayed": 18,
+          "calibration_configurations": 18,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.03525,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.00375,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.0015,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.00175,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.0015,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.0015,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.00325,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.00175,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.00125,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.001,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.0165,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.03525,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.001,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 0.78775,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.088,
+            "S01_0.10": 0.325,
+            "S01_0.25": 0.73,
+            "S02_0.05": 0.108,
+            "S02_0.10": 0.421,
+            "S02_0.25": 0.78,
+            "S03_0.05": 0.231,
+            "S03_0.10": 0.73,
+            "S03_0.25": 0.982,
+            "S04_0.05": 0.293,
+            "S04_0.10": 0.834,
+            "S04_0.25": 0.996,
+            "S05_0.05": 0.76,
+            "S05_0.10": 0.998,
+            "S05_0.25": 1.0
+          }
+        },
+        "200/temperature_mle": {
+          "threshold": 9.0,
+          "configuration_quantiles": {
+            "C01": 6.0,
+            "C02": 6.0,
+            "C03": 5.0,
+            "C04": 5.0,
+            "C05": 5.0,
+            "C06": 3.0,
+            "C07": 1.0,
+            "C08": 5.0,
+            "C09": 5.0,
+            "C10": 5.0,
+            "C11": 6.0,
+            "C12": 4.0,
+            "C13": 4.0,
+            "C14": 7.0,
+            "C15": 7.0,
+            "C16": 5.0,
+            "C17": 9.0,
+            "C18": 7.0
+          },
+          "calibration_trial_arrays_replayed": 18,
+          "calibration_configurations": 18,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.00775,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.00125,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.00775,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.00725,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 0.91325,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.021,
+            "S01_0.10": 0.102,
+            "S01_0.25": 0.397,
+            "S02_0.05": 0.021,
+            "S02_0.10": 0.189,
+            "S02_0.25": 0.578,
+            "S03_0.05": 0.059,
+            "S03_0.10": 0.416,
+            "S03_0.25": 0.923,
+            "S04_0.05": 0.099,
+            "S04_0.10": 0.581,
+            "S04_0.25": 0.981,
+            "S05_0.05": 0.487,
+            "S05_0.10": 0.983,
+            "S05_0.25": 1.0
+          }
+        },
+        "200/fixed_temperature": {
+          "threshold": 5.0,
+          "configuration_quantiles": {
+            "C01": 0.0,
+            "C02": 0.0,
+            "C03": 1.0,
+            "C04": 1.0,
+            "C05": 5.0,
+            "C06": 1.0,
+            "C07": 0.0,
+            "C08": 0.0,
+            "C09": 1.0,
+            "C10": 0.0,
+            "C11": 1.0,
+            "C12": 4.0,
+            "C13": 5.0,
+            "C14": 1.0,
+            "C15": 1.0,
+            "C16": 0.0,
+            "C17": 1.0,
+            "C18": 1.0
+          },
+          "calibration_trial_arrays_replayed": 18,
+          "calibration_configurations": 18,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.0,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 1.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.0,
+            "S01_0.10": 0.0,
+            "S01_0.25": 0.0,
+            "S02_0.05": 0.0,
+            "S02_0.10": 0.0,
+            "S02_0.25": 0.0,
+            "S03_0.05": 0.0,
+            "S03_0.10": 0.0,
+            "S03_0.25": 0.0,
+            "S04_0.05": 0.0,
+            "S04_0.10": 0.0,
+            "S04_0.25": 0.005,
+            "S05_0.05": 0.489,
+            "S05_0.10": 0.961,
+            "S05_0.25": 1.0
+          }
+        },
+        "200/nucleus_095": {
+          "threshold": 5.0,
+          "configuration_quantiles": {
+            "C01": 4.0,
+            "C02": 4.0,
+            "C03": 4.0,
+            "C04": 3.0,
+            "C05": 3.0,
+            "C06": 4.0,
+            "C07": 2.0,
+            "C08": 4.0,
+            "C09": 4.0,
+            "C10": 4.0,
+            "C11": 4.0,
+            "C12": 4.0,
+            "C13": 4.0,
+            "C14": 5.0,
+            "C15": 5.0,
+            "C16": 4.0,
+            "C17": 4.0,
+            "C18": 4.0
+          },
+          "calibration_trial_arrays_replayed": 18,
+          "calibration_configurations": 18,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.01775,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.0035,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.004,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.006,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.002,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.00125,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.003,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.0095,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.00675,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.01325,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.0015,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.00175,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.01775,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.0025,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.017,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 0.0165,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.01375,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.01,
+            "S01_0.10": 0.026,
+            "S01_0.25": 0.082,
+            "S02_0.05": 0.005,
+            "S02_0.10": 0.013,
+            "S02_0.25": 0.064,
+            "S03_0.05": 0.008,
+            "S03_0.10": 0.048,
+            "S03_0.25": 0.232,
+            "S04_0.05": 0.017,
+            "S04_0.10": 0.073,
+            "S04_0.25": 0.332,
+            "S05_0.05": 0.071,
+            "S05_0.10": 0.291,
+            "S05_0.25": 0.904
+          }
+        },
+        "200/top20": {
+          "threshold": 7.0,
+          "configuration_quantiles": {
+            "C01": 5.0,
+            "C02": 5.0,
+            "C03": 5.0,
+            "C04": 5.0,
+            "C05": 7.0,
+            "C06": 3.0,
+            "C07": 2.0,
+            "C08": 5.0,
+            "C09": 4.0,
+            "C10": 5.0,
+            "C11": 6.0,
+            "C12": 7.0,
+            "C13": 6.0,
+            "C14": 6.0,
+            "C15": 6.0,
+            "C16": 4.0,
+            "C17": 7.0,
+            "C18": 6.0
+          },
+          "calibration_trial_arrays_replayed": 18,
+          "calibration_configurations": 18,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.024,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.00025,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.00075,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.00375,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.00125,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.00125,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.00225,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.00175,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.0015,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.004,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.00225,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.00125,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.00325,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.015,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.024,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.001,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 0.80625,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.00175,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.094,
+            "S01_0.10": 0.337,
+            "S01_0.25": 0.74,
+            "S02_0.05": 0.122,
+            "S02_0.10": 0.43,
+            "S02_0.25": 0.785,
+            "S03_0.05": 0.254,
+            "S03_0.10": 0.746,
+            "S03_0.25": 0.987,
+            "S04_0.05": 0.305,
+            "S04_0.10": 0.835,
+            "S04_0.25": 1.0,
+            "S05_0.05": 0.757,
+            "S05_0.10": 0.997,
+            "S05_0.25": 1.0
+          }
+        },
+        "200/nll_count": {
+          "threshold": 17.0,
+          "configuration_quantiles": {
+            "C01": 1.0,
+            "C02": 1.0,
+            "C03": 1.0,
+            "C04": 2.0,
+            "C05": 16.0,
+            "C06": 4.0,
+            "C07": 1.0,
+            "C08": 0.0,
+            "C09": 0.0,
+            "C10": 0.0,
+            "C11": 1.0,
+            "C12": 15.0,
+            "C13": 17.0,
+            "C14": 1.0,
+            "C15": 1.0,
+            "C16": 1.0,
+            "C17": 1.0,
+            "C18": 1.0
+          },
+          "calibration_trial_arrays_replayed": 0,
+          "calibration_configurations": 18,
+          "calibration_input": "saved_configuration_quantiles",
+          "plain_max_far": 0.0,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 0.9685,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.0,
+            "S01_0.10": 0.0,
+            "S01_0.25": 0.0,
+            "S02_0.05": 0.0,
+            "S02_0.10": 0.0,
+            "S02_0.25": 0.0,
+            "S03_0.05": 0.0,
+            "S03_0.10": 0.0,
+            "S03_0.25": 0.0,
+            "S04_0.05": 0.0,
+            "S04_0.10": 0.0,
+            "S04_0.25": 0.0,
+            "S05_0.05": 0.0,
+            "S05_0.10": 0.002,
+            "S05_0.25": 0.731
+          }
+        },
+        "200/logrank_count": {
+          "threshold": 17.0,
+          "configuration_quantiles": {
+            "C01": 1.0,
+            "C02": 0.0,
+            "C03": 0.0,
+            "C04": 2.0,
+            "C05": 16.0,
+            "C06": 4.0,
+            "C07": 0.0,
+            "C08": 0.0,
+            "C09": 0.0,
+            "C10": 0.0,
+            "C11": 1.0,
+            "C12": 15.0,
+            "C13": 17.0,
+            "C14": 1.0,
+            "C15": 1.0,
+            "C16": 0.0,
+            "C17": 1.0,
+            "C18": 1.0
+          },
+          "calibration_trial_arrays_replayed": 0,
+          "calibration_configurations": 18,
+          "calibration_input": "saved_configuration_quantiles",
+          "plain_max_far": 0.0,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 0.176,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.0,
+            "S01_0.10": 0.0,
+            "S01_0.25": 0.0,
+            "S02_0.05": 0.0,
+            "S02_0.10": 0.0,
+            "S02_0.25": 0.0,
+            "S03_0.05": 0.0,
+            "S03_0.10": 0.0,
+            "S03_0.25": 0.0,
+            "S04_0.05": 0.0,
+            "S04_0.10": 0.0,
+            "S04_0.25": 0.0,
+            "S05_0.05": 0.0,
+            "S05_0.10": 0.0,
+            "S05_0.25": 0.099
+          }
+        },
+        "200/entropy_count": {
+          "threshold": 6.0,
+          "configuration_quantiles": {
+            "C01": 5.0,
+            "C02": 4.0,
+            "C03": 4.0,
+            "C04": 4.0,
+            "C05": 5.0,
+            "C06": 5.0,
+            "C07": 4.0,
+            "C08": 4.0,
+            "C09": 4.0,
+            "C10": 4.0,
+            "C11": 4.0,
+            "C12": 6.0,
+            "C13": 6.0,
+            "C14": 4.0,
+            "C15": 4.0,
+            "C16": 4.0,
+            "C17": 3.0,
+            "C18": 5.0
+          },
+          "calibration_trial_arrays_replayed": 0,
+          "calibration_configurations": 18,
+          "calibration_input": "saved_configuration_quantiles",
+          "plain_max_far": 0.02175,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.00075,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.00425,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.0075,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.011,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.01075,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.007,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.0105,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.001,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.0035,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.016,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.002,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.00525,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.0045,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.00875,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.01175,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.00125,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.0025,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.0075,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.00475,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 0.0815,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.02175,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.004,
+            "S01_0.10": 0.005,
+            "S01_0.25": 0.005,
+            "S02_0.05": 0.007,
+            "S02_0.10": 0.004,
+            "S02_0.25": 0.003,
+            "S03_0.05": 0.005,
+            "S03_0.10": 0.011,
+            "S03_0.25": 0.005,
+            "S04_0.05": 0.003,
+            "S04_0.10": 0.003,
+            "S04_0.25": 0.005,
+            "S05_0.05": 0.012,
+            "S05_0.10": 0.015,
+            "S05_0.25": 0.027
+          }
+        },
+        "200/rut": {
+          "threshold": 25.636667251586914,
+          "configuration_quantiles": {
+            "C01": 3.005232095718384,
+            "C02": 2.968325614929199,
+            "C03": 2.8448636531829834,
+            "C04": 25.478960037231445,
+            "C05": 21.055267333984375,
+            "C06": 22.203311920166016,
+            "C07": 4.4944963455200195,
+            "C08": 6.034683704376221,
+            "C09": 4.4513773918151855,
+            "C10": 8.546730041503906,
+            "C11": 17.80394172668457,
+            "C12": 21.02224349975586,
+            "C13": 20.991914749145508,
+            "C14": 7.092171669006348,
+            "C15": 14.63079833984375,
+            "C16": 13.537943840026855,
+            "C17": 25.636667251586914,
+            "C18": 24.63648796081543
+          },
+          "calibration_trial_arrays_replayed": 18,
+          "calibration_configurations": 18,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.003,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.00325,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.02925,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.003,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.0,
+            "S01_0.10": 0.0,
+            "S01_0.25": 0.0,
+            "S02_0.05": 0.0,
+            "S02_0.10": 0.0,
+            "S02_0.25": 0.0,
+            "S03_0.05": 0.0,
+            "S03_0.10": 0.0,
+            "S03_0.25": 0.0,
+            "S04_0.05": 0.0,
+            "S04_0.10": 0.0,
+            "S04_0.25": 0.001,
+            "S05_0.05": 0.0,
+            "S05_0.10": 0.0,
+            "S05_0.25": 0.014
+          }
+        },
+        "200/met": {
+          "threshold": 0.16216666996479034,
+          "configuration_quantiles": {
+            "C01": 0.04766666516661644,
+            "C02": 0.04933333396911621,
+            "C03": 0.04800000041723251,
+            "C04": 0.05900000035762787,
+            "C05": 0.10216666758060455,
+            "C06": 0.0846666693687439,
+            "C07": 0.055166665464639664,
+            "C08": 0.08833333104848862,
+            "C09": 0.05533333495259285,
+            "C10": 0.09149999916553497,
+            "C11": 0.10133333504199982,
+            "C12": 0.09366666525602341,
+            "C13": 0.10116666555404663,
+            "C14": 0.06666667014360428,
+            "C15": 0.07583333551883698,
+            "C16": 0.09549999982118607,
+            "C17": 0.16216666996479034,
+            "C18": 0.10849999636411667
+          },
+          "calibration_trial_arrays_replayed": 18,
+          "calibration_configurations": 18,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.0055,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.2235,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 1.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.0055,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.00225,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 0.99975,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.0,
+            "S01_0.10": 0.0,
+            "S01_0.25": 0.0
+          }
+        },
+        "400/api_tail": {
+          "threshold": 12.0,
+          "configuration_quantiles": {
+            "C01": 9.0,
+            "C02": 9.0,
+            "C03": 8.0,
+            "C04": 9.0,
+            "C05": 8.0,
+            "C06": 5.0,
+            "C07": 2.0,
+            "C08": 8.0,
+            "C09": 8.0,
+            "C10": 8.0,
+            "C11": 9.0,
+            "C12": 8.0,
+            "C13": 7.0,
+            "C14": 10.0,
+            "C15": 11.0,
+            "C16": 7.0,
+            "C17": 12.0,
+            "C18": 11.0
+          },
+          "calibration_trial_arrays_replayed": 18,
+          "calibration_configurations": 18,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.05125,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.001,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.00075,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.00175,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.00075,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.001,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.00125,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.01875,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.05125,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 0.9865,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.00075,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.167,
+            "S01_0.10": 0.62,
+            "S01_0.25": 0.959,
+            "S02_0.05": 0.222,
+            "S02_0.10": 0.709,
+            "S02_0.25": 0.985,
+            "S03_0.05": 0.488,
+            "S03_0.10": 0.96,
+            "S03_0.25": 1.0,
+            "S04_0.05": 0.567,
+            "S04_0.10": 0.983,
+            "S04_0.25": 1.0,
+            "S05_0.05": 0.963,
+            "S05_0.10": 1.0,
+            "S05_0.25": 1.0
+          }
+        }
+      },
+      "bootstrap_comparisons": {
+        "temperature_mle": {
+          "delta_power": 0.22300000000000003,
+          "paired_ci95": [
+            0.07497500330209732,
+            0.2680000066757202
+          ],
+          "paired_replicates": 2000
+        },
+        "fixed_temperature": {
+          "delta_power": 0.325,
+          "paired_ci95": [
+            0.22095000073313714,
+            0.4230250075459479
+          ],
+          "paired_replicates": 2000
+        },
+        "top20": {
+          "delta_power": -0.01200000000000001,
+          "paired_ci95": [
+            -0.038000017404556274,
+            0.01600000262260437
+          ],
+          "paired_replicates": 2000
+        },
+        "nucleus_095": {
+          "delta_power": 0.299,
+          "paired_ci95": [
+            0.19699999690055847,
+            0.39800000190734863
+          ],
+          "paired_replicates": 2000
+        }
+      },
+      "pool_ablation_without_penalties": {
+        "N": 200,
+        "method": "api_tail",
+        "removed_configurations": [
+          {
+            "id": "C14",
+            "source_configuration_label": "h_pp15"
+          },
+          {
+            "id": "C15",
+            "source_configuration_label": "h_pp20"
+          },
+          {
+            "id": "C16",
+            "source_configuration_label": "h_rp105"
+          },
+          {
+            "id": "C17",
+            "source_configuration_label": "h_rp110"
+          },
+          {
+            "id": "C18",
+            "source_configuration_label": "h_pp15rp105"
+          }
+        ],
+        "remaining_configurations": 13,
+        "configuration_quantiles": {
+          "C01": 5.0,
+          "C02": 5.0,
+          "C03": 5.0,
+          "C04": 5.0,
+          "C05": 5.0,
+          "C06": 3.0,
+          "C07": 1.0,
+          "C08": 5.0,
+          "C09": 4.0,
+          "C10": 5.0,
+          "C11": 5.0,
+          "C12": 5.0,
+          "C13": 4.0
+        },
+        "decisive_configurations": [
+          "C01",
+          "C02",
+          "C03",
+          "C04",
+          "C05",
+          "C08",
+          "C10",
+          "C11",
+          "C12"
+        ],
+        "threshold": 5.0,
+        "endpoint_rates": {
+          "Q20": {
+            "far": 0.01775,
+            "plain": false,
+            "trials": 4000
+          },
+          "Q18": {
+            "far": 0.0055,
+            "plain": false,
+            "trials": 4000
+          },
+          "Q04": {
+            "far": 0.0285,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q12": {
+            "far": 0.00625,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q09": {
+            "far": 0.06925,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q16": {
+            "far": 0.02225,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q11": {
+            "far": 0.027,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q08": {
+            "far": 0.03175,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q17": {
+            "far": 0.031,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q07": {
+            "far": 0.04175,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q10": {
+            "far": 0.03675,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q19": {
+            "far": 0.0805,
+            "plain": false,
+            "trials": 4000
+          },
+          "Q15": {
+            "far": 0.0105,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q01": {
+            "far": 0.0335,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q14": {
+            "far": 0.03875,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q06": {
+            "far": 0.03175,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q13": {
+            "far": 0.172,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q02": {
+            "far": 0.26925,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q05": {
+            "far": 0.031,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q21": {
+            "far": 0.9635,
+            "plain": false,
+            "trials": 4000
+          },
+          "Q03": {
+            "far": 0.04125,
+            "plain": true,
+            "trials": 4000
+          }
+        },
+        "plain_max_far": 0.26925,
+        "maximizing_plain_endpoints": [
+          "Q02"
+        ],
+        "plain_max_far_3dp": 0.269,
+        "published_plain_max_far_3dp": 0.269,
+        "verification": "Table 3 rounded FAR; computed from retained calibration and endpoint trial statistics"
+      }
+    },
+    "q38_user": {
+      "methods": {
+        "100/api_tail": {
+          "threshold": 3.0,
+          "configuration_quantiles": {
+            "C01": 1.0,
+            "C02": 1.0,
+            "C03": 1.0,
+            "C04": 2.0,
+            "C05": 1.0,
+            "C06": 1.0,
+            "C07": 2.0,
+            "C08": 2.0,
+            "C09": 2.0,
+            "C10": 1.0,
+            "C11": 1.0,
+            "C12": 1.0,
+            "C13": 1.0,
+            "C14": 1.0,
+            "C15": 1.0,
+            "C16": 1.0,
+            "C17": 1.0,
+            "C18": 3.0,
+            "C19": 3.0
+          },
+          "calibration_trial_arrays_replayed": 19,
+          "calibration_configurations": 19,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.00575,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.00575,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 0.878,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.134,
+            "S01_0.10": 0.408,
+            "S01_0.25": 0.825,
+            "S02_0.05": 0.0,
+            "S02_0.10": 0.01,
+            "S02_0.25": 0.042,
+            "S03_0.05": 0.494,
+            "S03_0.10": 0.942,
+            "S03_0.25": 1.0,
+            "S04_0.05": 0.397,
+            "S04_0.10": 0.882,
+            "S04_0.25": 1.0,
+            "S05_0.05": 0.727,
+            "S05_0.10": 0.992,
+            "S05_0.25": 1.0
+          }
+        },
+        "200/api_tail": {
+          "threshold": 5.0,
+          "configuration_quantiles": {
+            "C01": 1.0,
+            "C02": 1.0,
+            "C03": 2.0,
+            "C04": 3.0,
+            "C05": 1.0,
+            "C06": 1.0,
+            "C07": 2.0,
+            "C08": 3.0,
+            "C09": 3.0,
+            "C10": 1.0,
+            "C11": 1.0,
+            "C12": 1.0,
+            "C13": 2.0,
+            "C14": 2.0,
+            "C15": 2.0,
+            "C16": 2.0,
+            "C17": 2.0,
+            "C18": 5.0,
+            "C19": 5.0
+          },
+          "calibration_trial_arrays_replayed": 19,
+          "calibration_configurations": 19,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.0015,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.0015,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 0.9925,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.186,
+            "S01_0.10": 0.694,
+            "S01_0.25": 0.978,
+            "S02_0.05": 0.0,
+            "S02_0.10": 0.004,
+            "S02_0.25": 0.069,
+            "S03_0.05": 0.739,
+            "S03_0.10": 0.996,
+            "S03_0.25": 1.0,
+            "S04_0.05": 0.688,
+            "S04_0.10": 0.992,
+            "S04_0.25": 1.0,
+            "S05_0.05": 0.941,
+            "S05_0.10": 1.0,
+            "S05_0.25": 1.0
+          }
+        },
+        "200/temperature_mle": {
+          "threshold": 10.0,
+          "configuration_quantiles": {
+            "C01": 1.0,
+            "C02": 1.0,
+            "C03": 2.0,
+            "C04": 4.0,
+            "C05": 1.0,
+            "C06": 1.0,
+            "C07": 2.0,
+            "C08": 2.0,
+            "C09": 3.0,
+            "C10": 1.0,
+            "C11": 1.0,
+            "C12": 1.0,
+            "C13": 2.0,
+            "C14": 2.0,
+            "C15": 2.0,
+            "C16": 3.0,
+            "C17": 3.0,
+            "C18": 9.0,
+            "C19": 10.0
+          },
+          "calibration_trial_arrays_replayed": 19,
+          "calibration_configurations": 19,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.0,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 0.99875,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.0,
+            "S01_0.10": 0.06,
+            "S01_0.25": 0.6,
+            "S02_0.05": 0.0,
+            "S02_0.10": 0.0,
+            "S02_0.25": 0.0,
+            "S03_0.05": 0.106,
+            "S03_0.10": 0.834,
+            "S03_0.25": 1.0,
+            "S04_0.05": 0.049,
+            "S04_0.10": 0.733,
+            "S04_0.25": 1.0,
+            "S05_0.05": 0.408,
+            "S05_0.10": 0.99,
+            "S05_0.25": 1.0
+          }
+        },
+        "200/fixed_temperature": {
+          "threshold": 35.0,
+          "configuration_quantiles": {
+            "C01": 0.0,
+            "C02": 0.0,
+            "C03": 0.0,
+            "C04": 1.0,
+            "C05": 0.0,
+            "C06": 0.0,
+            "C07": 2.0,
+            "C08": 2.0,
+            "C09": 0.0,
+            "C10": 0.0,
+            "C11": 0.0,
+            "C12": 0.0,
+            "C13": 2.0,
+            "C14": 2.0,
+            "C15": 1.0,
+            "C16": 3.0,
+            "C17": 0.0,
+            "C18": 17.0,
+            "C19": 35.0
+          },
+          "calibration_trial_arrays_replayed": 19,
+          "calibration_configurations": 19,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.0,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 1.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.0,
+            "S01_0.10": 0.0,
+            "S01_0.25": 0.0,
+            "S02_0.05": 0.0,
+            "S02_0.10": 0.0,
+            "S02_0.25": 0.0,
+            "S03_0.05": 0.0,
+            "S03_0.10": 0.0,
+            "S03_0.25": 0.0,
+            "S04_0.05": 0.0,
+            "S04_0.10": 0.0,
+            "S04_0.25": 0.0,
+            "S05_0.05": 0.0,
+            "S05_0.10": 0.0,
+            "S05_0.25": 0.879
+          }
+        },
+        "200/nucleus_095": {
+          "threshold": 8.0,
+          "configuration_quantiles": {
+            "C01": 3.0,
+            "C02": 2.0,
+            "C03": 2.0,
+            "C04": 3.0,
+            "C05": 2.0,
+            "C06": 2.0,
+            "C07": 3.0,
+            "C08": 2.0,
+            "C09": 2.0,
+            "C10": 3.0,
+            "C11": 3.0,
+            "C12": 2.0,
+            "C13": 2.0,
+            "C14": 2.0,
+            "C15": 3.0,
+            "C16": 4.0,
+            "C17": 4.0,
+            "C18": 7.0,
+            "C19": 8.0
+          },
+          "calibration_trial_arrays_replayed": 19,
+          "calibration_configurations": 19,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.0,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 0.015,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.0,
+            "S01_0.10": 0.0,
+            "S01_0.25": 0.0,
+            "S02_0.05": 0.0,
+            "S02_0.10": 0.0,
+            "S02_0.25": 0.0,
+            "S03_0.05": 0.004,
+            "S03_0.10": 0.056,
+            "S03_0.25": 0.536,
+            "S04_0.05": 0.0,
+            "S04_0.10": 0.003,
+            "S04_0.25": 0.01,
+            "S05_0.05": 0.057,
+            "S05_0.10": 0.407,
+            "S05_0.25": 0.995
+          }
+        },
+        "200/top20": {
+          "threshold": 10.0,
+          "configuration_quantiles": {
+            "C01": 1.0,
+            "C02": 1.0,
+            "C03": 2.0,
+            "C04": 2.0,
+            "C05": 5.0,
+            "C06": 1.0,
+            "C07": 8.0,
+            "C08": 9.0,
+            "C09": 3.0,
+            "C10": 1.0,
+            "C11": 1.0,
+            "C12": 1.0,
+            "C13": 8.0,
+            "C14": 10.0,
+            "C15": 1.0,
+            "C16": 2.0,
+            "C17": 1.0,
+            "C18": 3.0,
+            "C19": 2.0
+          },
+          "calibration_trial_arrays_replayed": 19,
+          "calibration_configurations": 19,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.0,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 0.00475,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.001,
+            "S01_0.10": 0.077,
+            "S01_0.25": 0.78,
+            "S02_0.05": 0.0,
+            "S02_0.10": 0.0,
+            "S02_0.25": 0.0,
+            "S03_0.05": 0.082,
+            "S03_0.10": 0.797,
+            "S03_0.25": 1.0,
+            "S04_0.05": 0.031,
+            "S04_0.10": 0.692,
+            "S04_0.25": 1.0,
+            "S05_0.05": 0.406,
+            "S05_0.10": 0.99,
+            "S05_0.25": 1.0
+          }
+        },
+        "200/nll_count": {
+          "threshold": 11.0,
+          "configuration_quantiles": {
+            "C01": 1.0,
+            "C02": 2.0,
+            "C03": 0.0,
+            "C04": 3.0,
+            "C05": 3.0,
+            "C06": 1.0,
+            "C07": 10.0,
+            "C08": 11.0,
+            "C09": 1.0,
+            "C10": 1.0,
+            "C11": 2.0,
+            "C12": 2.0,
+            "C13": 10.0,
+            "C14": 11.0,
+            "C15": 3.0,
+            "C16": 3.0,
+            "C17": 3.0,
+            "C18": 4.0,
+            "C19": 6.0
+          },
+          "calibration_trial_arrays_replayed": 0,
+          "calibration_configurations": 19,
+          "calibration_input": "saved_configuration_quantiles",
+          "plain_max_far": 0.0,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 0.99825,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.0,
+            "S01_0.10": 0.0,
+            "S01_0.25": 0.0,
+            "S02_0.05": 0.0,
+            "S02_0.10": 0.0,
+            "S02_0.25": 0.0,
+            "S03_0.05": 0.0,
+            "S03_0.10": 0.0,
+            "S03_0.25": 0.0,
+            "S04_0.05": 0.0,
+            "S04_0.10": 0.0,
+            "S04_0.25": 0.0,
+            "S05_0.05": 0.0,
+            "S05_0.10": 0.002,
+            "S05_0.25": 0.509
+          }
+        },
+        "200/logrank_count": {
+          "threshold": 12.0,
+          "configuration_quantiles": {
+            "C01": 1.0,
+            "C02": 2.0,
+            "C03": 0.0,
+            "C04": 2.0,
+            "C05": 4.0,
+            "C06": 1.0,
+            "C07": 11.0,
+            "C08": 12.0,
+            "C09": 0.0,
+            "C10": 1.0,
+            "C11": 2.0,
+            "C12": 2.0,
+            "C13": 11.0,
+            "C14": 11.0,
+            "C15": 2.0,
+            "C16": 3.0,
+            "C17": 2.0,
+            "C18": 3.0,
+            "C19": 4.0
+          },
+          "calibration_trial_arrays_replayed": 0,
+          "calibration_configurations": 19,
+          "calibration_input": "saved_configuration_quantiles",
+          "plain_max_far": 0.0,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 0.92125,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.0,
+            "S01_0.10": 0.0,
+            "S01_0.25": 0.0,
+            "S02_0.05": 0.0,
+            "S02_0.10": 0.0,
+            "S02_0.25": 0.0,
+            "S03_0.05": 0.0,
+            "S03_0.10": 0.0,
+            "S03_0.25": 0.0,
+            "S04_0.05": 0.0,
+            "S04_0.10": 0.0,
+            "S04_0.25": 0.0,
+            "S05_0.05": 0.0,
+            "S05_0.10": 0.001,
+            "S05_0.25": 0.221
+          }
+        },
+        "200/entropy_count": {
+          "threshold": 6.0,
+          "configuration_quantiles": {
+            "C01": 4.0,
+            "C02": 4.0,
+            "C03": 3.0,
+            "C04": 5.0,
+            "C05": 4.0,
+            "C06": 4.0,
+            "C07": 6.0,
+            "C08": 6.0,
+            "C09": 4.0,
+            "C10": 3.0,
+            "C11": 4.0,
+            "C12": 4.0,
+            "C13": 6.0,
+            "C14": 6.0,
+            "C15": 4.0,
+            "C16": 4.0,
+            "C17": 4.0,
+            "C18": 3.0,
+            "C19": 4.0
+          },
+          "calibration_trial_arrays_replayed": 0,
+          "calibration_configurations": 19,
+          "calibration_input": "saved_configuration_quantiles",
+          "plain_max_far": 0.06475,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.00225,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.101,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.00325,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.00225,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.00975,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.01525,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.0035,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.00025,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.003,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.0025,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.02425,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.06475,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.00625,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.021,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.0015,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.0005,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 0.4355,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.026,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.001,
+            "S01_0.10": 0.004,
+            "S01_0.25": 0.006,
+            "S02_0.05": 0.003,
+            "S02_0.10": 0.004,
+            "S02_0.25": 0.001,
+            "S03_0.05": 0.002,
+            "S03_0.10": 0.002,
+            "S03_0.25": 0.007,
+            "S04_0.05": 0.003,
+            "S04_0.10": 0.001,
+            "S04_0.25": 0.001,
+            "S05_0.05": 0.002,
+            "S05_0.10": 0.009,
+            "S05_0.25": 0.028
+          }
+        },
+        "400/api_tail": {
+          "threshold": 9.0,
+          "configuration_quantiles": {
+            "C01": 2.0,
+            "C02": 1.0,
+            "C03": 3.0,
+            "C04": 4.0,
+            "C05": 2.0,
+            "C06": 1.0,
+            "C07": 4.0,
+            "C08": 4.0,
+            "C09": 5.0,
+            "C10": 1.0,
+            "C11": 1.0,
+            "C12": 1.0,
+            "C13": 3.0,
+            "C14": 4.0,
+            "C15": 3.0,
+            "C16": 3.0,
+            "C17": 3.0,
+            "C18": 9.0,
+            "C19": 9.0
+          },
+          "calibration_trial_arrays_replayed": 19,
+          "calibration_configurations": 19,
+          "calibration_input": "trial_statistics",
+          "plain_max_far": 0.0,
+          "endpoint_rates": {
+            "Q20": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q18": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q04": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q12": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q09": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q16": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q11": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q08": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q17": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q07": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q10": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q19": {
+              "far": 0.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q15": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q01": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q14": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q06": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q13": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q02": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q05": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            },
+            "Q21": {
+              "far": 1.0,
+              "plain": false,
+              "trials": 4000
+            },
+            "Q03": {
+              "far": 0.0,
+              "plain": true,
+              "trials": 4000
+            }
+          },
+          "powers": {
+            "S01_0.05": 0.303,
+            "S01_0.10": 0.926,
+            "S01_0.25": 1.0,
+            "S02_0.05": 0.0,
+            "S02_0.10": 0.001,
+            "S02_0.25": 0.067,
+            "S03_0.05": 0.917,
+            "S03_0.10": 1.0,
+            "S03_0.25": 1.0,
+            "S04_0.05": 0.879,
+            "S04_0.10": 1.0,
+            "S04_0.25": 1.0,
+            "S05_0.05": 0.997,
+            "S05_0.10": 1.0,
+            "S05_0.25": 1.0
+          }
+        }
+      },
+      "bootstrap_comparisons": {
+        "temperature_mle": {
+          "delta_power": 0.6339999999999999,
+          "paired_ci95": [
+            0.3720000088214874,
+            0.6700000166893005
+          ],
+          "paired_replicates": 2000
+        },
+        "fixed_temperature": {
+          "delta_power": 0.694,
+          "paired_ci95": [
+            0.4739750064909458,
+            0.7770250096917151
+          ],
+          "paired_replicates": 2000
+        },
+        "top20": {
+          "delta_power": 0.617,
+          "paired_ci95": [
+            0.4059999883174896,
+            0.6760249987244604
+          ],
+          "paired_replicates": 2000
+        },
+        "nucleus_095": {
+          "delta_power": 0.694,
+          "paired_ci95": [
+            0.4739750064909458,
+            0.7770250096917151
+          ],
+          "paired_replicates": 2000
+        }
+      },
+      "pool_ablation_without_penalties": {
+        "N": 200,
+        "method": "api_tail",
+        "removed_configurations": [
+          {
+            "id": "C15",
+            "source_configuration_label": "hu_pp15"
+          },
+          {
+            "id": "C16",
+            "source_configuration_label": "hu_pp20"
+          },
+          {
+            "id": "C17",
+            "source_configuration_label": "hu_rp105"
+          },
+          {
+            "id": "C18",
+            "source_configuration_label": "hu_rp110"
+          },
+          {
+            "id": "C19",
+            "source_configuration_label": "hu_pp15rp105"
+          }
+        ],
+        "remaining_configurations": 14,
+        "configuration_quantiles": {
+          "C01": 1.0,
+          "C02": 1.0,
+          "C03": 2.0,
+          "C04": 3.0,
+          "C05": 1.0,
+          "C06": 1.0,
+          "C07": 2.0,
+          "C08": 3.0,
+          "C09": 3.0,
+          "C10": 1.0,
+          "C11": 1.0,
+          "C12": 1.0,
+          "C13": 2.0,
+          "C14": 2.0
+        },
+        "decisive_configurations": [
+          "C04",
+          "C08",
+          "C09"
+        ],
+        "threshold": 3.0,
+        "endpoint_rates": {
+          "Q20": {
+            "far": 0.0,
+            "plain": false,
+            "trials": 4000
+          },
+          "Q18": {
+            "far": 0.0095,
+            "plain": false,
+            "trials": 4000
+          },
+          "Q04": {
+            "far": 0.074,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q12": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q09": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q16": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q11": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q08": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q17": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q07": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q10": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q19": {
+            "far": 0.0,
+            "plain": false,
+            "trials": 4000
+          },
+          "Q15": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q01": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q14": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q06": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q13": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q02": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q05": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          },
+          "Q21": {
+            "far": 0.99975,
+            "plain": false,
+            "trials": 4000
+          },
+          "Q03": {
+            "far": 0.0,
+            "plain": true,
+            "trials": 4000
+          }
+        },
+        "plain_max_far": 0.074,
+        "maximizing_plain_endpoints": [
+          "Q04"
+        ],
+        "plain_max_far_3dp": 0.074,
+        "published_plain_max_far_3dp": 0.074,
+        "verification": "Table 3 rounded FAR; computed from retained calibration and endpoint trial statistics"
+      }
+    }
+  },
+  "total_checks": 2020,
+  "check_groups": {
+    "original_frozen_replay": 2016,
+    "table3_without_penalties": 4
+  },
+  "failures": [],
+  "status": "passed_with_float32_differences",
+  "software_version": "0.1.1"
+}

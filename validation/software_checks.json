@@ -1,0 +1,79 @@
+{
+  "software_version": "0.1.1",
+  "checks": {
+    "build": {
+      "exit_code": 0,
+      "seconds": 4.559
+    },
+    "wheel_install": {
+      "exit_code": 0,
+      "seconds": 2.381
+    },
+    "version": {
+      "exit_code": 0,
+      "seconds": 0.133
+    },
+    "full_tests": {
+      "exit_code": 0,
+      "seconds": 23.48,
+      "discovered": 78,
+      "passed": 78,
+      "skipped": 0
+    },
+    "wheel_tests": {
+      "exit_code": 0,
+      "seconds": 2.537,
+      "discovered": 78,
+      "passed": 64,
+      "skipped": 14
+    },
+    "wheel_demo": {
+      "exit_code": 0,
+      "seconds": 1.062
+    },
+    "pip_check": {
+      "exit_code": 0,
+      "seconds": 0.409
+    },
+    "paper_replay": {
+      "exit_code": 0,
+      "seconds": 0.573
+    }
+  },
+  "checked_at_utc": "2026-10-27T13:59:30.968834+00:00",
+  "scope": "Linux source and isolated installed-wheel validation. Native Windows and GitHub-hosted CI were not executed.",
+  "runtime": {
+    "python": "3.13.9",
+    "cpu_numpy": "2.2.6",
+    "cpu_scipy": "1.16.3",
+    "isolated_cpu_wheel_environment": true,
+    "gpu_environment_reused": true,
+    "gpu_environment_existing_pip_conflicts": 5
+  },
+  "source_sha256": {
+    "src/apitail/__init__.py": "c8b489407bc00c39b91a9a8d54b2839668c6de6a6f0a3620885a92d3ba33b78f",
+    "src/apitail/__main__.py": "3129adff95e0f38b87ab34cddfc27082c7892bcaec267ff5d40f160fdf55b44a",
+    "src/apitail/baselines.py": "2aca9693c5d310f81304b651d2e0c89ef84a6da2ab86e52b83941089312ed598",
+    "src/apitail/cli.py": "ec9452603a19371aeb699654c22e85b35cfff40f0ead1003fb7f215d77ff45a5",
+    "src/apitail/collect.py": "48d7b1a8b1f60bf28f27ddba5fd9b02dc2814537b244cb546c9299435979d450",
+    "src/apitail/core.py": "82fe22767d8367f9445cbbbf726a541f137ec72af1b791305bd7c6edab88eb45",
+    "src/apitail/demo.py": "bc8d3833a1a7a4846eb686e804c3470c1e508bf48226d89249929957cc5bd26c",
+    "src/apitail/generate.py": "35d62b6243e05b397bcd756b18b6b96a410fa50461d7e77017605148e79abbd7",
+    "src/apitail/hf.py": "453dfbeb96bd15b053468bede0e9362d981a4af4eaf41f2bbf7e0fd73be52b82",
+    "src/apitail/io.py": "23b864f7a565d3f929c99dfde51b1295dbf63996166d83557ab3f2c92b96a6ff",
+    "src/apitail/pipeline.py": "59db96d18e18a66ee96390e27e4ca54adb3b5e7f926c301efa8cf374c2d1330b",
+    "src/apitail/validation.py": "1b6b7a9a935c13eeca6572253074ca2e0a59cc9969cd0563d13ba5ef442fa0fe",
+    "scripts/check_release.py": "5a76cd75fb34a0d0c5d076fad2a86e9409d8bae631fcb542937e4f504204baa5",
+    "scripts/gpu_smoke.py": "83959510a32d0ac73be8fb6a50b10310846780345f4cbcdb42520e14bc53bc50",
+    "scripts/reproduce_paper.py": "cb72d282773d6149dee8b39154985865f74f329e285f2432889c38fd5f8cc200",
+    "scripts/verify_archive_scores.py": "e488ad4a81060498f4f71bbd05ea392d24303fa190b77f69903a1d8ea173ab5f",
+    "tests/test_baselines.py": "8bcbaad457acb8b9e5980545e82aedf2b5c5b4bcb47246dca0b8d47d1aacf76f",
+    "tests/test_collection.py": "300532ff96cc0bd5164c177f5c0d89952ef8448f42e51f540404cfb07c3a9967",
+    "tests/test_core.py": "5395c9fd2f47c4034e8e4392a511b07730c3e6d67dc58143b78d9a3d70c7a41b",
+    "tests/test_generation.py": "0a2f2b6be670e0579685656bfaa393da30dfe83f44f334d97b8a6a44e82f9cb8",
+    "tests/test_hf.py": "b061c39e3a74aa5bc0a7e0f5c1b859cce147c3521a975fbd8bbb5fed861551f0",
+    "tests/test_pipeline.py": "dce9979432d36d75b6a06c613238b373ea72fb6c887e671e08e1e17a38835c2f",
+    "tests/test_release.py": "317077134078eef9d048517e8fdc470abcdaa0870c2e3c1bc96d605c678996c0",
+    "tests/test_text.py": "ef655e7611e11c9120429f1d4efa7e97bae9e7669b70703df82b014f473ee90c"
+  }
+}

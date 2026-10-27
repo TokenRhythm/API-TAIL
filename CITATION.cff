@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the API-TAIL manuscript when using this research code."
+title: "API-TAIL"
+type: software
+version: 0.1.1
+license: Apache-2.0
+repository-code: "https://github.com/TokenRhythm/API-TAIL"
+authors:
+  - name: "TokenRhythm Technologies"
+preferred-citation:
+  type: unpublished
+  title: "API-TAIL: Detecting Model Substitution in LLM APIs through Temperature-Aligned Likelihood Tails"
+  authors:
+    - name: "TokenRhythm Technologies"
+  year: 2026
+  notes: "Unpublished manuscript; no arXiv identifier has been assigned."

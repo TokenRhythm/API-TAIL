@@ -1,0 +1,436 @@
+{
+  "scope": "Removal of explicit endpoint/provider identity references from the distributed legacy source, not a guarantee of irreversible anonymization.",
+  "id_order": "Plain endpoints first, then special endpoints; source endpoint names were sorted alphabetically within each group. Existing paper IDs are preserved.",
+  "mapped_qwen_endpoints": 21,
+  "mapped_gemma_endpoints": 16,
+  "numeric_endpoint_mapping_checks": 73,
+  "identity_mapping_written": false,
+  "original_source_hashes_preserved": true,
+  "numeric_benchmark_assets_changed": false,
+  "changes": [
+    {
+      "file": "legacy/code/bbp/cmp_eval_nat.py",
+      "changes": [
+        "Removed explicit provider-name clues from historical source labels, comments and cost-field names; provider A/B follow the paper substitute labels, other legacy providers use distinct placeholders.",
+        "Added explicit UTF-8 encoding to 3 text I/O calls; binary cache I/O is unchanged."
+      ],
+      "text_io_calls_updated": 3
+    },
+    {
+      "file": "legacy/code/bbp/cmp_eval_v3.py",
+      "changes": [
+        "Added explicit UTF-8 encoding to 1 text I/O calls; binary cache I/O is unchanged."
+      ],
+      "text_io_calls_updated": 1
+    },
+    {
+      "file": "legacy/code/bbp/cmp_met_native.py",
+      "changes": [
+        "Added explicit UTF-8 encoding to 2 text I/O calls; binary cache I/O is unchanged."
+      ],
+      "text_io_calls_updated": 2
+    },
+    {
+      "file": "legacy/code/bbp/cmp_report.py",
+      "changes": [
+        "Added explicit UTF-8 encoding to 3 text I/O calls; binary cache I/O is unchanged."
+      ],
+      "text_io_calls_updated": 3
+    },
+    {
+      "file": "legacy/code/bbp/eval_tvmix2.py",
+      "changes": [
+        "Added explicit UTF-8 encoding to 2 text I/O calls; binary cache I/O is unchanged."
+      ],
+      "text_io_calls_updated": 2
+    },
+    {
+      "file": "legacy/code/bbp/final_eval.py",
+      "changes": [
+        "Added explicit UTF-8 encoding to 2 text I/O calls; binary cache I/O is unchanged."
+      ],
+      "text_io_calls_updated": 2
+    },
+    {
+      "file": "legacy/code/bbp/gen_multi.py",
+      "changes": [
+        "Added explicit UTF-8 encoding to 1 text I/O calls; binary cache I/O is unchanged."
+      ],
+      "text_io_calls_updated": 1
+    },
+    {
+      "file": "legacy/code/bbp/prota_report.py",
+      "changes": [
+        "Replaced historical Qwen special-endpoint names with the corresponding paper IDs.",
+        "Added explicit UTF-8 encoding to 3 text I/O calls; binary cache I/O is unchanged."
+      ],
+      "text_io_calls_updated": 3
+    },
+    {
+      "file": "legacy/code/jobs/paper2/e6_tools.py",
+      "changes": [
+        "Added explicit UTF-8 encoding to 7 text I/O calls; binary cache I/O is unchanged."
+      ],
+      "text_io_calls_updated": 7
+    },
+    {
+      "file": "legacy/code/jobs/paper2/gen_hf.py",
+      "changes": [
+        "Added explicit UTF-8 encoding to 1 text I/O calls; binary cache I/O is unchanged."
+      ],
+      "text_io_calls_updated": 1
+    },
+    {
+      "file": "legacy/code/jobs/paper2/hf_score.py",
+      "changes": [
+        "Added explicit UTF-8 encoding to 1 text I/O calls; binary cache I/O is unchanged."
+      ],
+      "text_io_calls_updated": 1
+    },
+    {
+      "file": "legacy/code/jobs/paper2/metnat_eval2.py",
+      "changes": [
+        "Removed explicit provider-name clues from historical source labels, comments and cost-field names; provider A/B follow the paper substitute labels, other legacy providers use distinct placeholders.",
+        "Added explicit UTF-8 encoding to 4 text I/O calls; binary cache I/O is unchanged."
+      ],
+      "text_io_calls_updated": 4
+    },
+    {
+      "file": "legacy/code/jobs/paper2/paper2_eval.py",
+      "changes": [
+        "Added explicit UTF-8 encoding to 5 text I/O calls; binary cache I/O is unchanged."
+      ],
+      "text_io_calls_updated": 5
+    },
+    {
+      "file": "legacy/code/jobs/paper2/paper2_report.py",
+      "changes": [
+        "Replaced full honest-endpoint identity strings with the existing paper endpoint IDs.",
+        "Removed explicit provider-name clues from historical source labels, comments and cost-field names; provider A/B follow the paper substitute labels, other legacy providers use distinct placeholders.",
+        "Added explicit UTF-8 encoding to 2 text I/O calls; binary cache I/O is unchanged."
+      ],
+      "text_io_calls_updated": 2
+    },
+    {
+      "file": "legacy/code/jobs/paper2/plain_rule2.py",
+      "changes": [
+        "Removed explicit provider-name clues from historical source labels, comments and cost-field names; provider A/B follow the paper substitute labels, other legacy providers use distinct placeholders.",
+        "Added explicit UTF-8 encoding to 2 text I/O calls; binary cache I/O is unchanged."
+      ],
+      "text_io_calls_updated": 2
+    },
+    {
+      "file": "legacy/code/jobs/supp1/pool_swap.py",
+      "changes": [
+        "Expanded three historical Qwen endpoint comprehensions to the existing paper endpoint IDs, preserving membership and order.",
+        "Removed explicit provider-name clues from historical source labels, comments and cost-field names; provider A/B follow the paper substitute labels, other legacy providers use distinct placeholders.",
+        "Added explicit UTF-8 encoding to 1 text I/O calls; binary cache I/O is unchanged."
+      ],
+      "text_io_calls_updated": 1
+    },
+    {
+      "file": "legacy/code/jobs/supp1/run_eval.py",
+      "changes": [
+        "Removed explicit provider-name clues from historical source labels, comments and cost-field names; provider A/B follow the paper substitute labels, other legacy providers use distinct placeholders.",
+        "Added explicit UTF-8 encoding to 3 text I/O calls; binary cache I/O is unchanged."
+      ],
+      "text_io_calls_updated": 3
+    },
+    {
+      "file": "legacy/code/jobs/talign/sv_grids.py",
+      "changes": [
+        "Added explicit UTF-8 encoding to 2 text I/O calls; binary cache I/O is unchanged."
+      ],
+      "text_io_calls_updated": 2
+    }
+  ],
+  "validation": {
+    "legacy_text_identity_name_scan": "passed",
+    "explicit_utf8_text_io_scan": "passed",
+    "original_and_adapted_source_hashes_verified": 23,
+    "distributed_numeric_asset_hashes_verified": 8,
+    "baseline_tests": {
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "seconds": 0.65
+    },
+    "cli_help": [
+      {
+        "entry": "score",
+        "returncode": 0
+      },
+      {
+        "entry": "generate",
+        "returncode": 0
+      },
+      {
+        "entry": "generate-vllm",
+        "returncode": 0
+      },
+      {
+        "entry": "evaluate",
+        "returncode": 0
+      },
+      {
+        "entry": "met-native",
+        "returncode": 0
+      },
+      {
+        "entry": "met-reference",
+        "returncode": 0
+      }
+    ],
+    "historical_provider_named_input_replay": "not executed; requires consistent external input-key and cache-filename conversion"
+  },
+  "documentation_changes": [
+    "README clarifies historical input-label conversion requirements and completed checks.",
+    "ASSETS and numerical manifest describe pseudonyms and cross-identification limits without claiming irreversible anonymization.",
+    "ASSETS and numerical manifest state author-authorized Apache-2.0 for distributed statistics, excluding external assets."
+  ],
+  "comment_cleanup": {
+    "scope": "Comments and docstrings only; executable AST excluding docstrings is unchanged. Source identifiers, file paths, algorithms and schema versions are preserved.",
+    "files": [
+      {
+        "file": "legacy/code/bbp/cmp_eval_nat.py",
+        "pre_cleanup_sha256": "03d7eeb06a3bd5eb59d0a07ad5e789753d8bc034e0f27dace142fb45a60abe80",
+        "current_sha256": "c4ad1bf7b7676449fc65280cb6ad50d30c14dbbf14f16a34d76eea2beb137a77",
+        "ast_without_docstrings_sha256": "5a5194f4f06ecc2150c1fb1e8fa3b4f5fc0c870a5db98399e11726cb05d829ab",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 1,
+        "comments_changed_or_removed": 5
+      },
+      {
+        "file": "legacy/code/bbp/cmp_eval_v3.py",
+        "pre_cleanup_sha256": "dcbbc263c7a4b0002a43a3adc2f8c25e6fefca4b8ac5e647ea2385e7fecc4bbd",
+        "current_sha256": "95dbfd916a835060680d72efe685bd9c317c3dfdb6dcb2e469e1729392b04155",
+        "ast_without_docstrings_sha256": "d9154f7f3c38f168fe0dbf8258a1b07b224bcaf66d0a2cf4bf664d9a509955ad",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 4,
+        "comments_changed_or_removed": 14
+      },
+      {
+        "file": "legacy/code/bbp/cmp_met_native.py",
+        "pre_cleanup_sha256": "11ee0b83c964d703131b69bb4fc38383eed960809e610e66f8b750e9b78c5580",
+        "current_sha256": "158b0bb67076eb67499d7c7197cb59fae09884b12a7ef9dbe4b8a03b1a64364b",
+        "ast_without_docstrings_sha256": "6b349873ee3cec18893922d55303640cade8a5fd8a9f3c1235b062e043303d28",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 1,
+        "comments_changed_or_removed": 0
+      },
+      {
+        "file": "legacy/code/bbp/cmp_report.py",
+        "pre_cleanup_sha256": "cf224eedd7f72ff8709b0a9ef85b5a4ed99ef595bd43f41c1b4803c4929e7038",
+        "current_sha256": "25adf606b08aba68d1cf55f7c9b6ed61225463d7035efe4b8f523b41efe4e906",
+        "ast_without_docstrings_sha256": "41f1a758a5914dd2555703611bf17500063b528b1e50a424dae105549c3b14ff",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 1,
+        "comments_changed_or_removed": 1
+      },
+      {
+        "file": "legacy/code/bbp/eval_tvmix2.py",
+        "pre_cleanup_sha256": "bd2a52c23950c781378bb0d4bf8d76d02086d9c7dd17f31544c0f4e1d5e3c7a4",
+        "current_sha256": "4f0db3e06ab6a50e1fa76f8af038126deda215cf5fb4f40a548e7fd0d558cab4",
+        "ast_without_docstrings_sha256": "50cb5fc7a2581dc4e119565a430f942fa743d808ab96e42cde5c342ef546c319",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 1,
+        "comments_changed_or_removed": 1
+      },
+      {
+        "file": "legacy/code/bbp/final_eval.py",
+        "pre_cleanup_sha256": "db34261ffccfb95e787934d04666ad5b50fb2083a5979e8c97722296bc61748e",
+        "current_sha256": "596eedcebe2cd126c3d99d5a040908415d540d7f589c8b187fa6ab95fdba1194",
+        "ast_without_docstrings_sha256": "323a6acadd971cfeb0828498f0db860a3442f9187fb7f29a4b1ff638c124c653",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 1,
+        "comments_changed_or_removed": 0
+      },
+      {
+        "file": "legacy/code/bbp/gen_local.py",
+        "pre_cleanup_sha256": "e7c732b677d16fadab9f150c72fcf0cfc20cf8c39630b0a670e8a565633f4ea1",
+        "current_sha256": "6dd7b7df49573c74b8c02ab0ebb05b34383186f9780c6371b73ba16d9bf716db",
+        "ast_without_docstrings_sha256": "658517b79bcfebc1ccda2864c3d945169aae80e2fa7398f80c3d6384c0aab828",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 1,
+        "comments_changed_or_removed": 0
+      },
+      {
+        "file": "legacy/code/bbp/gen_multi.py",
+        "pre_cleanup_sha256": "cb35195eec70a559b0b52f7079bfa64e6784fcaac45406d36c5065a2c06066ed",
+        "current_sha256": "39892c963b3f404d3abc664e8b5d6a7ed0dab0189fab266b9121b0acc9f9e1d3",
+        "ast_without_docstrings_sha256": "80e27f8e204b3ab549909c1ab1a087cd41c6cd8817228944d9187047aa12d364",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 1,
+        "comments_changed_or_removed": 0
+      },
+      {
+        "file": "legacy/code/bbp/prota_report.py",
+        "pre_cleanup_sha256": "0b9ba9a5284443dd60ef495f1683d6e372b49c738f16d9f34e9390ee4d159889",
+        "current_sha256": "bb2b9d5205b7174d6f9158a772e0ec2e183488016722c8618524a219b5fd023c",
+        "ast_without_docstrings_sha256": "f54352fe3c1b79d690cf6cf8d90cca239854e77d5f57feee78c35ef7820b8969",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 1,
+        "comments_changed_or_removed": 0
+      },
+      {
+        "file": "legacy/code/bbp/rut.py",
+        "pre_cleanup_sha256": "08ed8a10c8c440a3d8a14fa1fb6a355434343f0f7ff702c5453e153afb6fdcfa",
+        "current_sha256": "59522632c8951d2f1f315a5f61e0577c16fdbbbbda14ce9819054aff89baff8d",
+        "ast_without_docstrings_sha256": "b10549b1c325e9f31f2c39fcbe32d5e8e33b1304878f77b062424962fc889b0b",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 2,
+        "comments_changed_or_removed": 0
+      },
+      {
+        "file": "legacy/code/bbp/scenarios.py",
+        "pre_cleanup_sha256": "b989bbcc59702dd00bba2879904088feac5c97ffa4dae02b3f82e29a727381a4",
+        "current_sha256": "5d4535e692346ba6fa7abb6eec026939daa2b363ae65d9ca5e6784bbe152efe0",
+        "ast_without_docstrings_sha256": "65a9a4bf62dabd04321b7ccffaa91858795641c6255cad8f6a4ab4c860d7c1b3",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 1,
+        "comments_changed_or_removed": 0
+      },
+      {
+        "file": "legacy/code/jobs/paper2/e6_tools.py",
+        "pre_cleanup_sha256": "54009f6ffe2018bbb9cee63921a2b33796e3a67b1806339605d8dc9e37c8576b",
+        "current_sha256": "1a68eede8d5470dd302486d6f4409450547ab0f572977ec036301ddef53037e8",
+        "ast_without_docstrings_sha256": "a4ae0fc2571b73326cfe6783df7015a900174ca987d51d5723749846fca51abe",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 1,
+        "comments_changed_or_removed": 3
+      },
+      {
+        "file": "legacy/code/jobs/paper2/gen_hf.py",
+        "pre_cleanup_sha256": "d29098985abd811a6975d20b18b7695400220079905f6d331ba865ea6fff6fc0",
+        "current_sha256": "0d3b3555b5b369b15141337a58e70d2d5877e6fa708b60d3c99125278c3655a4",
+        "ast_without_docstrings_sha256": "6b64923d207f8dc27426f4a792bba2900d40ae43df1aa9cd1f2e2c386aa56603",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 1,
+        "comments_changed_or_removed": 0
+      },
+      {
+        "file": "legacy/code/jobs/paper2/hf_score.py",
+        "pre_cleanup_sha256": "79e84bdb321a12f2a520bdfad28162eb5c3d676551e89083a6fe0c5a1b49cd00",
+        "current_sha256": "b7bd2135b5ffb8da859fe7b3a5553af3142ca3b964a6222fa57c02a2ed94c298",
+        "ast_without_docstrings_sha256": "902ee881aaf91d0899556907fc3b1f2b2e5907081c3f63ee80557b38a5cf1fda",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 1,
+        "comments_changed_or_removed": 0
+      },
+      {
+        "file": "legacy/code/jobs/paper2/metnat_eval2.py",
+        "pre_cleanup_sha256": "54ee284be46ebc7f3abb9f7109f91ef936f2b244d51b8af8d067dce0ae5d5149",
+        "current_sha256": "03967996a10dd917d0813ffac9fc7bf1a7f308a3163c8c7708193070b6183cf2",
+        "ast_without_docstrings_sha256": "e53cbeffb7e54843d306ccf53d1383a5d8602214582bba6bb1bc2910c0cc8ab7",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 1,
+        "comments_changed_or_removed": 2
+      },
+      {
+        "file": "legacy/code/jobs/paper2/paper2_eval.py",
+        "pre_cleanup_sha256": "163211c3a13558c000fb93aa5699422d573fbf5489fc66848834c2f2975f07fb",
+        "current_sha256": "742b8ae0dbc0cf53feebb8e4e1f8768e315af7b6c911c665663fe0cd9651d164",
+        "ast_without_docstrings_sha256": "f1c1395938aa2d1987b6477d4d78442da2531dd78d450379b0c1df008874facc",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 2,
+        "comments_changed_or_removed": 12
+      },
+      {
+        "file": "legacy/code/jobs/paper2/paper2_report.py",
+        "pre_cleanup_sha256": "237fe531962816e4d9f57a02177dd928725041b9a35a03be890a83f0b72e0e0c",
+        "current_sha256": "fb175d5fce76db811a5a26ad7e41260fc08220f0e4920b244e7db09e43f9d90a",
+        "ast_without_docstrings_sha256": "157aae98b3694e68525cd584fdae7fd7e801b83a25c073cf456842ab5c015d02",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 7,
+        "comments_changed_or_removed": 21
+      },
+      {
+        "file": "legacy/code/jobs/paper2/plain_rule2.py",
+        "pre_cleanup_sha256": "c7e48efb40a02f2a45d21e49c368e2aefe556b8346f2d2d5a0192af8c2afaedf",
+        "current_sha256": "8f5396b21e07d566746287bb0bd92018fdde5ac1abcef2baffc0d8aa2c029448",
+        "ast_without_docstrings_sha256": "faeafa0d0d71abb4fbb2c7af1fd0ca55a42b38f206ab81894a1b9624216e761c",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 1,
+        "comments_changed_or_removed": 0
+      },
+      {
+        "file": "legacy/code/jobs/supp1/engine.py",
+        "pre_cleanup_sha256": "47caea37519a9e822deacc110943280596be75f1eab8236ea60475b622f57180",
+        "current_sha256": "44b08d99075a339d37be53a0537b3b03f500824af76095381747909637ea195d",
+        "ast_without_docstrings_sha256": "4ae1b6c867ee88dfb5001ede7483a73372cf42b9912be6d292f31b2f739e3d4e",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 3,
+        "comments_changed_or_removed": 10
+      },
+      {
+        "file": "legacy/code/jobs/supp1/pool_swap.py",
+        "pre_cleanup_sha256": "326b41ab1a81e05ace7b67eaecb1ba438dc06c3c033b60cd371853ee92918cca",
+        "current_sha256": "953a696f955514c6654abde5f385bf088dfe08e3a445288be5412ce06ba2c9bf",
+        "ast_without_docstrings_sha256": "e2ede92144f1e2429ac78c3da9edbb08980dd8efa12f6c59e23a1881509d62c3",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 1,
+        "comments_changed_or_removed": 3
+      },
+      {
+        "file": "legacy/code/jobs/supp1/run_eval.py",
+        "pre_cleanup_sha256": "40cf0ae4927c1ae8d88c9fa5a1cf7fe1c1bf1c7718779a072416724ba7b9bfcb",
+        "current_sha256": "5bad01352e32a6d3488ab288e9df0dd2648e09ca368046487bd0a0608757a3ce",
+        "ast_without_docstrings_sha256": "ef4a4a1bc45f080f8b7a6f51a503ebe05cb20da65a65b7f2e46e7e5e69ba0cc2",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 1,
+        "comments_changed_or_removed": 5
+      },
+      {
+        "file": "legacy/code/jobs/talign/sv_grids.py",
+        "pre_cleanup_sha256": "0c4457157162714072dd554e76b9a6e43b896ad85ac6b74b1209a7059fc428c1",
+        "current_sha256": "b2397c954cf56701f563c855afad0b19928dde780afba71b942dc5bac44c9071",
+        "ast_without_docstrings_sha256": "eba0809e0c33d16584f044afb6c160e0a873761f90f7bbdb6b89cf2e6e6851bb",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 2,
+        "comments_changed_or_removed": 2
+      },
+      {
+        "file": "legacy/code/jobs/talign/ta_run_eval.py",
+        "pre_cleanup_sha256": "faa1824c55ebeb73835f2cb7f39520baecd5be16af5ee7b27f0281a765b5c0ca",
+        "current_sha256": "a5fb553ed68a15fe16ac20354b39a5484ef9afe2c994c4e07379580eff17c568",
+        "ast_without_docstrings_sha256": "4519480f8f0c56817e8e5e9df7bf3f57b6fd57693d8887bcd4e6fe6828d63073",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 1,
+        "comments_changed_or_removed": 8
+      },
+      {
+        "file": "legacy/rebase.py",
+        "pre_cleanup_sha256": "b2a0b8ee23ad86d23f8056bbe06ef1bc634c164874642d954f180882bbd75158",
+        "current_sha256": "5bf7691df159dc202452c1cd04f15e409ec9ef969b5608565b48d60966b18180",
+        "ast_without_docstrings_sha256": "fb19ad5602db88547d33b15486875b24e6ffd504beeddbd6363113ceea02fba3",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 1,
+        "comments_changed_or_removed": 0
+      },
+      {
+        "file": "legacy/run.py",
+        "pre_cleanup_sha256": "fb937b14f3f9b3376711f488f617124ddce6f8781748ceb83d2460336fb808d5",
+        "current_sha256": "e2756b0400c3eb5b87441cd188776982f397665a4f567f8b7314a84467f0e231",
+        "ast_without_docstrings_sha256": "eda4dac50feb31a9fa4eef3ac00daf7b9b25ce87959005cb64c3fe436c6dd47d",
+        "ast_without_docstrings_unchanged": true,
+        "docstrings_rewritten": 1,
+        "comments_changed_or_removed": 0
+      }
+    ],
+    "ast_python": "3.10.12",
+    "validation": {
+      "ast_unchanged_files": 25,
+      "original_and_adapted_hashes_verified": 23,
+      "cli_help_passed": 6,
+      "baseline_unittest": {
+        "tests": 13,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0,
+        "elapsed_seconds": 0.602
+      }
+    }
+  },
+  "current_validation": "legacy/VALIDATION.json"
+}

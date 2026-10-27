@@ -1,0 +1,77 @@
+{
+  "software_version": "0.1.1",
+  "python": "3.13.9",
+  "scope": "Executed CPU source-reference, comment-only AST, path-rebasing and CLI help checks. No GPU generation, paid API calls or complete historical panel replay was performed by these checks.",
+  "baseline_unittest": {
+    "tests": 13,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "elapsed_seconds": 0.602
+  },
+  "checks": [
+    {
+      "check": "AST excluding docstrings unchanged by comment cleanup",
+      "files": 25,
+      "python": "3.10.12",
+      "passed": true
+    },
+    {
+      "check": "original and adapted source hashes verified separately",
+      "files": 23,
+      "passed": true
+    },
+    {
+      "check": "explicit UTF-8 text I/O",
+      "passed": true
+    },
+    {
+      "check": "named endpoint/provider clues absent from source",
+      "passed": true
+    },
+    {
+      "check": "internal process markers and date notes absent from comments/docstrings",
+      "passed": true
+    },
+    {
+      "check": "legacy help score",
+      "returncode": 0,
+      "stdout_lines": 24,
+      "stderr": ""
+    },
+    {
+      "check": "legacy help generate",
+      "returncode": 0,
+      "stdout_lines": 16,
+      "stderr": ""
+    },
+    {
+      "check": "legacy help generate-vllm",
+      "returncode": 0,
+      "stdout_lines": 14,
+      "stderr": ""
+    },
+    {
+      "check": "legacy help evaluate",
+      "returncode": 0,
+      "stdout_lines": 21,
+      "stderr": ""
+    },
+    {
+      "check": "legacy help met-native",
+      "returncode": 0,
+      "stdout_lines": 10,
+      "stderr": ""
+    },
+    {
+      "check": "legacy help met-reference",
+      "returncode": 0,
+      "stdout_lines": 7,
+      "stderr": ""
+    },
+    {
+      "check": "JSON rebase boundary and recursive values",
+      "passed": true
+    }
+  ]
+}

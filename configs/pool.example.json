@@ -1,0 +1,12 @@
+{
+  "budget": 200,
+  "trials": 2000,
+  "alpha": 0.05,
+  "seed": 20261025,
+  "method": "align",
+  "z_cutoff": 3.0,
+  "members": {
+    "temperature_0.7": "../work/cal-t07.npz",
+    "temperature_1.0": "../work/cal-t10.npz"
+  }
+}

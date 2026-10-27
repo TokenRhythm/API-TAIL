@@ -1,0 +1,177 @@
+{
+  "schema": "apitail-gpu-smoke-v1",
+  "status": "passed",
+  "started_utc": "2026-10-27T13:52:01.035515+00:00",
+  "model_name": "Qwen3.8-27B",
+  "local_files_only": true,
+  "paid_api_calls": 0,
+  "model_downloads": 0,
+  "synthetic_prompts": 3,
+  "max_new_tokens": 8,
+  "temperature_grid_size": 151,
+  "independent_scoring_processes": 2,
+  "scope": "Small local generation/scoring acceptance check; not a reproduction of paper-scale power/FAR or a cross-hardware determinism claim.",
+  "source_sha256": {
+    "core.py": "82fe22767d8367f9445cbbbf726a541f137ec72af1b791305bd7c6edab88eb45",
+    "hf.py": "453dfbeb96bd15b053468bede0e9362d981a4af4eaf41f2bbf7e0fd73be52b82",
+    "generate.py": "35d62b6243e05b397bcd756b18b6b96a410fa50461d7e77017605148e79abbd7",
+    "io.py": "23b864f7a565d3f929c99dfde51b1295dbf63996166d83557ab3f2c92b96a6ff"
+  },
+  "prompts_sha256": "26ae6e27317cee76add90130aa474b674cb7e92a0ee7ce3db90c86fe951cc939",
+  "before": {
+    "free_disk_bytes": 27999961350144,
+    "kubectl_available": false,
+    "gpu_name": "NVIDIA L20X",
+    "memory_used_mib": 0,
+    "memory_total_mib": 143771,
+    "utilization_percent": 0,
+    "compute_process_count": 0,
+    "pod_query_succeeded": null
+  },
+  "stages": [
+    {
+      "responses": 3,
+      "generated_token_count": 24,
+      "generated_tokens_per_response": [
+        8,
+        8,
+        8
+      ],
+      "stage": "generate",
+      "elapsed_seconds": 24.710712045431137,
+      "peak_allocated_bytes": 53940157952,
+      "peak_reserved_bytes": 53966012416,
+      "gpu_name": "NVIDIA L20X",
+      "torch_version": "2.6.0+cu124",
+      "transformers_version": "5.5.0",
+      "numpy_version": "2.2.6",
+      "reference_comparison": {
+        "performed": false,
+        "responses_checked": 0,
+        "fields": {}
+      }
+    },
+    {
+      "responses": 3,
+      "tokens": 24,
+      "seconds": 2.579235814511776,
+      "stage": "score1",
+      "elapsed_seconds": 22.61174415424466,
+      "peak_allocated_bytes": 53949746176,
+      "peak_reserved_bytes": 53986983936,
+      "gpu_name": "NVIDIA L20X",
+      "torch_version": "2.6.0+cu124",
+      "transformers_version": "5.5.0",
+      "numpy_version": "2.2.6",
+      "reference_comparison": {
+        "performed": true,
+        "responses_checked": 3,
+        "fields": {
+          "S": {
+            "max_abs_error": 3.552713678800501e-15,
+            "max_rel_error": 4.35759118528584e-16,
+            "passed": true
+          },
+          "V": {
+            "max_abs_error": 2.842170943040401e-14,
+            "max_rel_error": 4.372062221263502e-16,
+            "passed": true
+          },
+          "S_nucleus": {
+            "max_abs_error": 0.0,
+            "max_rel_error": 0.0,
+            "passed": true
+          },
+          "V_nucleus": {
+            "max_abs_error": 0.0,
+            "max_rel_error": 0.0,
+            "passed": true
+          },
+          "n_nucleus": {
+            "max_abs_error": 0.0,
+            "max_rel_error": 0.0,
+            "passed": true
+          },
+          "nucleus_overflow": {
+            "max_abs_error": 0.0,
+            "max_rel_error": 0.0,
+            "passed": true
+          },
+          "out20": {
+            "max_abs_error": 0.0,
+            "max_rel_error": 0.0,
+            "passed": true
+          }
+        },
+        "source_sha256": "e3f23b88966c9a041f38ca6993285a372c02657880fa3c8301fcc2d577e97455",
+        "atol": 1e-06,
+        "rtol": 1e-06
+      }
+    },
+    {
+      "responses": 3,
+      "tokens": 24,
+      "seconds": 1.8066287823021412,
+      "stage": "score2",
+      "elapsed_seconds": 19.192406494170427,
+      "peak_allocated_bytes": 53949746176,
+      "peak_reserved_bytes": 53986983936,
+      "gpu_name": "NVIDIA L20X",
+      "torch_version": "2.6.0+cu124",
+      "transformers_version": "5.5.0",
+      "numpy_version": "2.2.6",
+      "reference_comparison": {
+        "performed": false,
+        "responses_checked": 0,
+        "fields": {}
+      }
+    }
+  ],
+  "bitwise_repeat_fields": {
+    "S": true,
+    "V": true,
+    "grid": true,
+    "pid": true,
+    "k": true,
+    "n_tokens": true,
+    "nucleus_overflow": true,
+    "out20": true,
+    "logrank": true,
+    "V_nucleus": true,
+    "nll": true,
+    "entropy": true,
+    "n_nucleus": true,
+    "S_nucleus": true
+  },
+  "bitwise_repeat_passed": true,
+  "audit_statistic": {
+    "temperature": 0.3,
+    "temperature_index": 0,
+    "count": 0,
+    "n": 3,
+    "z": [
+      -0.5840707308325762,
+      -0.01022247786877113,
+      -0.05140812404935551
+    ],
+    "method": "align"
+  },
+  "actual_scored_tokens": 24,
+  "actual_scored_responses": 3,
+  "peak_allocated_bytes": 53949746176,
+  "peak_reserved_bytes": 53986983936,
+  "elapsed_seconds": 116.79601972550154,
+  "completed_utc": "2026-10-27T13:53:57.834198+00:00",
+  "after": {
+    "free_disk_bytes": 28179725025280,
+    "kubectl_available": false,
+    "gpu_name": "NVIDIA L20X",
+    "memory_used_mib": 0,
+    "memory_total_mib": 143771,
+    "utilization_percent": 0,
+    "compute_process_count": 0,
+    "pod_query_succeeded": null
+  },
+  "gpu_compute_processes_released": true,
+  "software_version": "0.1.1"
+}

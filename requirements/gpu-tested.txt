@@ -1,0 +1,8 @@
+# Tested with NVIDIA L20X and an existing CUDA-compatible torch build.
+# Install the appropriate torch wheel for your driver; the recorded build was 2.6.0+cu124.
+torch==2.6.0
+numpy==2.2.6
+scipy==1.16.3
+transformers==5.5.0
+accelerate==1.13.0
+safetensors==0.7.0

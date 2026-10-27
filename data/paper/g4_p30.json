@@ -1,0 +1,3127 @@
+{
+  "schema_version": 1,
+  "panel": "g4_p30",
+  "claimed_model": "Gemma-4-31B-it",
+  "protocol": "P30",
+  "alpha": 0.05,
+  "pool": "with_sampling_penalties",
+  "method_labels": {
+    "api_tail": "API-TAIL",
+    "temperature_mle": "Temperature MLE",
+    "fixed_temperature": "Fixed temperature T=1",
+    "nucleus_095": "Nucleus restricted p=0.95",
+    "top20": "Top-20 scoring",
+    "nll_count": "Negative log-likelihood count",
+    "logrank_count": "Log-rank count",
+    "entropy_count": "Entropy count",
+    "rut": "Rank-uniformity test",
+    "met": "MET matched query budget"
+  },
+  "main_substitution": "S06_0.10",
+  "substitutes": {
+    "S01": "Qwen3.6-27B (provider A)",
+    "S02": "Qwen3.6-27B (developer platform)",
+    "S03": "Qwen3.6-35B-A3B",
+    "S04": "Qwen3.8-Flash",
+    "S05": "DeepSeek-V4.1-Flash",
+    "S06": "Gemma-4-26B-A4B",
+    "S07": "Qwen3.8-27B"
+  },
+  "configurations": [
+    {
+      "id": "C01",
+      "source_configuration_label": "g4p_self"
+    },
+    {
+      "id": "C02",
+      "source_configuration_label": "g4p_self2"
+    },
+    {
+      "id": "C03",
+      "source_configuration_label": "g4p_topk64"
+    },
+    {
+      "id": "C04",
+      "source_configuration_label": "g4p_T07"
+    },
+    {
+      "id": "C05",
+      "source_configuration_label": "g4p_T10"
+    },
+    {
+      "id": "C06",
+      "source_configuration_label": "g4p_T10b"
+    },
+    {
+      "id": "C07",
+      "source_configuration_label": "g4p_gcdef"
+    },
+    {
+      "id": "C08",
+      "source_configuration_label": "g4p_T07p08"
+    },
+    {
+      "id": "C09",
+      "source_configuration_label": "g4p_sysdefault"
+    },
+    {
+      "id": "C10",
+      "source_configuration_label": "g4p_fp8w"
+    },
+    {
+      "id": "C11",
+      "source_configuration_label": "g4p_fp8w_T10"
+    },
+    {
+      "id": "C12",
+      "source_configuration_label": "g4p_pp15"
+    },
+    {
+      "id": "C13",
+      "source_configuration_label": "g4p_pp20"
+    },
+    {
+      "id": "C14",
+      "source_configuration_label": "g4p_rp105"
+    },
+    {
+      "id": "C15",
+      "source_configuration_label": "g4p_rp110"
+    },
+    {
+      "id": "C16",
+      "source_configuration_label": "g4p_pp15rp105"
+    }
+  ],
+  "rules": [
+    {
+      "N": 100,
+      "method": "api_tail",
+      "threshold_expected": 5.0,
+      "calibration": [
+        {
+          "id": "C01",
+          "array": "a00000",
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C02",
+          "array": "a00001",
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C03",
+          "array": "a00002",
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C04",
+          "array": "a00003",
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C05",
+          "array": "a00004",
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C06",
+          "array": "a00005",
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C07",
+          "array": "a00006",
+          "q95_expected": 2.0
+        },
+        {
+          "id": "C08",
+          "array": "a00007",
+          "q95_expected": 1.0
+        },
+        {
+          "id": "C09",
+          "array": "a00008",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C10",
+          "array": "a00009",
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C11",
+          "array": "a00010",
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C12",
+          "array": "a00011",
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C13",
+          "array": "a00012",
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C14",
+          "array": "a00013",
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C15",
+          "array": "a00014",
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C16",
+          "array": "a00015",
+          "q95_expected": 3.0
+        }
+      ],
+      "honest": [
+        {
+          "id": "G11",
+          "plain": false,
+          "array": "a00016",
+          "far_expected": 0.0075
+        },
+        {
+          "id": "G16",
+          "plain": false,
+          "array": "a00017",
+          "far_expected": 0.00225
+        },
+        {
+          "id": "G10",
+          "plain": false,
+          "array": "a00018",
+          "far_expected": 0.00525
+        },
+        {
+          "id": "G12",
+          "plain": false,
+          "array": "a00019",
+          "far_expected": 0.0045
+        },
+        {
+          "id": "G13",
+          "plain": false,
+          "array": "a00020",
+          "far_expected": 0.004
+        },
+        {
+          "id": "G01",
+          "plain": true,
+          "array": "a00021",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G05",
+          "plain": true,
+          "array": "a00022",
+          "far_expected": 0.0005
+        },
+        {
+          "id": "G06",
+          "plain": true,
+          "array": "a00023",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G07",
+          "plain": true,
+          "array": "a00024",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G03",
+          "plain": true,
+          "array": "a00025",
+          "far_expected": 0.0005
+        },
+        {
+          "id": "G02",
+          "plain": true,
+          "array": "a00026",
+          "far_expected": 0.00125
+        },
+        {
+          "id": "G04",
+          "plain": true,
+          "array": "a00027",
+          "far_expected": 0.00025
+        },
+        {
+          "id": "G08",
+          "plain": true,
+          "array": "a00028",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G15",
+          "plain": false,
+          "array": "a00029",
+          "far_expected": 0.00575
+        },
+        {
+          "id": "G09",
+          "plain": true,
+          "array": "a00030",
+          "far_expected": 0.00025
+        }
+      ],
+      "substitutions": [
+        {
+          "id": "S06_0.05",
+          "substitute": "S06",
+          "rho": 0.05,
+          "array": "a00031",
+          "power_expected": 0.125
+        },
+        {
+          "id": "S06_0.10",
+          "substitute": "S06",
+          "rho": 0.1,
+          "array": "a00032",
+          "power_expected": 0.555
+        },
+        {
+          "id": "S06_0.25",
+          "substitute": "S06",
+          "rho": 0.25,
+          "array": "a00033",
+          "power_expected": 0.993
+        },
+        {
+          "id": "S05_0.05",
+          "substitute": "S05",
+          "rho": 0.05,
+          "array": "a00034",
+          "power_expected": 0.329
+        },
+        {
+          "id": "S05_0.10",
+          "substitute": "S05",
+          "rho": 0.1,
+          "array": "a00035",
+          "power_expected": 0.912
+        },
+        {
+          "id": "S05_0.25",
+          "substitute": "S05",
+          "rho": 0.25,
+          "array": "a00036",
+          "power_expected": 1.0
+        },
+        {
+          "id": "S07_0.05",
+          "substitute": "S07",
+          "rho": 0.05,
+          "array": "a00037",
+          "power_expected": 0.282
+        },
+        {
+          "id": "S07_0.10",
+          "substitute": "S07",
+          "rho": 0.1,
+          "array": "a00038",
+          "power_expected": 0.874
+        },
+        {
+          "id": "S07_0.25",
+          "substitute": "S07",
+          "rho": 0.25,
+          "array": "a00039",
+          "power_expected": 0.999
+        }
+      ],
+      "plain_max_far_expected": 0.00125,
+      "continuous": false
+    },
+    {
+      "N": 200,
+      "method": "api_tail",
+      "threshold_expected": 8.0,
+      "calibration": [
+        {
+          "id": "C01",
+          "array": "a00040",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C02",
+          "array": "a00041",
+          "q95_expected": 7.0
+        },
+        {
+          "id": "C03",
+          "array": "a00042",
+          "q95_expected": 6.0
+        },
+        {
+          "id": "C04",
+          "array": "a00043",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C05",
+          "array": "a00044",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C06",
+          "array": "a00045",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C07",
+          "array": "a00046",
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C08",
+          "array": "a00047",
+          "q95_expected": 2.0
+        },
+        {
+          "id": "C09",
+          "array": "a00048",
+          "q95_expected": 8.0
+        },
+        {
+          "id": "C10",
+          "array": "a00049",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C11",
+          "array": "a00050",
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C12",
+          "array": "a00051",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C13",
+          "array": "a00052",
+          "q95_expected": 7.0
+        },
+        {
+          "id": "C14",
+          "array": "a00053",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C15",
+          "array": "a00054",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C16",
+          "array": "a00055",
+          "q95_expected": 5.0
+        }
+      ],
+      "honest": [
+        {
+          "id": "G11",
+          "plain": false,
+          "array": "a00056",
+          "far_expected": 0.01175
+        },
+        {
+          "id": "G16",
+          "plain": false,
+          "array": "a00057",
+          "far_expected": 0.0035
+        },
+        {
+          "id": "G10",
+          "plain": false,
+          "array": "a00058",
+          "far_expected": 0.0095
+        },
+        {
+          "id": "G12",
+          "plain": false,
+          "array": "a00059",
+          "far_expected": 0.0085
+        },
+        {
+          "id": "G13",
+          "plain": false,
+          "array": "a00060",
+          "far_expected": 0.0045
+        },
+        {
+          "id": "G01",
+          "plain": true,
+          "array": "a00061",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G05",
+          "plain": true,
+          "array": "a00062",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G06",
+          "plain": true,
+          "array": "a00063",
+          "far_expected": 0.0005
+        },
+        {
+          "id": "G07",
+          "plain": true,
+          "array": "a00064",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G03",
+          "plain": true,
+          "array": "a00065",
+          "far_expected": 0.003
+        },
+        {
+          "id": "G02",
+          "plain": true,
+          "array": "a00066",
+          "far_expected": 0.0015
+        },
+        {
+          "id": "G04",
+          "plain": true,
+          "array": "a00067",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G08",
+          "plain": true,
+          "array": "a00068",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G15",
+          "plain": false,
+          "array": "a00069",
+          "far_expected": 0.0125
+        },
+        {
+          "id": "G09",
+          "plain": true,
+          "array": "a00070",
+          "far_expected": 0.00025
+        }
+      ],
+      "substitutions": [
+        {
+          "id": "S06_0.05",
+          "substitute": "S06",
+          "rho": 0.05,
+          "array": "a00071",
+          "power_expected": 0.293
+        },
+        {
+          "id": "S06_0.10",
+          "substitute": "S06",
+          "rho": 0.1,
+          "array": "a00072",
+          "power_expected": 0.893
+        },
+        {
+          "id": "S06_0.25",
+          "substitute": "S06",
+          "rho": 0.25,
+          "array": "a00073",
+          "power_expected": 1.0
+        },
+        {
+          "id": "S05_0.05",
+          "substitute": "S05",
+          "rho": 0.05,
+          "array": "a00074",
+          "power_expected": 0.564
+        },
+        {
+          "id": "S05_0.10",
+          "substitute": "S05",
+          "rho": 0.1,
+          "array": "a00075",
+          "power_expected": 1.0
+        },
+        {
+          "id": "S05_0.25",
+          "substitute": "S05",
+          "rho": 0.25,
+          "array": "a00076",
+          "power_expected": 1.0
+        },
+        {
+          "id": "S07_0.05",
+          "substitute": "S07",
+          "rho": 0.05,
+          "array": "a00077",
+          "power_expected": 0.542
+        },
+        {
+          "id": "S07_0.10",
+          "substitute": "S07",
+          "rho": 0.1,
+          "array": "a00078",
+          "power_expected": 0.989
+        },
+        {
+          "id": "S07_0.25",
+          "substitute": "S07",
+          "rho": 0.25,
+          "array": "a00079",
+          "power_expected": 1.0
+        }
+      ],
+      "plain_max_far_expected": 0.003,
+      "continuous": false
+    },
+    {
+      "N": 200,
+      "method": "temperature_mle",
+      "threshold_expected": 9.0,
+      "calibration": [
+        {
+          "id": "C01",
+          "array": "a00080",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C02",
+          "array": "a00081",
+          "q95_expected": 7.0
+        },
+        {
+          "id": "C03",
+          "array": "a00082",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C04",
+          "array": "a00083",
+          "q95_expected": 6.0
+        },
+        {
+          "id": "C05",
+          "array": "a00084",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C06",
+          "array": "a00085",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C07",
+          "array": "a00086",
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C08",
+          "array": "a00087",
+          "q95_expected": 2.0
+        },
+        {
+          "id": "C09",
+          "array": "a00088",
+          "q95_expected": 9.0
+        },
+        {
+          "id": "C10",
+          "array": "a00089",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C11",
+          "array": "a00090",
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C12",
+          "array": "a00091",
+          "q95_expected": 6.0
+        },
+        {
+          "id": "C13",
+          "array": "a00092",
+          "q95_expected": 7.0
+        },
+        {
+          "id": "C14",
+          "array": "a00093",
+          "q95_expected": 6.0
+        },
+        {
+          "id": "C15",
+          "array": "a00094",
+          "q95_expected": 6.0
+        },
+        {
+          "id": "C16",
+          "array": "a00095",
+          "q95_expected": 6.0
+        }
+      ],
+      "honest": [
+        {
+          "id": "G11",
+          "plain": false,
+          "array": "a00096",
+          "far_expected": 0.007
+        },
+        {
+          "id": "G16",
+          "plain": false,
+          "array": "a00097",
+          "far_expected": 0.003
+        },
+        {
+          "id": "G10",
+          "plain": false,
+          "array": "a00098",
+          "far_expected": 0.00525
+        },
+        {
+          "id": "G12",
+          "plain": false,
+          "array": "a00099",
+          "far_expected": 0.00575
+        },
+        {
+          "id": "G13",
+          "plain": false,
+          "array": "a00100",
+          "far_expected": 0.0035
+        },
+        {
+          "id": "G01",
+          "plain": true,
+          "array": "a00101",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G05",
+          "plain": true,
+          "array": "a00102",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G06",
+          "plain": true,
+          "array": "a00103",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G07",
+          "plain": true,
+          "array": "a00104",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G03",
+          "plain": true,
+          "array": "a00105",
+          "far_expected": 0.00075
+        },
+        {
+          "id": "G02",
+          "plain": true,
+          "array": "a00106",
+          "far_expected": 0.00125
+        },
+        {
+          "id": "G04",
+          "plain": true,
+          "array": "a00107",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G08",
+          "plain": true,
+          "array": "a00108",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G15",
+          "plain": false,
+          "array": "a00109",
+          "far_expected": 0.006
+        },
+        {
+          "id": "G09",
+          "plain": true,
+          "array": "a00110",
+          "far_expected": 0.0
+        }
+      ],
+      "substitutions": [
+        {
+          "id": "S06_0.05",
+          "substitute": "S06",
+          "rho": 0.05,
+          "array": "a00111",
+          "power_expected": 0.151
+        },
+        {
+          "id": "S06_0.10",
+          "substitute": "S06",
+          "rho": 0.1,
+          "array": "a00112",
+          "power_expected": 0.8
+        },
+        {
+          "id": "S06_0.25",
+          "substitute": "S06",
+          "rho": 0.25,
+          "array": "a00113",
+          "power_expected": 1.0
+        },
+        {
+          "id": "S05_0.05",
+          "substitute": "S05",
+          "rho": 0.05,
+          "array": "a00114",
+          "power_expected": 0.445
+        },
+        {
+          "id": "S05_0.10",
+          "substitute": "S05",
+          "rho": 0.1,
+          "array": "a00115",
+          "power_expected": 0.997
+        },
+        {
+          "id": "S05_0.25",
+          "substitute": "S05",
+          "rho": 0.25,
+          "array": "a00116",
+          "power_expected": 1.0
+        },
+        {
+          "id": "S07_0.05",
+          "substitute": "S07",
+          "rho": 0.05,
+          "array": "a00117",
+          "power_expected": 0.4
+        },
+        {
+          "id": "S07_0.10",
+          "substitute": "S07",
+          "rho": 0.1,
+          "array": "a00118",
+          "power_expected": 0.984
+        },
+        {
+          "id": "S07_0.25",
+          "substitute": "S07",
+          "rho": 0.25,
+          "array": "a00119",
+          "power_expected": 1.0
+        }
+      ],
+      "plain_max_far_expected": 0.00125,
+      "continuous": false
+    },
+    {
+      "N": 200,
+      "method": "fixed_temperature",
+      "threshold_expected": 5.0,
+      "calibration": [
+        {
+          "id": "C01",
+          "array": "a00120",
+          "q95_expected": 1.0
+        },
+        {
+          "id": "C02",
+          "array": "a00121",
+          "q95_expected": 0.0
+        },
+        {
+          "id": "C03",
+          "array": "a00122",
+          "q95_expected": 0.0
+        },
+        {
+          "id": "C04",
+          "array": "a00123",
+          "q95_expected": 1.0
+        },
+        {
+          "id": "C05",
+          "array": "a00124",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C06",
+          "array": "a00125",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C07",
+          "array": "a00126",
+          "q95_expected": 1.0
+        },
+        {
+          "id": "C08",
+          "array": "a00127",
+          "q95_expected": 0.0
+        },
+        {
+          "id": "C09",
+          "array": "a00128",
+          "q95_expected": 0.0
+        },
+        {
+          "id": "C10",
+          "array": "a00129",
+          "q95_expected": 0.0
+        },
+        {
+          "id": "C11",
+          "array": "a00130",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C12",
+          "array": "a00131",
+          "q95_expected": 1.0
+        },
+        {
+          "id": "C13",
+          "array": "a00132",
+          "q95_expected": 1.0
+        },
+        {
+          "id": "C14",
+          "array": "a00133",
+          "q95_expected": 1.0
+        },
+        {
+          "id": "C15",
+          "array": "a00134",
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C16",
+          "array": "a00135",
+          "q95_expected": 2.0
+        }
+      ],
+      "honest": [
+        {
+          "id": "G11",
+          "plain": false,
+          "array": "a00136",
+          "far_expected": 0.1795
+        },
+        {
+          "id": "G16",
+          "plain": false,
+          "array": "a00137",
+          "far_expected": 0.0185
+        },
+        {
+          "id": "G10",
+          "plain": false,
+          "array": "a00138",
+          "far_expected": 0.10075
+        },
+        {
+          "id": "G12",
+          "plain": false,
+          "array": "a00139",
+          "far_expected": 0.10525
+        },
+        {
+          "id": "G13",
+          "plain": false,
+          "array": "a00140",
+          "far_expected": 0.05225
+        },
+        {
+          "id": "G01",
+          "plain": true,
+          "array": "a00141",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G05",
+          "plain": true,
+          "array": "a00142",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G06",
+          "plain": true,
+          "array": "a00143",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G07",
+          "plain": true,
+          "array": "a00144",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G03",
+          "plain": true,
+          "array": "a00145",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G02",
+          "plain": true,
+          "array": "a00146",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G04",
+          "plain": true,
+          "array": "a00147",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G08",
+          "plain": true,
+          "array": "a00148",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G15",
+          "plain": false,
+          "array": "a00149",
+          "far_expected": 0.136
+        },
+        {
+          "id": "G09",
+          "plain": true,
+          "array": "a00150",
+          "far_expected": 0.0
+        }
+      ],
+      "substitutions": [
+        {
+          "id": "S06_0.05",
+          "substitute": "S06",
+          "rho": 0.05,
+          "array": "a00151",
+          "power_expected": 0.398
+        },
+        {
+          "id": "S06_0.10",
+          "substitute": "S06",
+          "rho": 0.1,
+          "array": "a00152",
+          "power_expected": 0.935
+        },
+        {
+          "id": "S06_0.25",
+          "substitute": "S06",
+          "rho": 0.25,
+          "array": "a00153",
+          "power_expected": 1.0
+        },
+        {
+          "id": "S05_0.05",
+          "substitute": "S05",
+          "rho": 0.05,
+          "array": "a00154",
+          "power_expected": 0.905
+        },
+        {
+          "id": "S05_0.10",
+          "substitute": "S05",
+          "rho": 0.1,
+          "array": "a00155",
+          "power_expected": 1.0
+        },
+        {
+          "id": "S05_0.25",
+          "substitute": "S05",
+          "rho": 0.25,
+          "array": "a00156",
+          "power_expected": 1.0
+        },
+        {
+          "id": "S07_0.05",
+          "substitute": "S07",
+          "rho": 0.05,
+          "array": "a00157",
+          "power_expected": 0.879
+        },
+        {
+          "id": "S07_0.10",
+          "substitute": "S07",
+          "rho": 0.1,
+          "array": "a00158",
+          "power_expected": 1.0
+        },
+        {
+          "id": "S07_0.25",
+          "substitute": "S07",
+          "rho": 0.25,
+          "array": "a00159",
+          "power_expected": 1.0
+        }
+      ],
+      "plain_max_far_expected": 0.0,
+      "continuous": false
+    },
+    {
+      "N": 200,
+      "method": "nucleus_095",
+      "threshold_expected": 6.0,
+      "calibration": [
+        {
+          "id": "C01",
+          "array": "a00160",
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C02",
+          "array": "a00161",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C03",
+          "array": "a00162",
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C04",
+          "array": "a00163",
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C05",
+          "array": "a00164",
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C06",
+          "array": "a00165",
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C07",
+          "array": "a00166",
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C08",
+          "array": "a00167",
+          "q95_expected": 2.0
+        },
+        {
+          "id": "C09",
+          "array": "a00168",
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C10",
+          "array": "a00169",
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C11",
+          "array": "a00170",
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C12",
+          "array": "a00171",
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C13",
+          "array": "a00172",
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C14",
+          "array": "a00173",
+          "q95_expected": 6.0
+        },
+        {
+          "id": "C15",
+          "array": "a00174",
+          "q95_expected": 6.0
+        },
+        {
+          "id": "C16",
+          "array": "a00175",
+          "q95_expected": 5.0
+        }
+      ],
+      "honest": [
+        {
+          "id": "G11",
+          "plain": false,
+          "array": "a00176",
+          "far_expected": 0.00025
+        },
+        {
+          "id": "G16",
+          "plain": false,
+          "array": "a00177",
+          "far_expected": 0.00075
+        },
+        {
+          "id": "G10",
+          "plain": false,
+          "array": "a00178",
+          "far_expected": 0.0005
+        },
+        {
+          "id": "G12",
+          "plain": false,
+          "array": "a00179",
+          "far_expected": 0.001
+        },
+        {
+          "id": "G13",
+          "plain": false,
+          "array": "a00180",
+          "far_expected": 0.00025
+        },
+        {
+          "id": "G01",
+          "plain": true,
+          "array": "a00181",
+          "far_expected": 0.00025
+        },
+        {
+          "id": "G05",
+          "plain": true,
+          "array": "a00182",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G06",
+          "plain": true,
+          "array": "a00183",
+          "far_expected": 0.0005
+        },
+        {
+          "id": "G07",
+          "plain": true,
+          "array": "a00184",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G03",
+          "plain": true,
+          "array": "a00185",
+          "far_expected": 0.00075
+        },
+        {
+          "id": "G02",
+          "plain": true,
+          "array": "a00186",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G04",
+          "plain": true,
+          "array": "a00187",
+          "far_expected": 0.0005
+        },
+        {
+          "id": "G08",
+          "plain": true,
+          "array": "a00188",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G15",
+          "plain": false,
+          "array": "a00189",
+          "far_expected": 0.00125
+        },
+        {
+          "id": "G09",
+          "plain": true,
+          "array": "a00190",
+          "far_expected": 0.002
+        }
+      ],
+      "substitutions": [
+        {
+          "id": "S06_0.05",
+          "substitute": "S06",
+          "rho": 0.05,
+          "array": "a00191",
+          "power_expected": 0.011
+        },
+        {
+          "id": "S06_0.10",
+          "substitute": "S06",
+          "rho": 0.1,
+          "array": "a00192",
+          "power_expected": 0.063
+        },
+        {
+          "id": "S06_0.25",
+          "substitute": "S06",
+          "rho": 0.25,
+          "array": "a00193",
+          "power_expected": 0.425
+        },
+        {
+          "id": "S05_0.05",
+          "substitute": "S05",
+          "rho": 0.05,
+          "array": "a00194",
+          "power_expected": 0.018
+        },
+        {
+          "id": "S05_0.10",
+          "substitute": "S05",
+          "rho": 0.1,
+          "array": "a00195",
+          "power_expected": 0.119
+        },
+        {
+          "id": "S05_0.25",
+          "substitute": "S05",
+          "rho": 0.25,
+          "array": "a00196",
+          "power_expected": 0.741
+        },
+        {
+          "id": "S07_0.05",
+          "substitute": "S07",
+          "rho": 0.05,
+          "array": "a00197",
+          "power_expected": 0.012
+        },
+        {
+          "id": "S07_0.10",
+          "substitute": "S07",
+          "rho": 0.1,
+          "array": "a00198",
+          "power_expected": 0.096
+        },
+        {
+          "id": "S07_0.25",
+          "substitute": "S07",
+          "rho": 0.25,
+          "array": "a00199",
+          "power_expected": 0.753
+        }
+      ],
+      "plain_max_far_expected": 0.002,
+      "continuous": false
+    },
+    {
+      "N": 200,
+      "method": "top20",
+      "threshold_expected": 8.0,
+      "calibration": [
+        {
+          "id": "C01",
+          "array": "a00200",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C02",
+          "array": "a00201",
+          "q95_expected": 7.0
+        },
+        {
+          "id": "C03",
+          "array": "a00202",
+          "q95_expected": 6.0
+        },
+        {
+          "id": "C04",
+          "array": "a00203",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C05",
+          "array": "a00204",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C06",
+          "array": "a00205",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C07",
+          "array": "a00206",
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C08",
+          "array": "a00207",
+          "q95_expected": 2.0
+        },
+        {
+          "id": "C09",
+          "array": "a00208",
+          "q95_expected": 8.0
+        },
+        {
+          "id": "C10",
+          "array": "a00209",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C11",
+          "array": "a00210",
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C12",
+          "array": "a00211",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C13",
+          "array": "a00212",
+          "q95_expected": 7.0
+        },
+        {
+          "id": "C14",
+          "array": "a00213",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C15",
+          "array": "a00214",
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C16",
+          "array": "a00215",
+          "q95_expected": 5.0
+        }
+      ],
+      "honest": [
+        {
+          "id": "G11",
+          "plain": false,
+          "array": "a00216",
+          "far_expected": 0.0125
+        },
+        {
+          "id": "G16",
+          "plain": false,
+          "array": "a00217",
+          "far_expected": 0.00425
+        },
+        {
+          "id": "G10",
+          "plain": false,
+          "array": "a00218",
+          "far_expected": 0.011
+        },
+        {
+          "id": "G12",
+          "plain": false,
+          "array": "a00219",
+          "far_expected": 0.00975
+        },
+        {
+          "id": "G13",
+          "plain": false,
+          "array": "a00220",
+          "far_expected": 0.00475
+        },
+        {
+          "id": "G01",
+          "plain": true,
+          "array": "a00221",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G05",
+          "plain": true,
+          "array": "a00222",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G06",
+          "plain": true,
+          "array": "a00223",
+          "far_expected": 0.0005
+        },
+        {
+          "id": "G07",
+          "plain": true,
+          "array": "a00224",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G03",
+          "plain": true,
+          "array": "a00225",
+          "far_expected": 0.00325
+        },
+        {
+          "id": "G02",
+          "plain": true,
+          "array": "a00226",
+          "far_expected": 0.0015
+        },
+        {
+          "id": "G04",
+          "plain": true,
+          "array": "a00227",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G08",
+          "plain": true,
+          "array": "a00228",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G15",
+          "plain": false,
+          "array": "a00229",
+          "far_expected": 0.0175
+        },
+        {
+          "id": "G09",
+          "plain": true,
+          "array": "a00230",
+          "far_expected": 0.00025
+        }
+      ],
+      "substitutions": [
+        {
+          "id": "S06_0.05",
+          "substitute": "S06",
+          "rho": 0.05,
+          "array": "a00231",
+          "power_expected": 0.294
+        },
+        {
+          "id": "S06_0.10",
+          "substitute": "S06",
+          "rho": 0.1,
+          "array": "a00232",
+          "power_expected": 0.893
+        },
+        {
+          "id": "S06_0.25",
+          "substitute": "S06",
+          "rho": 0.25,
+          "array": "a00233",
+          "power_expected": 1.0
+        },
+        {
+          "id": "S05_0.05",
+          "substitute": "S05",
+          "rho": 0.05,
+          "array": "a00234",
+          "power_expected": 0.564
+        },
+        {
+          "id": "S05_0.10",
+          "substitute": "S05",
+          "rho": 0.1,
+          "array": "a00235",
+          "power_expected": 1.0
+        },
+        {
+          "id": "S05_0.25",
+          "substitute": "S05",
+          "rho": 0.25,
+          "array": "a00236",
+          "power_expected": 1.0
+        },
+        {
+          "id": "S07_0.05",
+          "substitute": "S07",
+          "rho": 0.05,
+          "array": "a00237",
+          "power_expected": 0.537
+        },
+        {
+          "id": "S07_0.10",
+          "substitute": "S07",
+          "rho": 0.1,
+          "array": "a00238",
+          "power_expected": 0.988
+        },
+        {
+          "id": "S07_0.25",
+          "substitute": "S07",
+          "rho": 0.25,
+          "array": "a00239",
+          "power_expected": 1.0
+        }
+      ],
+      "plain_max_far_expected": 0.00325,
+      "continuous": false
+    },
+    {
+      "N": 200,
+      "method": "nll_count",
+      "threshold_expected": 14.0,
+      "calibration": [
+        {
+          "id": "C01",
+          "array": null,
+          "q95_expected": 1.0
+        },
+        {
+          "id": "C02",
+          "array": null,
+          "q95_expected": 0.0
+        },
+        {
+          "id": "C03",
+          "array": null,
+          "q95_expected": 0.0
+        },
+        {
+          "id": "C04",
+          "array": null,
+          "q95_expected": 2.0
+        },
+        {
+          "id": "C05",
+          "array": null,
+          "q95_expected": 12.0
+        },
+        {
+          "id": "C06",
+          "array": null,
+          "q95_expected": 12.0
+        },
+        {
+          "id": "C07",
+          "array": null,
+          "q95_expected": 6.0
+        },
+        {
+          "id": "C08",
+          "array": null,
+          "q95_expected": 0.0
+        },
+        {
+          "id": "C09",
+          "array": null,
+          "q95_expected": 1.0
+        },
+        {
+          "id": "C10",
+          "array": null,
+          "q95_expected": 1.0
+        },
+        {
+          "id": "C11",
+          "array": null,
+          "q95_expected": 14.0
+        },
+        {
+          "id": "C12",
+          "array": null,
+          "q95_expected": 1.0
+        },
+        {
+          "id": "C13",
+          "array": null,
+          "q95_expected": 0.0
+        },
+        {
+          "id": "C14",
+          "array": null,
+          "q95_expected": 1.0
+        },
+        {
+          "id": "C15",
+          "array": null,
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C16",
+          "array": null,
+          "q95_expected": 1.0
+        }
+      ],
+      "honest": [
+        {
+          "id": "G11",
+          "plain": false,
+          "array": "a00240",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G16",
+          "plain": false,
+          "array": "a00241",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G10",
+          "plain": false,
+          "array": "a00242",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G12",
+          "plain": false,
+          "array": "a00243",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G13",
+          "plain": false,
+          "array": "a00244",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G01",
+          "plain": true,
+          "array": "a00245",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G05",
+          "plain": true,
+          "array": "a00246",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G06",
+          "plain": true,
+          "array": "a00247",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G07",
+          "plain": true,
+          "array": "a00248",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G03",
+          "plain": true,
+          "array": "a00249",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G02",
+          "plain": true,
+          "array": "a00250",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G04",
+          "plain": true,
+          "array": "a00251",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G08",
+          "plain": true,
+          "array": "a00252",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G15",
+          "plain": false,
+          "array": "a00253",
+          "far_expected": 0.00025
+        },
+        {
+          "id": "G09",
+          "plain": true,
+          "array": "a00254",
+          "far_expected": 0.0
+        }
+      ],
+      "substitutions": [
+        {
+          "id": "S06_0.05",
+          "substitute": "S06",
+          "rho": 0.05,
+          "array": "a00255",
+          "power_expected": 0.0
+        },
+        {
+          "id": "S06_0.10",
+          "substitute": "S06",
+          "rho": 0.1,
+          "array": "a00256",
+          "power_expected": 0.077
+        },
+        {
+          "id": "S06_0.25",
+          "substitute": "S06",
+          "rho": 0.25,
+          "array": "a00257",
+          "power_expected": 0.984
+        },
+        {
+          "id": "S05_0.05",
+          "substitute": "S05",
+          "rho": 0.05,
+          "array": "a00258",
+          "power_expected": 0.051
+        },
+        {
+          "id": "S05_0.10",
+          "substitute": "S05",
+          "rho": 0.1,
+          "array": "a00259",
+          "power_expected": 0.842
+        },
+        {
+          "id": "S05_0.25",
+          "substitute": "S05",
+          "rho": 0.25,
+          "array": "a00260",
+          "power_expected": 1.0
+        },
+        {
+          "id": "S07_0.05",
+          "substitute": "S07",
+          "rho": 0.05,
+          "array": "a00261",
+          "power_expected": 0.013
+        },
+        {
+          "id": "S07_0.10",
+          "substitute": "S07",
+          "rho": 0.1,
+          "array": "a00262",
+          "power_expected": 0.582
+        },
+        {
+          "id": "S07_0.25",
+          "substitute": "S07",
+          "rho": 0.25,
+          "array": "a00263",
+          "power_expected": 1.0
+        }
+      ],
+      "plain_max_far_expected": 0.0,
+      "continuous": false
+    },
+    {
+      "N": 200,
+      "method": "logrank_count",
+      "threshold_expected": 13.0,
+      "calibration": [
+        {
+          "id": "C01",
+          "array": null,
+          "q95_expected": 1.0
+        },
+        {
+          "id": "C02",
+          "array": null,
+          "q95_expected": 0.0
+        },
+        {
+          "id": "C03",
+          "array": null,
+          "q95_expected": 1.0
+        },
+        {
+          "id": "C04",
+          "array": null,
+          "q95_expected": 2.0
+        },
+        {
+          "id": "C05",
+          "array": null,
+          "q95_expected": 9.0
+        },
+        {
+          "id": "C06",
+          "array": null,
+          "q95_expected": 12.0
+        },
+        {
+          "id": "C07",
+          "array": null,
+          "q95_expected": 8.0
+        },
+        {
+          "id": "C08",
+          "array": null,
+          "q95_expected": 0.0
+        },
+        {
+          "id": "C09",
+          "array": null,
+          "q95_expected": 1.0
+        },
+        {
+          "id": "C10",
+          "array": null,
+          "q95_expected": 1.0
+        },
+        {
+          "id": "C11",
+          "array": null,
+          "q95_expected": 13.0
+        },
+        {
+          "id": "C12",
+          "array": null,
+          "q95_expected": 1.0
+        },
+        {
+          "id": "C13",
+          "array": null,
+          "q95_expected": 0.0
+        },
+        {
+          "id": "C14",
+          "array": null,
+          "q95_expected": 2.0
+        },
+        {
+          "id": "C15",
+          "array": null,
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C16",
+          "array": null,
+          "q95_expected": 1.0
+        }
+      ],
+      "honest": [
+        {
+          "id": "G11",
+          "plain": false,
+          "array": "a00264",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G16",
+          "plain": false,
+          "array": "a00265",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G10",
+          "plain": false,
+          "array": "a00266",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G12",
+          "plain": false,
+          "array": "a00267",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G13",
+          "plain": false,
+          "array": "a00268",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G01",
+          "plain": true,
+          "array": "a00269",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G05",
+          "plain": true,
+          "array": "a00270",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G06",
+          "plain": true,
+          "array": "a00271",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G07",
+          "plain": true,
+          "array": "a00272",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G03",
+          "plain": true,
+          "array": "a00273",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G02",
+          "plain": true,
+          "array": "a00274",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G04",
+          "plain": true,
+          "array": "a00275",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G08",
+          "plain": true,
+          "array": "a00276",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G15",
+          "plain": false,
+          "array": "a00277",
+          "far_expected": 0.00025
+        },
+        {
+          "id": "G09",
+          "plain": true,
+          "array": "a00278",
+          "far_expected": 0.0
+        }
+      ],
+      "substitutions": [
+        {
+          "id": "S06_0.05",
+          "substitute": "S06",
+          "rho": 0.05,
+          "array": "a00279",
+          "power_expected": 0.0
+        },
+        {
+          "id": "S06_0.10",
+          "substitute": "S06",
+          "rho": 0.1,
+          "array": "a00280",
+          "power_expected": 0.025
+        },
+        {
+          "id": "S06_0.25",
+          "substitute": "S06",
+          "rho": 0.25,
+          "array": "a00281",
+          "power_expected": 0.915
+        },
+        {
+          "id": "S05_0.05",
+          "substitute": "S05",
+          "rho": 0.05,
+          "array": "a00282",
+          "power_expected": 0.033
+        },
+        {
+          "id": "S05_0.10",
+          "substitute": "S05",
+          "rho": 0.1,
+          "array": "a00283",
+          "power_expected": 0.784
+        },
+        {
+          "id": "S05_0.25",
+          "substitute": "S05",
+          "rho": 0.25,
+          "array": "a00284",
+          "power_expected": 1.0
+        },
+        {
+          "id": "S07_0.05",
+          "substitute": "S07",
+          "rho": 0.05,
+          "array": "a00285",
+          "power_expected": 0.006
+        },
+        {
+          "id": "S07_0.10",
+          "substitute": "S07",
+          "rho": 0.1,
+          "array": "a00286",
+          "power_expected": 0.417
+        },
+        {
+          "id": "S07_0.25",
+          "substitute": "S07",
+          "rho": 0.25,
+          "array": "a00287",
+          "power_expected": 0.999
+        }
+      ],
+      "plain_max_far_expected": 0.0,
+      "continuous": false
+    },
+    {
+      "N": 200,
+      "method": "entropy_count",
+      "threshold_expected": 6.0,
+      "calibration": [
+        {
+          "id": "C01",
+          "array": null,
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C02",
+          "array": null,
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C03",
+          "array": null,
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C04",
+          "array": null,
+          "q95_expected": 2.0
+        },
+        {
+          "id": "C05",
+          "array": null,
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C06",
+          "array": null,
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C07",
+          "array": null,
+          "q95_expected": 6.0
+        },
+        {
+          "id": "C08",
+          "array": null,
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C09",
+          "array": null,
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C10",
+          "array": null,
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C11",
+          "array": null,
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C12",
+          "array": null,
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C13",
+          "array": null,
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C14",
+          "array": null,
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C15",
+          "array": null,
+          "q95_expected": 5.0
+        },
+        {
+          "id": "C16",
+          "array": null,
+          "q95_expected": 4.0
+        }
+      ],
+      "honest": [
+        {
+          "id": "G11",
+          "plain": false,
+          "array": "a00288",
+          "far_expected": 0.036
+        },
+        {
+          "id": "G16",
+          "plain": false,
+          "array": "a00289",
+          "far_expected": 0.00875
+        },
+        {
+          "id": "G10",
+          "plain": false,
+          "array": "a00290",
+          "far_expected": 0.004
+        },
+        {
+          "id": "G12",
+          "plain": false,
+          "array": "a00291",
+          "far_expected": 0.01075
+        },
+        {
+          "id": "G13",
+          "plain": false,
+          "array": "a00292",
+          "far_expected": 0.0075
+        },
+        {
+          "id": "G01",
+          "plain": true,
+          "array": "a00293",
+          "far_expected": 0.0045
+        },
+        {
+          "id": "G05",
+          "plain": true,
+          "array": "a00294",
+          "far_expected": 0.029
+        },
+        {
+          "id": "G06",
+          "plain": true,
+          "array": "a00295",
+          "far_expected": 0.0075
+        },
+        {
+          "id": "G07",
+          "plain": true,
+          "array": "a00296",
+          "far_expected": 0.0105
+        },
+        {
+          "id": "G03",
+          "plain": true,
+          "array": "a00297",
+          "far_expected": 0.01175
+        },
+        {
+          "id": "G02",
+          "plain": true,
+          "array": "a00298",
+          "far_expected": 0.01025
+        },
+        {
+          "id": "G04",
+          "plain": true,
+          "array": "a00299",
+          "far_expected": 0.0245
+        },
+        {
+          "id": "G08",
+          "plain": true,
+          "array": "a00300",
+          "far_expected": 0.01225
+        },
+        {
+          "id": "G15",
+          "plain": false,
+          "array": "a00301",
+          "far_expected": 0.004
+        },
+        {
+          "id": "G09",
+          "plain": true,
+          "array": "a00302",
+          "far_expected": 0.00075
+        }
+      ],
+      "substitutions": [
+        {
+          "id": "S06_0.05",
+          "substitute": "S06",
+          "rho": 0.05,
+          "array": "a00303",
+          "power_expected": 0.019
+        },
+        {
+          "id": "S06_0.10",
+          "substitute": "S06",
+          "rho": 0.1,
+          "array": "a00304",
+          "power_expected": 0.019
+        },
+        {
+          "id": "S06_0.25",
+          "substitute": "S06",
+          "rho": 0.25,
+          "array": "a00305",
+          "power_expected": 0.02
+        },
+        {
+          "id": "S05_0.05",
+          "substitute": "S05",
+          "rho": 0.05,
+          "array": "a00306",
+          "power_expected": 0.017
+        },
+        {
+          "id": "S05_0.10",
+          "substitute": "S05",
+          "rho": 0.1,
+          "array": "a00307",
+          "power_expected": 0.028
+        },
+        {
+          "id": "S05_0.25",
+          "substitute": "S05",
+          "rho": 0.25,
+          "array": "a00308",
+          "power_expected": 0.069
+        },
+        {
+          "id": "S07_0.05",
+          "substitute": "S07",
+          "rho": 0.05,
+          "array": "a00309",
+          "power_expected": 0.014
+        },
+        {
+          "id": "S07_0.10",
+          "substitute": "S07",
+          "rho": 0.1,
+          "array": "a00310",
+          "power_expected": 0.018
+        },
+        {
+          "id": "S07_0.25",
+          "substitute": "S07",
+          "rho": 0.25,
+          "array": "a00311",
+          "power_expected": 0.028
+        }
+      ],
+      "plain_max_far_expected": 0.029,
+      "continuous": false
+    },
+    {
+      "N": 200,
+      "method": "rut",
+      "threshold_expected": 25.275378947573987,
+      "calibration": [
+        {
+          "id": "C01",
+          "array": "a00312",
+          "q95_expected": 3.0336729012571633
+        },
+        {
+          "id": "C02",
+          "array": "a00313",
+          "q95_expected": 2.984600322020408
+        },
+        {
+          "id": "C03",
+          "array": "a00314",
+          "q95_expected": 2.8215081109119993
+        },
+        {
+          "id": "C04",
+          "array": "a00315",
+          "q95_expected": 21.177112486845804
+        },
+        {
+          "id": "C05",
+          "array": "a00316",
+          "q95_expected": 23.641966674976754
+        },
+        {
+          "id": "C06",
+          "array": "a00317",
+          "q95_expected": 23.193353360598515
+        },
+        {
+          "id": "C07",
+          "array": "a00318",
+          "q95_expected": 25.001083615359207
+        },
+        {
+          "id": "C08",
+          "array": "a00319",
+          "q95_expected": 5.4239260021920055
+        },
+        {
+          "id": "C09",
+          "array": "a00320",
+          "q95_expected": 16.51223795395685
+        },
+        {
+          "id": "C10",
+          "array": "a00321",
+          "q95_expected": 4.5770834307752235
+        },
+        {
+          "id": "C11",
+          "array": "a00322",
+          "q95_expected": 23.26727656625466
+        },
+        {
+          "id": "C12",
+          "array": "a00323",
+          "q95_expected": 7.012933831456829
+        },
+        {
+          "id": "C13",
+          "array": "a00324",
+          "q95_expected": 10.38588846169463
+        },
+        {
+          "id": "C14",
+          "array": "a00325",
+          "q95_expected": 8.238763081868772
+        },
+        {
+          "id": "C15",
+          "array": "a00326",
+          "q95_expected": 25.275378947573987
+        },
+        {
+          "id": "C16",
+          "array": "a00327",
+          "q95_expected": 22.28989324268282
+        }
+      ],
+      "honest": [
+        {
+          "id": "G11",
+          "plain": false,
+          "array": "a00328",
+          "far_expected": 0.02475
+        },
+        {
+          "id": "G16",
+          "plain": false,
+          "array": "a00329",
+          "far_expected": 0.052
+        },
+        {
+          "id": "G10",
+          "plain": false,
+          "array": "a00330",
+          "far_expected": 0.03075
+        },
+        {
+          "id": "G12",
+          "plain": false,
+          "array": "a00331",
+          "far_expected": 0.05
+        },
+        {
+          "id": "G13",
+          "plain": false,
+          "array": "a00332",
+          "far_expected": 0.04475
+        },
+        {
+          "id": "G01",
+          "plain": true,
+          "array": "a00333",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G05",
+          "plain": true,
+          "array": "a00334",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G06",
+          "plain": true,
+          "array": "a00335",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G07",
+          "plain": true,
+          "array": "a00336",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G03",
+          "plain": true,
+          "array": "a00337",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G02",
+          "plain": true,
+          "array": "a00338",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G04",
+          "plain": true,
+          "array": "a00339",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G08",
+          "plain": true,
+          "array": "a00340",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G15",
+          "plain": false,
+          "array": "a00341",
+          "far_expected": 0.02425
+        },
+        {
+          "id": "G09",
+          "plain": true,
+          "array": "a00342",
+          "far_expected": 0.0
+        }
+      ],
+      "substitutions": [
+        {
+          "id": "S06_0.05",
+          "substitute": "S06",
+          "rho": 0.05,
+          "array": "a00343",
+          "power_expected": 0.0
+        },
+        {
+          "id": "S06_0.10",
+          "substitute": "S06",
+          "rho": 0.1,
+          "array": "a00344",
+          "power_expected": 0.0
+        },
+        {
+          "id": "S06_0.25",
+          "substitute": "S06",
+          "rho": 0.25,
+          "array": "a00345",
+          "power_expected": 0.001
+        },
+        {
+          "id": "S05_0.05",
+          "substitute": "S05",
+          "rho": 0.05,
+          "array": "a00346",
+          "power_expected": 0.0
+        },
+        {
+          "id": "S05_0.10",
+          "substitute": "S05",
+          "rho": 0.1,
+          "array": "a00347",
+          "power_expected": 0.0
+        },
+        {
+          "id": "S05_0.25",
+          "substitute": "S05",
+          "rho": 0.25,
+          "array": "a00348",
+          "power_expected": 0.021
+        },
+        {
+          "id": "S07_0.05",
+          "substitute": "S07",
+          "rho": 0.05,
+          "array": "a00349",
+          "power_expected": 0.0
+        },
+        {
+          "id": "S07_0.10",
+          "substitute": "S07",
+          "rho": 0.1,
+          "array": "a00350",
+          "power_expected": 0.0
+        },
+        {
+          "id": "S07_0.25",
+          "substitute": "S07",
+          "rho": 0.25,
+          "array": "a00351",
+          "power_expected": 0.012
+        }
+      ],
+      "plain_max_far_expected": 0.0,
+      "continuous": true
+    },
+    {
+      "N": 200,
+      "method": "met",
+      "threshold_expected": 0.20950000000000002,
+      "calibration": [
+        {
+          "id": "C01",
+          "array": "a00352",
+          "q95_expected": 0.0625
+        },
+        {
+          "id": "C02",
+          "array": "a00353",
+          "q95_expected": 0.032333333333333436
+        },
+        {
+          "id": "C03",
+          "array": "a00354",
+          "q95_expected": 0.04533333333333367
+        },
+        {
+          "id": "C04",
+          "array": "a00355",
+          "q95_expected": 0.0691666666666666
+        },
+        {
+          "id": "C05",
+          "array": "a00356",
+          "q95_expected": 0.09699999999999998
+        },
+        {
+          "id": "C06",
+          "array": "a00357",
+          "q95_expected": 0.1083333333333335
+        },
+        {
+          "id": "C07",
+          "array": "a00358",
+          "q95_expected": 0.08550000000000013
+        },
+        {
+          "id": "C08",
+          "array": "a00359",
+          "q95_expected": 0.06599999999999961
+        },
+        {
+          "id": "C09",
+          "array": "a00360",
+          "q95_expected": 0.1363333333333332
+        },
+        {
+          "id": "C10",
+          "array": "a00361",
+          "q95_expected": 0.07066666666666677
+        },
+        {
+          "id": "C11",
+          "array": "a00362",
+          "q95_expected": 0.10766666666666658
+        },
+        {
+          "id": "C12",
+          "array": "a00363",
+          "q95_expected": 0.07566666666666666
+        },
+        {
+          "id": "C13",
+          "array": "a00364",
+          "q95_expected": 0.09333333333333316
+        },
+        {
+          "id": "C14",
+          "array": "a00365",
+          "q95_expected": 0.07500000000000029
+        },
+        {
+          "id": "C15",
+          "array": "a00366",
+          "q95_expected": 0.20950000000000002
+        },
+        {
+          "id": "C16",
+          "array": "a00367",
+          "q95_expected": 0.15666666666666673
+        }
+      ],
+      "honest": [
+        {
+          "id": "G11",
+          "plain": false,
+          "array": "a00368",
+          "far_expected": 0.00225
+        },
+        {
+          "id": "G16",
+          "plain": false,
+          "array": "a00369",
+          "far_expected": 0.00475
+        },
+        {
+          "id": "G10",
+          "plain": false,
+          "array": "a00370",
+          "far_expected": 0.00025
+        },
+        {
+          "id": "G12",
+          "plain": false,
+          "array": "a00371",
+          "far_expected": 0.004
+        },
+        {
+          "id": "G13",
+          "plain": false,
+          "array": "a00372",
+          "far_expected": 0.002
+        },
+        {
+          "id": "G01",
+          "plain": true,
+          "array": "a00373",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G05",
+          "plain": true,
+          "array": "a00374",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G06",
+          "plain": true,
+          "array": "a00375",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G07",
+          "plain": true,
+          "array": "a00376",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G03",
+          "plain": true,
+          "array": "a00377",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G02",
+          "plain": true,
+          "array": "a00378",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G04",
+          "plain": true,
+          "array": "a00379",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G08",
+          "plain": true,
+          "array": "a00380",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G15",
+          "plain": false,
+          "array": "a00381",
+          "far_expected": 1.0
+        },
+        {
+          "id": "G09",
+          "plain": true,
+          "array": "a00382",
+          "far_expected": 0.0
+        }
+      ],
+      "substitutions": [
+        {
+          "id": "S06_0.05",
+          "substitute": "S06",
+          "rho": 0.05,
+          "array": "a00383",
+          "power_expected": 0.0
+        },
+        {
+          "id": "S06_0.10",
+          "substitute": "S06",
+          "rho": 0.1,
+          "array": "a00384",
+          "power_expected": 0.0
+        },
+        {
+          "id": "S06_0.25",
+          "substitute": "S06",
+          "rho": 0.25,
+          "array": "a00385",
+          "power_expected": 0.0
+        },
+        {
+          "id": "S07_0.05",
+          "substitute": "S07",
+          "rho": 0.05,
+          "array": "a00386",
+          "power_expected": 0.0
+        },
+        {
+          "id": "S07_0.10",
+          "substitute": "S07",
+          "rho": 0.1,
+          "array": "a00387",
+          "power_expected": 0.0
+        },
+        {
+          "id": "S07_0.25",
+          "substitute": "S07",
+          "rho": 0.25,
+          "array": "a00388",
+          "power_expected": 0.0
+        }
+      ],
+      "plain_max_far_expected": 0.0,
+      "continuous": true
+    },
+    {
+      "N": 400,
+      "method": "api_tail",
+      "threshold_expected": 14.0,
+      "calibration": [
+        {
+          "id": "C01",
+          "array": "a00389",
+          "q95_expected": 9.0
+        },
+        {
+          "id": "C02",
+          "array": "a00390",
+          "q95_expected": 12.0
+        },
+        {
+          "id": "C03",
+          "array": "a00391",
+          "q95_expected": 9.0
+        },
+        {
+          "id": "C04",
+          "array": "a00392",
+          "q95_expected": 9.0
+        },
+        {
+          "id": "C05",
+          "array": "a00393",
+          "q95_expected": 8.0
+        },
+        {
+          "id": "C06",
+          "array": "a00394",
+          "q95_expected": 8.0
+        },
+        {
+          "id": "C07",
+          "array": "a00395",
+          "q95_expected": 4.0
+        },
+        {
+          "id": "C08",
+          "array": "a00396",
+          "q95_expected": 3.0
+        },
+        {
+          "id": "C09",
+          "array": "a00397",
+          "q95_expected": 14.0
+        },
+        {
+          "id": "C10",
+          "array": "a00398",
+          "q95_expected": 8.0
+        },
+        {
+          "id": "C11",
+          "array": "a00399",
+          "q95_expected": 7.0
+        },
+        {
+          "id": "C12",
+          "array": "a00400",
+          "q95_expected": 8.0
+        },
+        {
+          "id": "C13",
+          "array": "a00401",
+          "q95_expected": 11.0
+        },
+        {
+          "id": "C14",
+          "array": "a00402",
+          "q95_expected": 8.0
+        },
+        {
+          "id": "C15",
+          "array": "a00403",
+          "q95_expected": 8.0
+        },
+        {
+          "id": "C16",
+          "array": "a00404",
+          "q95_expected": 9.0
+        }
+      ],
+      "honest": [
+        {
+          "id": "G11",
+          "plain": false,
+          "array": "a00405",
+          "far_expected": 0.0075
+        },
+        {
+          "id": "G16",
+          "plain": false,
+          "array": "a00406",
+          "far_expected": 0.0005
+        },
+        {
+          "id": "G10",
+          "plain": false,
+          "array": "a00407",
+          "far_expected": 0.0095
+        },
+        {
+          "id": "G12",
+          "plain": false,
+          "array": "a00408",
+          "far_expected": 0.006
+        },
+        {
+          "id": "G13",
+          "plain": false,
+          "array": "a00409",
+          "far_expected": 0.002
+        },
+        {
+          "id": "G01",
+          "plain": true,
+          "array": "a00410",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G05",
+          "plain": true,
+          "array": "a00411",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G06",
+          "plain": true,
+          "array": "a00412",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G07",
+          "plain": true,
+          "array": "a00413",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G03",
+          "plain": true,
+          "array": "a00414",
+          "far_expected": 0.00125
+        },
+        {
+          "id": "G02",
+          "plain": true,
+          "array": "a00415",
+          "far_expected": 0.00025
+        },
+        {
+          "id": "G04",
+          "plain": true,
+          "array": "a00416",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G08",
+          "plain": true,
+          "array": "a00417",
+          "far_expected": 0.0
+        },
+        {
+          "id": "G15",
+          "plain": false,
+          "array": "a00418",
+          "far_expected": 0.01125
+        },
+        {
+          "id": "G09",
+          "plain": true,
+          "array": "a00419",
+          "far_expected": 0.00025
+        }
+      ],
+      "substitutions": [
+        {
+          "id": "S06_0.05",
+          "substitute": "S06",
+          "rho": 0.05,
+          "array": "a00420",
+          "power_expected": 0.505
+        },
+        {
+          "id": "S06_0.10",
+          "substitute": "S06",
+          "rho": 0.1,
+          "array": "a00421",
+          "power_expected": 0.996
+        },
+        {
+          "id": "S06_0.25",
+          "substitute": "S06",
+          "rho": 0.25,
+          "array": "a00422",
+          "power_expected": 1.0
+        },
+        {
+          "id": "S05_0.05",
+          "substitute": "S05",
+          "rho": 0.05,
+          "array": "a00423",
+          "power_expected": 0.862
+        },
+        {
+          "id": "S05_0.10",
+          "substitute": "S05",
+          "rho": 0.1,
+          "array": "a00424",
+          "power_expected": 1.0
+        },
+        {
+          "id": "S05_0.25",
+          "substitute": "S05",
+          "rho": 0.25,
+          "array": "a00425",
+          "power_expected": 1.0
+        },
+        {
+          "id": "S07_0.05",
+          "substitute": "S07",
+          "rho": 0.05,
+          "array": "a00426",
+          "power_expected": 0.781
+        },
+        {
+          "id": "S07_0.10",
+          "substitute": "S07",
+          "rho": 0.1,
+          "array": "a00427",
+          "power_expected": 1.0
+        },
+        {
+          "id": "S07_0.25",
+          "substitute": "S07",
+          "rho": 0.25,
+          "array": "a00428",
+          "power_expected": 1.0
+        }
+      ],
+      "plain_max_far_expected": 0.00125,
+      "continuous": false
+    }
+  ],
+  "bootstrap": {
+    "array": "bootstrap_rates",
+    "replicates": 2000,
+    "N": 200,
+    "methods": [
+      "top20",
+      "api_tail",
+      "temperature_mle",
+      "fixed_temperature",
+      "nucleus_095",
+      "nll_count",
+      "logrank_count",
+      "entropy_count",
+      "rut",
+      "met"
+    ],
+    "items": [
+      {
+        "kind": "substitution",
+        "id": "S06_0.10"
+      },
+      {
+        "kind": "substitution",
+        "id": "S05_0.05"
+      },
+      {
+        "kind": "honest",
+        "id": "G01"
+      },
+      {
+        "kind": "honest",
+        "id": "G02"
+      },
+      {
+        "kind": "honest",
+        "id": "G03"
+      },
+      {
+        "kind": "honest",
+        "id": "G04"
+      },
+      {
+        "kind": "honest",
+        "id": "G05"
+      },
+      {
+        "kind": "honest",
+        "id": "G06"
+      },
+      {
+        "kind": "honest",
+        "id": "G07"
+      },
+      {
+        "kind": "honest",
+        "id": "G08"
+      },
+      {
+        "kind": "honest",
+        "id": "G09"
+      }
+    ],
+    "decision_rule": "integer",
+    "comparisons": [
+      {
+        "alternative": "temperature_mle",
+        "delta_expected": 0.09299999999999997,
+        "ci95_expected": [
+          0.0629749670624733,
+          0.12999999523162842
+        ]
+      },
+      {
+        "alternative": "fixed_temperature",
+        "delta_expected": -0.04200000000000004,
+        "ci95_expected": [
+          -0.07199996709823608,
+          0.04702504724264145
+        ]
+      },
+      {
+        "alternative": "top20",
+        "delta_expected": 0.0,
+        "ci95_expected": [
+          -0.001000046730041504,
+          0.0040000081062316895
+        ]
+      },
+      {
+        "alternative": "nucleus_095",
+        "delta_expected": 0.8300000000000001,
+        "ci95_expected": [
+          0.784974992275238,
+          0.8809999823570251
+        ]
+      }
+    ]
+  }
+}

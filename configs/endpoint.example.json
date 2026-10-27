@@ -1,0 +1,8 @@
+{
+  "url": "https://openrouter.ai/api/v1/chat/completions",
+  "model": "REPLACE_WITH_PROVIDER_MODEL_ID",
+  "api_key_env": "OPENROUTER_API_KEY",
+  "responses_per_prompt": 1,
+  "timeout": 120,
+  "parameters": {"max_tokens": 30, "temperature": 0.5, "top_p": 1.0}
+}
