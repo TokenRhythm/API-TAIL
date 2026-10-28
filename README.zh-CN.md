@@ -1,6 +1,8 @@
 # API-TAIL
 
-[English](README.md) · [实际审计指南](docs/QUICKSTART.md) · [数据格式](docs/SCHEMAS.md) · [验证结果](docs/VALIDATION_REPORT.md)
+[![arXiv](https://img.shields.io/badge/arXiv-2610.36801-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.36801)
+
+[English](README.md) · [论文](https://arxiv.org/abs/2610.36801) · [实际审计指南](docs/QUICKSTART.md) · [数据格式](docs/SCHEMAS.md) · [验证结果](docs/VALIDATION_REPORT.md)
 
 **当前版本：0.1.1。** API-TAIL 用于检测 LLM API 可能存在的模型替换：使用声明的参考模型为回复评分，并在允许的解码配置范围内校准检测阈值。
 
@@ -105,13 +107,16 @@ py -3 -m venv .venv
 
 代码及随包提供的数值统计量采用 [Apache-2.0](LICENSE)，版权人为 TokenRhythm Technologies。模型权重和原始提示/回复文本是独立资产，其获取与许可范围见[资产说明](docs/ASSETS.md)。
 
-论文目前为未发表手稿，尚无 arXiv 编号；引用元数据见 [CITATION.cff](CITATION.cff)。
+论文已发布在 arXiv：[arXiv:2610.36801](https://arxiv.org/abs/2610.36801)。使用 API-TAIL 时请引用该论文；[CITATION.cff](CITATION.cff) 中有相同的引用元数据。
 
 ```bibtex
-@unpublished{tokenrhythm2026apitail,
+@misc{tokenrhythm2026apitail,
   author = {{TokenRhythm Technologies}},
   title = {{API-TAIL}: Detecting Model Substitution in {LLM APIs} through Temperature-Aligned Likelihood Tails},
   year = {2026},
-  note = {Unpublished manuscript}
+  eprint = {2610.36801},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.LG},
+  url = {https://arxiv.org/abs/2610.36801}
 }
 ```
