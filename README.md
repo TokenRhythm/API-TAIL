@@ -1,4 +1,4 @@
-# API-TAIL
+# API-TAIL: Detecting Model Substitution in LLM APIs through Temperature-Aligned Likelihood Tails
 
 [![arXiv](https://img.shields.io/badge/arXiv-2610.36801-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.36801)
 
