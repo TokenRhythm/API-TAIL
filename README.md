@@ -1,6 +1,8 @@
 # API-TAIL
 
-[中文](README.zh-CN.md) · [Audit walkthrough](docs/QUICKSTART.md) · [Data formats](docs/SCHEMAS.md) · [Validation](docs/VALIDATION_REPORT.md)
+[![arXiv](https://img.shields.io/badge/arXiv-2610.36801-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.36801)
+
+[中文](README.zh-CN.md) · [Paper](https://arxiv.org/abs/2610.36801) · [Audit walkthrough](docs/QUICKSTART.md) · [Data formats](docs/SCHEMAS.md) · [Validation](docs/VALIDATION_REPORT.md)
 
 **Version 0.1.1.** API-TAIL detects possible model substitution in LLM APIs by scoring responses with the claimed reference model and calibrating over allowed decoding configurations.
 
@@ -105,13 +107,16 @@ The [validation report](docs/VALIDATION_REPORT.md) records 78 passing tests with
 
 Code and the included numerical statistics use [Apache-2.0](LICENSE), copyright TokenRhythm Technologies. Model weights and original prompt/response text are separate assets; their terms are described in [ASSETS.md](docs/ASSETS.md).
 
-The paper is an unpublished manuscript without an arXiv identifier. [CITATION.cff](CITATION.cff) contains its citation metadata.
+The paper is available on arXiv as [arXiv:2610.36801](https://arxiv.org/abs/2610.36801). If you use API-TAIL, please cite it; [CITATION.cff](CITATION.cff) contains the same citation metadata.
 
 ```bibtex
-@unpublished{tokenrhythm2026apitail,
+@misc{tokenrhythm2026apitail,
   author = {{TokenRhythm Technologies}},
   title = {{API-TAIL}: Detecting Model Substitution in {LLM APIs} through Temperature-Aligned Likelihood Tails},
   year = {2026},
-  note = {Unpublished manuscript}
+  eprint = {2610.36801},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.LG},
+  url = {https://arxiv.org/abs/2610.36801}
 }
 ```
