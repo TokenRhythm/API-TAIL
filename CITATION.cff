@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "Please cite the API-TAIL paper when using this research code."
 title: "API-TAIL"
 type: software
-version: 0.1.1
+version: 0.1.2
 license: Apache-2.0
 repository-code: "https://github.com/TokenRhythm/API-TAIL"
 authors:
@@ -11,7 +11,20 @@ preferred-citation:
   type: article
   title: "API-TAIL: Detecting Model Substitution in LLM APIs through Temperature-Aligned Likelihood Tails"
   authors:
-    - name: "TokenRhythm Technologies"
+    - family-names: Mei
+      given-names: Haocheng
+    - family-names: Tian
+      given-names: Yuchuan
+    - family-names: Yuan
+      given-names: Ye
+    - family-names: Xu
+      given-names: Chao
+    - family-names: Chen
+      given-names: Allen
+    - family-names: Han
+      given-names: Kai
+    - family-names: Wang
+      given-names: Yunhe
   year: 2026
   journal: "arXiv preprint arXiv:2610.36801"
   doi: "10.48550/arXiv.2610.36801"

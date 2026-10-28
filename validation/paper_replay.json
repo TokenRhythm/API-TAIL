@@ -7048,5 +7048,5 @@
   },
   "failures": [],
   "status": "passed_with_float32_differences",
-  "software_version": "0.1.1"
+  "software_version": "0.1.2"
 }

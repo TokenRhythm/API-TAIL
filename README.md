@@ -1,10 +1,8 @@
-# API-TAIL: Detecting Model Substitution in LLM APIs through Temperature-Aligned Likelihood Tails
+# API-TAIL
 
-[![arXiv](https://img.shields.io/badge/arXiv-2610.36801-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.36801)
+[中文](README.zh-CN.md) · [Audit walkthrough](docs/QUICKSTART.md) · [Data formats](docs/SCHEMAS.md) · [Validation](docs/VALIDATION_REPORT.md)
 
-[中文](README.zh-CN.md) · [Paper](https://arxiv.org/abs/2610.36801) · [Audit walkthrough](docs/QUICKSTART.md) · [Data formats](docs/SCHEMAS.md) · [Validation](docs/VALIDATION_REPORT.md)
-
-**Version 0.1.1.** API-TAIL detects possible model substitution in LLM APIs by scoring responses with the claimed reference model and calibrating over allowed decoding configurations.
+**Version 0.1.2.** API-TAIL detects possible model substitution in LLM APIs by scoring responses with the claimed reference model and calibrating over allowed decoding configurations.
 
 ## Choose your starting point
 
@@ -58,7 +56,7 @@ If `py` is unavailable, use `python -m venv .venv` for the first Windows command
 
 ## 3. Check the results
 
-- The version command prints `apitail 0.1.1`.
+- The version command prints `apitail 0.1.2`.
 - The demo prints `"synthetic": true` and writes its calibration, audit and evaluation results.
 - Paper replay reports `"total_checks": 2020` and `"failures": 0`. Its expected status is `passed_with_float32_differences`; the [reproduction notes](docs/REPRODUCTION_STATUS.md) explain those recorded precision differences.
 
@@ -101,17 +99,17 @@ The guide includes configuration-file creation, credential setup, request previe
 - [Installation environments](docs/ENVIRONMENT.md)
 - [Tests and extension instructions](CONTRIBUTING.md)
 
-The [validation report](docs/VALIDATION_REPORT.md) records 78 passing tests with the model backend installed, 64 passing tests with 14 optional skips in the lightweight CPU environment, 2,020 paper-result checks, 1,280 original-function comparisons, and a local GPU smoke test.
+The [validation report](docs/VALIDATION_REPORT.md) records 88 passing tests with the model backend installed, 69 passing tests with 19 optional skips in the lightweight CPU environment, 2,020 paper-result checks, 1,280 original-function comparisons, and a local GPU smoke test.
 
 ## License and citation
 
 Code and the included numerical statistics use [Apache-2.0](LICENSE), copyright TokenRhythm Technologies. Model weights and original prompt/response text are separate assets; their terms are described in [ASSETS.md](docs/ASSETS.md).
 
-The paper is available on arXiv as [arXiv:2610.36801](https://arxiv.org/abs/2610.36801). If you use API-TAIL, please cite it; [CITATION.cff](CITATION.cff) contains the same citation metadata.
+The paper is available as [arXiv:2610.36801](https://arxiv.org/abs/2610.36801). [CITATION.cff](CITATION.cff) contains its registered paper authors and citation metadata. See [citation notes](docs/CITATIONS.md) for baseline sources, adaptations and bibliographic corrections.
 
 ```bibtex
 @misc{tokenrhythm2026apitail,
-  author = {{TokenRhythm Technologies}},
+  author = {Mei, Haocheng and Tian, Yuchuan and Yuan, Ye and Xu, Chao and Chen, Allen and Han, Kai and Wang, Yunhe},
   title = {{API-TAIL}: Detecting Model Substitution in {LLM APIs} through Temperature-Aligned Likelihood Tails},
   year = {2026},
   eprint = {2610.36801},

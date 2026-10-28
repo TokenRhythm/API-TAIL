@@ -1,11 +1,11 @@
 # Validation report
 
-Validation for API-TAIL 0.1.1. Machine-readable results and source hashes are in [validation](../validation/).
+Validation for API-TAIL 0.1.2. Machine-readable results and source hashes are in [validation](../validation/).
 
 | Check | Result | Evidence |
 |---|---|---|
-| Full unit/integration suite | 78 tests passed, zero skips | [software_checks.json](../validation/software_checks.json) |
-| Installed wheel in an isolated CPU environment | 64 tests passed, 14 optional tests skipped; synthetic pipeline and pip check passed | [software_checks.json](../validation/software_checks.json) |
+| Full unit/integration suite | 88 tests passed, zero skips | [software_checks.json](../validation/software_checks.json) |
+| Installed wheel in an isolated CPU environment | 69 tests passed, 19 optional tests skipped; synthetic pipeline and pip check passed | [software_checks.json](../validation/software_checks.json) |
 | Frozen paper-statistic replay | 2,020 checks, zero failures: 2,016 original checks plus four Table 3 pool-ablation checks | [paper_replay.json](../validation/paper_replay.json) |
 | Original S/V functions on saved score arrays | 1,280 trial/method comparisons; zero count or temperature mismatches | [archive_scores.json](../validation/archive_scores.json) |
 | Real model GPU generation and scoring | Three synthetic prompts, 24 tokens total, 151 temperatures plus nucleus | [gpu_smoke.json](../validation/gpu_smoke.json) |

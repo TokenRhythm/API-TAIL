@@ -1,9 +1,10 @@
 {
-  "software_version": "0.1.1",
+  "software_version": "0.1.2",
   "platform": "linux",
   "status": "passed",
-  "scope": "Real Git checkout with core.autocrlf=true on Linux; not a native Windows run.",
+  "scope": "Real Git checkout with core.autocrlf=true on Linux; not a native Windows run. The control omits .gitattributes and the fixed checkout includes the source file. System/global Git attributes were disabled for the temporary fixture.",
   "git_version": "git version 2.34.1",
+  "python": "3.13.9",
   "cases": {
     "control": {
       "core_autocrlf": "true",
@@ -54,5 +55,21 @@
     "q38_user.json": "ffed5fb6767a9629ef27874c8805e756e1922aabbd9372f30d93451678660c8c",
     "q38_user.npz": "df0c93423c22b53732c2d84ad4f1033fb3cd531dfb7623688e22055590aa7306"
   },
-  "gbk_regression": "The unit suite separately simulates GBK defaults for UTF-8 Chinese configuration and prompt-ID files."
+  "gbk_regression": "The separate test_text.py attempt timed out after 120 seconds and is not reported as passing. All seven test_text cases, including GBK-default simulations, are confirmed passed in the completed final full-suite log. The 83 float32 precision differences in paper replay remain explicitly reported.",
+  "standalone_text_tests": {
+    "status": "timeout",
+    "timeout_seconds": 120,
+    "reported_as_passed": false
+  },
+  "full_suite_text_coverage": {
+    "status": "passed",
+    "tests": 88,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "elapsed_seconds": 130.668,
+    "test_text_cases_verified": 7,
+    "evidence_log": "full_tests_final.log",
+    "evidence_sha256": "b024b20231bc6e7733b6b544f58adcb5d0ee62299c2289b3f250e6fb65ecc291"
+  }
 }

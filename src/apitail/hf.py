@@ -50,6 +50,7 @@ def moments_torch(logits, targets, grid, nucleus=False, token_chunk=64):
         raise ValueError("Invalid targets or nonfinite model logits")
     if (targets < 0).any() or (targets >= logits.shape[1]).any():
         raise ValueError("Target token outside vocabulary")
+    targets = targets.to(dtype=torch.int64)
     tg = np.asarray(grid, dtype=np.float64)
     if tg.ndim != 1 or len(tg) == 0 or not np.isfinite(tg).all() or (tg <= 0).any() or (np.diff(tg) <= 0).any():
         raise ValueError("Invalid temperature grid")
@@ -141,7 +142,7 @@ def score(model_path, prompts, responses, output, device="cuda:0", dtype="bfloat
         pi = chat_ids(tok, P[pid]["text"], system, chat_kwargs)
         rid = tok.encode(text, add_special_tokens=False)
         # Reject overlength responses so each score covers the complete text.
-        if not rid or len(pi) + len(rid) + 1 > max_length:
+        if not rid or len(pi) + len(rid) > max_length:
             raise ValueError(f"Response {(pid, k)} is empty after tokenization or exceeds max_length")
         ids = torch.tensor([pi + rid], device=device)
         with torch.inference_mode():

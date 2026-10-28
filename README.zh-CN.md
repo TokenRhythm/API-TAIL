@@ -1,10 +1,8 @@
-# API-TAIL: Detecting Model Substitution in LLM APIs through Temperature-Aligned Likelihood Tails
+# API-TAIL
 
-[![arXiv](https://img.shields.io/badge/arXiv-2610.36801-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.36801)
+[English](README.md) · [实际审计指南](docs/QUICKSTART.md) · [数据格式](docs/SCHEMAS.md) · [验证结果](docs/VALIDATION_REPORT.md)
 
-[English](README.md) · [论文](https://arxiv.org/abs/2610.36801) · [实际审计指南](docs/QUICKSTART.md) · [数据格式](docs/SCHEMAS.md) · [验证结果](docs/VALIDATION_REPORT.md)
-
-**当前版本：0.1.1。** API-TAIL 用于检测 LLM API 可能存在的模型替换：使用声明的参考模型为回复评分，并在允许的解码配置范围内校准检测阈值。
+**当前版本：0.1.2。** API-TAIL 用于检测 LLM API 可能存在的模型替换：使用声明的参考模型为回复评分，并在允许的解码配置范围内校准检测阈值。
 
 ## 先选择你要做什么
 
@@ -58,7 +56,7 @@ py -3 -m venv .venv
 
 ## 3. 确认运行成功
 
-- 版本命令输出 `apitail 0.1.1`。
+- 版本命令输出 `apitail 0.1.2`。
 - 示例输出 `"synthetic": true`，并保存校准、审计和评估结果。
 - 论文回放输出 `"total_checks": 2020`、`"failures": 0`。预期状态为 `passed_with_float32_differences`；这些已记录的精度差异见[复现说明](docs/REPRODUCTION_STATUS.md)。
 
@@ -101,17 +99,17 @@ py -3 -m venv .venv
 - [安装环境](docs/ENVIRONMENT.md)
 - [测试及扩展方式](CONTRIBUTING.md)
 
-[验证报告](docs/VALIDATION_REPORT.md)记录了：安装模型后端后 78 项测试通过；轻量 CPU 环境中 64 项通过、14 项可选测试跳过；2,020 项论文结果核对、1,280 次原函数对照，以及本地 GPU 冒烟测试。
+[验证报告](docs/VALIDATION_REPORT.md)记录了：安装模型后端后 88 项测试通过；轻量 CPU 环境中 69 项通过、19 项可选测试跳过；2,020 项论文结果核对、1,280 次原函数对照，以及本地 GPU 冒烟测试。
 
 ## 许可证与引用
 
 代码及随包提供的数值统计量采用 [Apache-2.0](LICENSE)，版权人为 TokenRhythm Technologies。模型权重和原始提示/回复文本是独立资产，其获取与许可范围见[资产说明](docs/ASSETS.md)。
 
-论文已发布在 arXiv：[arXiv:2610.36801](https://arxiv.org/abs/2610.36801)。使用 API-TAIL 时请引用该论文；[CITATION.cff](CITATION.cff) 中有相同的引用元数据。
+论文已发布为 [arXiv:2610.36801](https://arxiv.org/abs/2610.36801)；[CITATION.cff](CITATION.cff) 中的论文作者与 arXiv 登记一致。基线来源、适配说明和书目修正见[引用说明](docs/CITATIONS.md)。
 
 ```bibtex
 @misc{tokenrhythm2026apitail,
-  author = {{TokenRhythm Technologies}},
+  author = {Mei, Haocheng and Tian, Yuchuan and Yuan, Ye and Xu, Chao and Chen, Allen and Han, Kai and Wang, Yunhe},
   title = {{API-TAIL}: Detecting Model Substitution in {LLM APIs} through Temperature-Aligned Likelihood Tails},
   year = {2026},
   eprint = {2610.36801},

@@ -1,6 +1,6 @@
 # Data formats and numerical conventions
 
-These formats apply to API-TAIL 0.1.1.
+These formats apply to API-TAIL 0.1.2.
 
 ## Text inputs
 
@@ -20,7 +20,7 @@ Responses are UTF-8 JSONL:
 
 The pair `(pid, k)` identifies a response and must be unique. `k` is a nonnegative integer; if absent, scoring defaults it to zero. Every response must refer to a supplied prompt. Extra fields such as `finish_reason`, `ids`, or `usage` may be retained, but scoring tokenizes `text` under the claimed model tokenizer rather than trusting returned token IDs. Lines with an `_meta` field are ignored by the JSONL reader.
 
-The generation recipe uses `seed`, `responses_per_prompt`, `max_length`, `system`, and a `sampling` object. Supported sampling controls are temperature, top-p, top-k, min-p, presence penalty, repetition penalty, and maximum tokens. `fp8_weight_rounding` is an optional simulated weight-rounding intervention; it is not a native FP8 serving backend.
+The generation recipe uses `seed`, `responses_per_prompt`, `max_length`, `system`, and a `sampling` object. Supported sampling controls are temperature, top-p, top-k, min-p, presence penalty, repetition penalty, and maximum tokens. `fp8_weight_rounding` is an optional boolean controlling simulated weight rounding; it is not a native FP8 serving backend.
 
 Endpoint configurations use `url`, `model`, `api_key_env`, `responses_per_prompt`, `timeout`, optional `system`, and a `parameters` object. Credential values and arbitrary headers are rejected in the config; secrets come from the named environment variable. Collection accepts HTTPS endpoints or local HTTP endpoints, and is dry-run unless explicitly executed.
 
@@ -62,7 +62,7 @@ The paper grid contains 151 values from 0.30 to 1.80, inclusive, in steps of 0.0
 
 The sum is over responses in the current audit batch. The tail count is `K = count(z > z_cutoff)`, with default cutoff 3. The MLE label refers to a discretized likelihood score-equation rule, not exact optimization of likelihood over the finite grid.
 
-HF scoring has batch size one. Exponentials and products use float32; sums and final moment arithmetic use float64. The NumPy logits reference routine uses float64 throughout and can differ slightly from the HF scorer. The HF backend rejects an empty tokenized response or an input satisfying `prompt_tokens + response_tokens + 1 > max_length`. The archival scorer truncated inputs instead.
+HF scoring has batch size one. Exponentials and products use float32; sums and final moment arithmetic use float64. The NumPy logits reference routine uses float64 throughout and can differ slightly from the HF scorer. The HF backend rejects an empty tokenized response or an input satisfying `prompt_tokens + response_tokens > max_length`. The archival scorer truncated inputs instead.
 
 With `--nucleus`, the candidate set is limited to the top 4,096 tokens. The distribution is renormalized on the retained set, and response tokens outside that set do not contribute to nucleus S/V. `nucleus_overflow` must be inspected: a nonzero entry means the candidate set did not reach the requested mass. A response with no retained tokens has zero nucleus S/V and therefore zero standardized score under the denominator convention.
 
@@ -71,6 +71,12 @@ With `--nucleus`, the candidate set is limited to the top 4,096 tokens. The dist
 A pool configuration contains `budget`, `trials`, and a nonempty `members` map from configuration names to score-file paths. Optional fields are `method`, `alpha`, `seed`, and `z_cutoff`. Relative score paths resolve against the pool JSON's directory.
 
 Every simulated batch samples `budget` distinct prompts without replacement and one stored response uniformly per prompt. Thus budget must be no larger than each source's distinct-prompt count. Calibration stores the maximum per-configuration `(1-alpha)` quantile, using NumPy's `higher` convention.
+
+A version-1 calibration artifact must contain a `score_semantics` object with
+`model_id`, `model_config_sha256`, `dtype`, `scoring`, `system`, `chat_kwargs`,
+and `max_length`. Values may be `null` when a custom numerical score bank has no
+corresponding metadata. It must also contain `calibration_prompt_ids` as a nonempty list
+of unique, nonempty strings. Both `audit` and `evaluate` reject missing or malformed fields.
 
 The calibration JSON has schema `apitail-calibration-v1`. It records `threshold`, per-member `quantiles`, the decisive member, trial counts, method, budget, grid, scorer semantics, calibration prompt IDs, and source hashes. An `exact` field records a randomized empirical diagnostic; the CLI audit/evaluate commands use the ordinary strict integer rule, not that randomized diagnostic.
 

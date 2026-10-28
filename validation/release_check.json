@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "files_checked": 95,
-  "bytes_checked": 5542393,
+  "files_checked": 97,
+  "bytes_checked": 5556010,
   "issues": [],
   "scope": "Static heuristic checks; not a guarantee that every possible secret or copyright issue is absent.",
-  "software_version": "0.1.1"
+  "software_version": "0.1.2"
 }

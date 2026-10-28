@@ -84,6 +84,19 @@ class TorchMomentsTests(unittest.TestCase):
         np.testing.assert_allclose(result['V_nucleus'], [4e-6, 4e-6])
         np.testing.assert_array_equal(result['n_nucleus'], [4, 4])
 
+    def test_int32_targets_match_int64_without_mutating_inputs(self):
+        logits = torch.tensor([[.1, -.3, 1.2], [-2., .3, .6]], dtype=torch.float32)
+        targets = torch.tensor([2, 1], dtype=torch.int32)
+        grid = np.asarray([.3, .7, 1., 1.8])
+        expected = moments_torch(logits, targets.to(torch.int64), grid, nucleus=True, token_chunk=1)
+        actual = moments_torch(logits, targets, grid, nucleus=True, token_chunk=1)
+        self.assertEqual(targets.dtype, torch.int32)
+        self.assertEqual(targets.tolist(), [2, 1])
+        self.assertEqual(set(actual), set(expected))
+        for name in expected:
+            with self.subTest(field=name):
+                np.testing.assert_array_equal(actual[name], expected[name])
+
     def test_rejects_invalid_numeric_inputs(self):
         logits, target = torch.zeros((2, 3)), torch.tensor([0, 1])
         for bad_target in [torch.tensor([0.0, 1.0]), torch.tensor([-1, 0]), torch.tensor([0, 3])]:

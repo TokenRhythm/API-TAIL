@@ -51,14 +51,30 @@ def calibrate(config_path, output):
 
 
 def _check_rule(bank, rule, allow_overlap=False):
-    if rule.get("schema") != "apitail-calibration-v1":
+    if not isinstance(rule, dict) or rule.get("schema") != "apitail-calibration-v1":
         raise ValueError("Unsupported calibration artifact")
+    required = {"score_semantics", "calibration_prompt_ids"}
+    missing = required - rule.keys()
+    if missing:
+        raise ValueError(f"Calibration artifact missing required fields: {sorted(missing)}")
+    semantics = rule["score_semantics"]
+    if not isinstance(semantics, dict):
+        raise ValueError("Calibration score_semantics must be an object")
+    fields = {"model_id", "model_config_sha256", "dtype", "scoring", "system", "chat_kwargs", "max_length"}
+    missing = fields - semantics.keys()
+    if missing:
+        raise ValueError(f"Calibration score_semantics missing required fields: {sorted(missing)}")
+    prompt_ids = rule["calibration_prompt_ids"]
+    if not isinstance(prompt_ids, list) or not prompt_ids or any(not isinstance(pid, str) or pid == "" for pid in prompt_ids):
+        raise ValueError("Calibration prompt IDs must be a nonempty list of nonempty strings")
+    if len(set(prompt_ids)) != len(prompt_ids):
+        raise ValueError("Calibration prompt IDs must be unique")
     if not np.array_equal(bank.grid, rule["grid"]):
         raise ValueError("Calibration and audit grids differ")
-    for k, value in rule.get("score_semantics", {}).items():
+    for k, value in semantics.items():
         if bank.metadata.get(k) != value:
             raise ValueError(f"Calibration and audit scoring differ on {k}")
-    overlap = set(bank.prompt_ids) & set(rule.get("calibration_prompt_ids", []))
+    overlap = set(bank.prompt_ids) & set(prompt_ids)
     if overlap and not allow_overlap:
         raise ValueError(f"{len(overlap)} audit prompt ids overlap calibration; use disjoint prompts")
 

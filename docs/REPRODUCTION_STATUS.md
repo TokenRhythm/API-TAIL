@@ -1,6 +1,6 @@
 # Reproduction status
 
-API-TAIL 0.1.1 provides paper-result replay from saved numerical assets and a workflow for new data. The paper's original API collection and full model scoring have not been rerun end to end.
+API-TAIL 0.1.2 provides paper-result replay from saved numerical assets and a workflow for new data. The paper's original API collection and full model scoring have not been rerun end to end.
 
 ## Paper-result replay
 
@@ -69,4 +69,4 @@ The archive check requires NumPy, CPU PyTorch, original Python sources and trust
 
 ## Software and model checks
 
-The full test environment passes **78 tests**. The lightweight CPU environment passes **64 tests and skips 14 optional backend tests**. A local GPU smoke test covers three synthetic prompts, 24 generated tokens and 151 temperatures, including nucleus scoring. Commands, environment details and machine-readable results are in [VALIDATION_REPORT.md](VALIDATION_REPORT.md) and [ENVIRONMENT.md](ENVIRONMENT.md).
+The full test environment passes **88 tests**. The lightweight CPU environment passes **69 tests and skips 19 optional backend tests**. A local GPU smoke test covers three synthetic prompts, 24 generated tokens and 151 temperatures, including nucleus scoring. Commands, environment details and machine-readable results are in [VALIDATION_REPORT.md](VALIDATION_REPORT.md) and [ENVIRONMENT.md](ENVIRONMENT.md).

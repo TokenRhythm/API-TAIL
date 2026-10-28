@@ -2,7 +2,7 @@
 
 ## CPU
 
-API-TAIL 0.1.1 is tested in a Python 3.13.9 virtual environment without system site-packages. It uses NumPy 2.2.6 and SciPy 1.16.3. The wheel is installed and tested outside the source checkout, and `pip check` passes. Tests that require the optional Torch backend are skipped in this environment.
+API-TAIL 0.1.2 is tested in a Python 3.13.9 virtual environment without system site-packages. It uses NumPy 2.5.4 and SciPy 1.18.1. The wheel is installed and tested outside the source checkout, and `pip check` passes. Tests that require the optional Torch backend are skipped in this environment.
 
 ```bash
 python -m venv .venv

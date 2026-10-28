@@ -51,6 +51,9 @@ def generate(model_path, prompts, config_path, output, device="cuda:0", dtype="b
     if not isinstance(cfg, dict):
         raise ValueError("Generation config must be an object")
     reject_credentials(cfg)
+    fp8_weight_rounding = cfg.get("fp8_weight_rounding", False)
+    if not isinstance(fp8_weight_rounding, bool):
+        raise ValueError("fp8_weight_rounding must be a boolean")
     settings = cfg.get("sampling", {})
     if not isinstance(settings, dict):
         raise ValueError("sampling must be an object")
@@ -71,7 +74,7 @@ def generate(model_path, prompts, config_path, output, device="cuda:0", dtype="b
     partial = dst.with_suffix(dst.suffix + ".partial")
     if dst.exists() or partial.exists(): raise FileExistsError(output)
     torch, tok, model = load_model(model_path, device, dtype, local_files_only)
-    if cfg.get("fp8_weight_rounding", False):
+    if fp8_weight_rounding:
         with torch.no_grad():
             for name, module in model.named_modules():
                 if isinstance(module, torch.nn.Linear) and "vision" not in name and "audio" not in name and module is not model.get_output_embeddings():

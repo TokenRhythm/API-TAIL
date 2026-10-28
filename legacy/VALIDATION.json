@@ -1,17 +1,17 @@
 {
-  "software_version": "0.1.1",
+  "software_version": "0.1.2",
   "python": "3.13.9",
-  "scope": "Executed CPU source-reference, comment-only AST, path-rebasing and CLI help checks. No GPU generation, paid API calls or complete historical panel replay was performed by these checks.",
+  "scope": "Executed CPU source-reference, recorded AST-digest, path-rebasing and CLI help checks. CUDA devices were hidden from these processes. No GPU generation, paid API calls or complete historical panel replay was performed by these checks.",
   "baseline_unittest": {
     "tests": 13,
     "failures": 0,
     "errors": 0,
     "skips": 0,
-    "elapsed_seconds": 0.602
+    "elapsed_seconds": 1.237
   },
   "checks": [
     {
-      "check": "AST excluding docstrings unchanged by comment cleanup",
+      "check": "AST excluding docstrings matches recorded cleanup digest",
       "files": 25,
       "python": "3.10.12",
       "passed": true

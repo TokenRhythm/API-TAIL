@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "api-tail"
-version = "0.1.1"
+version = "0.1.2"
 description = "Temperature-aligned likelihood tails for auditing model substitution in LLM APIs"
 readme = "README.md"
 requires-python = ">=3.10"

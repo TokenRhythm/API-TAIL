@@ -1,12 +1,12 @@
 # Paper design and code map
 
-API-TAIL 0.1.1 implements full-vocabulary temperature-aligned likelihood-tail counting. The paper's source code calls this method **`T_align-fsv`**. In the archived code, `T_align` is the top-20 variant, while `ProTA` and `ProTA-N95` are penalty-profile variants.
+API-TAIL 0.1.2 implements full-vocabulary temperature-aligned likelihood-tail counting. The paper's source code calls this method **`T_align-fsv`**. In the archived code, `T_align` is the top-20 variant, while `ProTA` and `ProTA-N95` are penalty-profile variants.
 
 The public package accepts new data through the CLI and Python interfaces. `legacy/` preserves the paper evaluator and its dependencies. Their data formats and random-number streams differ.
 
 ## Method and evaluation
 
-| Paper operation | Public implementation | Original implementation in `legacy/code/` | Notes |
+| Paper operation | Public implementation | Archived API-TAIL implementation in `legacy/code/` | Notes |
 | --- | --- | --- | --- |
 | Generate legitimate local responses | `src/apitail/generate.py`, `apitail generate` | `jobs/paper2/gen_hf.py`; Qwen: `bbp/gen_multi.py` | Model and data locations are explicit. GPU regeneration is distinct from offline array tests. |
 | Collect text-only API responses | `src/apitail/collect.py`, `apitail collect` | Original collector is not bundled | Collection defaults to a dry run; credentials come from environment variables. |
@@ -24,20 +24,22 @@ The inventory retains actual generation counts: Qwen pool metadata records four 
 
 ## Ablations and baselines
 
-| Comparison | Public callable / supported route | Original identifier and source | Scope and budget |
+The sources are [MET](https://arxiv.org/html/2410.20247v2), [RUT](https://arxiv.org/html/2506.06975v1) and [Fast-DetectGPT](https://arxiv.org/html/2310.05130v2). The implementations below adapt their statistics to this study; archived implementation columns refer to API-TAIL code, not upstream official implementations. See [citation notes](CITATIONS.md) for sources and corrected bibliography details.
+
+| Comparison | Public callable / supported route | Archived identifier and source | Scope and budget |
 | --- | --- | --- | --- |
 | Full-vocabulary API-TAIL | `core.batch_statistic(..., method="align")` | `T_align-fsv` | N API responses, one per selected prompt. |
 | MLE temperature | `core.batch_statistic(..., method="mle")` | `T_MLE-full`, `ta_run_eval.py` | Grid minimum of abs(sum S), then the same standardized tail count and own composite cutoff. |
 | Huber temperature alignment | `core.batch_statistic(..., method="huber")` | `T Huber-fsv`, `paper2_eval.py` | Grid minimum of abs(sum clip(z, -1.345, 1.345)); raw z is used for the final tail count. |
-| Fixed temperature | `core.batch_statistic(..., method="fixed")` | `FDG-fsv`, `paper2_eval.py` | T=1.0; Fast-DetectGPT-style typicality criterion adapted to this count/calibration protocol. |
+| Fixed-temperature surprisal-tail control | `core.batch_statistic(..., method="fixed")` | `FDG-fsv`, `paper2_eval.py` | T=1.0; counts z > 3 with its own composite cutoff. For matching scoring and sampling distributions, the theoretical z(1) is the negative of the Fast-DetectGPT criterion, apart from numerical variance floors. This control tests the opposite tail and retains historical FDG identifiers for compatibility. |
 | Nucleus-only alignment / MLE | Scorer nucleus arrays plus the corresponding core method; inspect scorer metadata | `N95-full id`, `N95-full MLE`, `hf_score.py` and `ta_run_eval.py` | Historical nucleus uses at most 4096 tokens. Overflow and out-of-nucleus behavior are described below. |
 | Top-20 and penalty-profile variants | Archived evaluator | `T_align`, `T_MLE`, `FDG T=1`, `T Huber`, `T+pen (no Huber)`, `ProTA`; N95 T-only/penalty variants | Requires the archived grid caches; the public package does not regenerate the ProTA grids. |
-| NLL / log-rank / entropy count | `baselines.response_detectors`, `detector_threshold`, `detector_counts` | `NLL count`, `log-rank count`, `entropy count`, `paper2_eval.py` and `bbp/rut.py` | Per-response 0.99 pooled calibration percentile, followed by a separate composite count cutoff. Entropy is normalized within the supplied top-20 window in this baseline, not full-vocabulary entropy. |
-| RUT | `baselines.mean_log_rank`, `randomized_ranks`, `rut_statistic` | `bbp/rut.py`, `jobs/supp1/engine.py` | One API response plus 100 local reference responses per prompt. Mean log midrank, randomized reference rank, Cramer-von Mises uniformity test, then composite calibration of -log(p). Evaluated in the P30 panels. |
-| MET at matched API budget | `baselines.pad_token_ids`, `paired_hamming_mmd2` | `MET same-budget`, `paper2_eval.py` | N/2 prompts, 2 API responses and 2 local reference responses per prompt, token length 30. Evaluated in the P30 panels. |
-| MET in native protocol | `baselines.hamming_mmd2`; archived `metnat_eval2.py` | `bbp/cmp_met_native.py`, `jobs/paper2/metnat_eval2.py` | N/10 prompts, 10 API and 10 local reference responses per prompt, token length 50, temperature 1 protocol. Native null draws two disjoint groups from 20 references. |
+| NLL / log-rank / entropy count | `baselines.response_detectors`, `detector_threshold`, `detector_counts` | `NLL count`, `log-rank count`, `entropy count`, `paper2_eval.py` and `bbp/rut.py` | Per-response 0.99 pooled calibration percentile, followed by a separate composite count cutoff. Entropy is normalized within the supplied top-20 window in this baseline, not full-vocabulary entropy. These are feature-count controls, not reproductions of the complete cited detectors. |
+| RUT adaptation | `baselines.mean_log_rank`, `randomized_ranks`, `rut_statistic` | `bbp/rut.py`, `jobs/supp1/engine.py` | One API response plus 100 local reference responses per prompt. Mean log midrank, randomized reference rank, Cramer-von Mises uniformity test, then composite calibration of -log(p). Evaluated in the P30 panels. |
+| MET adaptation at matched API budget | `baselines.pad_token_ids`, `paired_hamming_mmd2` | `MET same-budget`, `paper2_eval.py` | N/2 prompts, 2 API responses and 2 local reference responses per prompt, token length 30. Evaluated in the P30 panels. |
+| MET with native sampling | `baselines.hamming_mmd2`; archived `metnat_eval2.py` | `bbp/cmp_met_native.py`, `jobs/paper2/metnat_eval2.py` | N/10 prompts, 10 API and 10 local reference responses per prompt, token length 50, temperature 1 protocol. Native null draws two disjoint groups from 20 references. The reported comparison still uses this study's composite calibration. |
 
-The array baseline functions do not collect responses or choose the legitimate pool. RUT and MET return continuous statistics; use `baselines.calibrate_continuous` to calibrate them directly from null-audit arrays. It takes the maximum of each configuration's `higher` (1-alpha) Monte Carlo quantile and rejects strictly above that cutoff. It also returns all configuration quantiles, the decisive configurations, trial counts and strict calibration exceedance rates. This is not an exact randomized boundary rule, and its calibration rates are not independent false-alarm estimates.
+The array baseline functions do not collect responses or choose the legitimate pool. RUT and MET are adapted to this study's composite-null evaluation protocol. They return continuous statistics; use `baselines.calibrate_continuous` to calibrate them directly from null-audit arrays. It takes the maximum of each configuration's `higher` (1-alpha) Monte Carlo quantile and rejects strictly above that cutoff. It also returns all configuration quantiles, the decisive configurations, trial counts and strict calibration exceedance rates. This is not an exact randomized boundary rule, and its calibration rates are not independent false-alarm estimates.
 
 For RUT, each null-audit value is **negative log p**, available as `rut_statistic(...)["statistic"]`; larger values are more suspicious. Do not calibrate upper tails of the raw p-value. For MET, use the raw MMD squared statistic, retaining negative unbiased estimates. The following tiny arrays illustrate the interface; real calibration needs enough independently generated null audits for each legitimate setting.
 
@@ -58,7 +60,7 @@ reject = observed_statistic > cal["threshold"]  # equality never rejects
 ### Details needed for faithful comparisons
 
 - RUT midranks use fp16 equality in the stored top-k window. A token whose reported rank is outside the window retains that rank. The public callable uses the first 100 supplied references, as in the paper evaluator.
-- RUT tie randomization is `(L + U * (E + 1)) / (m + 1)`. Callers can provide U explicitly to replay the same draw. The public implementation uses SciPy's public Cramer-von Mises API; its p-value was checked against the frozen evaluator's private SciPy CDF formula.
+- RUT retains randomized response ranks. Our finite-reference adjustment is `(L + U * (E + 1)) / (m + 1)`, replacing the original paper's `(L + U * E) / m`; L counts smaller reference scores and E counts ties. This response-level adjustment is separate from the token-level FP16 midranks above. Callers can provide U explicitly to replay the same draw. The public implementation uses SciPy's public Cramer-von Mises API; its p-value was checked against the frozen evaluator's private SciPy CDF formula.
 - MET uses positional Hamming similarity, including equal padding tokens. The MMD estimator omits same-set diagonal pairs and may be negative. Each prompt needs at least two samples on each side. In matched-budget mixture draws, if both API samples come from the same source, they must be two distinct stored responses.
 - The likelihood-count 0.99 percentile pools the rows actually drawn during calibration, including repeats. Computing it once over unique saved responses can change the result. NaN response statistics do not count as tail exceedances in the archived implementation.
 - Thresholds are recalibrated for each method. Reusing API-TAIL's integer cutoff for MLE, RUT or MET does not reproduce the comparison.
@@ -77,7 +79,7 @@ MET has its own reference and routing design and its own stream seeded from 2026
 
 The reference scorer computes logits in model inference precision, then uses float32 shifted logits/exponentials with float64 moment accumulation. Full-vocabulary scoring is distinct from saving top-20 log-probabilities for baselines. It retokenizes returned text under the claimed tokenizer and preserves `(pid, k)` keys. The original evaluator aligns full-score rows to the earlier grid-cache keys, rejects missing keys and ignores extra full-score rows.
 
-For the historical N95 ablation, the scorer keeps the shortest top-4096 prefix reaching mass 0.95 under the full distribution. If the full top-4096 mass is smaller, it records `overNF` and keeps the available window; there is no automatic vocabulary expansion. A target token outside the retained nucleus contributes zero to nucleus S/V and is excluded from its count. These choices must be accounted for when interpreting the nucleus ablation. They do not constrain the final full-vocabulary score.
+For the historical N95 ablation, the scorer keeps the shortest top-4096 prefix reaching mass 0.95 under the full distribution. If the full top-4096 mass is smaller, it records `overNF` and keeps the available window; there is no automatic vocabulary expansion. A target token outside the retained nucleus contributes zero to nucleus S/V and is excluded from its count. These choices must be accounted for when interpreting the nucleus ablation: it changes both support and scored positions, so it does not isolate the effect of rare tokens. They do not constrain the final full-vocabulary score.
 
 Qwen FP8, AWQ INT4 and RedHatAI INT4 pool members use separately retained quantized checkpoints with the original vLLM generation entry. The checkpoint bytes and inference compatibility are not established by a name alone. Gemma `fp8w` members instead use the archived HF generator's e4m3fn rounding: each selected Linear weight row is scaled by its maximum absolute weight / 448, rounded to float8, rescaled, and stored in BF16. Vision/audio modules and the output head are excluded. This is a weight-perturbation ablation, not a native FP8 backend implementation. Provider-reported FP4/FP8 metadata is a separate endpoint classification input, not a locally reproduced quantizer.
 
@@ -85,4 +87,4 @@ Qwen FP8, AWQ INT4 and RedHatAI INT4 pool members use separately retained quanti
 
 `tests/test_baselines.py` covers midranks, entropy, detector thresholds, RUT ties and reference selection, CvM agreement, MMD, padding, continuous calibration and invalid inputs. It also compares the public RUT midrank and native MET functions with their archived counterparts.
 
-API-TAIL 0.1.1 passes 78 tests with the optional backend installed; the lightweight CPU environment passes 64 and skips 14 backend tests. Paper replay passes 2,020 checks, and the comparison with original score functions passes 1,280 trial/method checks. See [VALIDATION_REPORT.md](VALIDATION_REPORT.md) for software and GPU results and [REPRODUCTION_STATUS.md](REPRODUCTION_STATUS.md) for the paper-data coverage.
+API-TAIL 0.1.2 passes 88 tests with the optional backend installed; the lightweight CPU environment passes 69 and skips 19 backend tests. Paper replay passes 2,020 checks, and the comparison with original score functions passes 1,280 trial/method checks. See [VALIDATION_REPORT.md](VALIDATION_REPORT.md) for software and GPU results and [REPRODUCTION_STATUS.md](REPRODUCTION_STATUS.md) for the paper-data coverage.

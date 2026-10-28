@@ -130,6 +130,45 @@ class GenerationTests(unittest.TestCase):
                                            "n_tokens": 1, "finish_reason": "stop"})
                 self.output.unlink()
 
+    def test_fp8_flag_rejects_non_boolean_before_model_load(self):
+        for value in ("false", "true", 0, 1, None, [], {}):
+            with self.subTest(value=value):
+                self.write_config(fp8_weight_rounding=value)
+                with patch("apitail.generate.load_model", side_effect=AssertionError("Model loading must not begin")) as load:
+                    with self.assertRaisesRegex(ValueError, "fp8_weight_rounding must be a boolean"):
+                        generate("mock-model", self.prompts, self.config, self.output, device="cpu")
+                    load.assert_not_called()
+                self.assertFalse(self.output.exists())
+                self.assertFalse(self.output.with_suffix(".jsonl.partial").exists())
+
+    def test_fp8_boolean_controls_weight_rounding(self):
+        for enabled in (False, True):
+            with self.subTest(enabled=enabled):
+                self.write_config(fp8_weight_rounding=enabled)
+                linear = torch.nn.Linear(4, 4, bias=False)
+                with torch.no_grad():
+                    linear.weight.copy_(torch.arange(1, 17, dtype=torch.float32).reshape(4, 4) / 19)
+                before = linear.weight.detach().clone()
+                class Model:
+                    generation_config = SimpleNamespace(eos_token_id=4)
+                    def named_modules(self):
+                        return [("linear", linear)]
+                    def get_output_embeddings(self):
+                        return None
+                    def generate(self, **kwargs):
+                        return torch.tensor([[0, 1, 2, 4]])
+                tokenizer = SimpleNamespace(pad_token_id=None, decode=lambda *args, **kwargs: "Word.")
+                with patch("apitail.generate.load_model", return_value=(torch, tokenizer, Model())), patch("apitail.generate.chat_ids", return_value=[0, 1]):
+                    result = generate("mock-model", self.prompts, self.config, self.output, device="cpu")
+                if enabled:
+                    self.assertGreater(float((linear.weight.detach() - before).abs().max()), 0.)
+                else:
+                    torch.testing.assert_close(linear.weight.detach(), before, rtol=0, atol=0)
+                rows = [json.loads(line) for line in self.output.read_text(encoding="utf-8").splitlines()]
+                self.assertIs(rows[0]["_meta"]["config"]["fp8_weight_rounding"], enabled)
+                self.assertEqual(result["responses"], 1)
+                self.output.unlink()
+
     def test_malformed_numeric_config_fails_before_model_load(self):
         changes = [{"responses_per_prompt": 1.5}, {"responses_per_prompt": -1},
                    {"responses_per_prompt": True}, {"seed": 1.5}, {"max_length": -1},
